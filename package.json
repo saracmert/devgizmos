@@ -1,0 +1,38 @@
+{
+  "name": "devgizmos",
+  "description": "",
+  "version": "0.0.0",
+  "private": true,
+  "repository": "saracmert/devgizmos",
+  "license": "MIT",
+  "stackblitz": {
+    "startCommand": "npm start"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --ignore-path .gitignore",
+    "fix": "npm run lint -- --fix",
+    "test": "npm run build && npm run lint"
+  },
+  "dependencies": {
+    "@monaco-editor/loader": "^1.4.0",
+    "@popperjs/core": "^2.11.8",
+    "@vueuse/core": "^10.9.0",
+    "bootstrap": "^5.3.3",
+    "monaco-editor": "^0.47.0",
+    "monaco-editor-webpack-plugin": "^7.1.0",
+    "monaco-languageclient": "^7.3.0",
+    "vue": "^3.4.15"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.22.0",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.1",
+    "vite": "^5.0.12",
+    "vue-loader": "^17.4.2"
+  }
+}
