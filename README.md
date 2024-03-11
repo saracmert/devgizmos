@@ -32,6 +32,8 @@ Automatic StringBuilder escaper code generation.
 ## Encode - Decode Gizmos
 ### [Base64](https://devgizmos.com/#/Base64)
 You can use the Base64 Gizmo to encode or decode text, and convert files to Base64 strings.
+### [URL Encoder / Decoder](https://devgizmos.com/#/URL)
+You can use the URL Encoder / Decoder Gizmo to encode or decode URL strings.
 
 ## Network Gizmos
 ### [My IP Address](https://devgizmos.com/#/MyIPAddress)

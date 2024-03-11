@@ -49,6 +49,11 @@ export default {
               title: 'Base64',
               description: 'You can use the Base64 Gizmo to encode or decode text, and convert files to Base64 strings.',
               gizmo: 'Base64'
+            },
+            {
+              title: 'URL Encoder / Decoder',
+              description: 'You can use the URL Encoder / Decoder Gizmo to encode or decode URL strings.',
+              gizmo: 'URL'
             }
           ]
         },

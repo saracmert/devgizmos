@@ -13,6 +13,7 @@ import DiffChecker from '../gizmos/code/DiffChecker.vue'
 import GuidGenerator from '../gizmos/code/GuidGenerator.vue'
 import PasswordGenerator from '../gizmos/other/PasswordGenerator.vue'
 import MyIPAddress from '../gizmos/network/MyIPAddress.vue'
+import URL from '../gizmos/encode-decode/URL.vue'
 // Gizmos End
 
 const routes = {
@@ -23,7 +24,8 @@ const routes = {
   '/DiffChecker': DiffChecker,
   "/GuidGenerator": GuidGenerator,
   "/PasswordGenerator": PasswordGenerator,
-  "/MyIPAddress": MyIPAddress
+  "/MyIPAddress": MyIPAddress,
+  "/URL": URL
 }
 
 const currentPath = ref(window.location.hash)
