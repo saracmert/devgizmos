@@ -40,12 +40,12 @@ function decode () {
                             <div class="accordion-body">
                                 <div class="col-12">
                                     <div class="mb-3">
-                                        <label for="txtEncodeInput" class="form-label">Text Input</label>
+                                        <label for="txtEncodeInput" class="form-label">Input</label>
                                         <textarea v-model="encodeInput" class="form-control" id="txtEncodeInput" rows="3" />
                                     </div>
                                     <button class="btn btn-primary" @click="encode()">Encode</button>
                                     <div class="mt-3 mb-3">
-                                        <label for="txtEncodeOutput" class="form-label">Text Output</label>
+                                        <label for="txtEncodeOutput" class="form-label">Output</label>
                                         <textarea v-model="encodeOutput" class="form-control" id="txtEncodeOutput" rows="3" disabled />
                                     </div>
                                     <div>
@@ -65,12 +65,12 @@ function decode () {
                             <div class="accordion-body">
                                 <div class="col-12">
                                     <div class="mb-3">
-                                        <label for="txtDecodeInput" class="form-label">Text Input</label>
+                                        <label for="txtDecodeInput" class="form-label">Input</label>
                                         <textarea v-model="decodeInput" class="form-control" id="txtDecodeInput" rows="3" />
                                     </div>
                                     <button class="btn btn-primary" @click="decode()">Decode</button>
                                     <div class="mt-3 mb-3">
-                                        <label for="txtDecodeOutput" class="form-label">Text Output</label>
+                                        <label for="txtDecodeOutput" class="form-label">Output</label>
                                         <textarea v-model="decodeOutput" class="form-control" id="txtDecodeOutput" rows="3" disabled />
                                     </div>
                                     <div>
