@@ -53,6 +53,16 @@ export default {
           ]
         },
         {
+          title: 'Network Gizmos',
+          items: [
+            {
+              title: 'My IP Address',
+              description: 'You can use the My IP Address Gizmo to get your public IP address.',
+              gizmo: 'MyIPAddress'
+            }
+          ]
+        },
+        {
           title: 'Other Gizmos',
           items: [
             {

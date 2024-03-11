@@ -12,6 +12,7 @@ import Base64 from '../gizmos/encode-decode/Base64.vue'
 import DiffChecker from '../gizmos/code/DiffChecker.vue'
 import GuidGenerator from '../gizmos/code/GuidGenerator.vue'
 import PasswordGenerator from '../gizmos/other/PasswordGenerator.vue'
+import MyIPAddress from '../gizmos/network/MyIPAddress.vue'
 // Gizmos End
 
 const routes = {
@@ -21,7 +22,8 @@ const routes = {
   '/Base64': Base64,
   '/DiffChecker': DiffChecker,
   "/GuidGenerator": GuidGenerator,
-  "/PasswordGenerator": PasswordGenerator
+  "/PasswordGenerator": PasswordGenerator,
+  "/MyIPAddress": MyIPAddress
 }
 
 const currentPath = ref(window.location.hash)

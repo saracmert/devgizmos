@@ -33,6 +33,10 @@ Automatic StringBuilder escaper code generation.
 ### [Base64](https://devgizmos.com/#/Base64)
 You can use the Base64 Gizmo to encode or decode text, and convert files to Base64 strings.
 
+## Network Gizmos
+### [My IP Address](https://devgizmos.com/#/MyIPAddress)
+You can use the My IP Address Gizmo to get your public IP address.
+
 ## Other Gizmos
 ### [Password Generator](https://devgizmos.com/#/PasswordGenerator)
 You can use the Password Generator Gizmo to quickly generate a secure password.
