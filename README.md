@@ -42,3 +42,44 @@ You can use the My IP Address Gizmo to get your public IP address.
 ## Other Gizmos
 ### [Password Generator](https://devgizmos.com/#/PasswordGenerator)
 You can use the Password Generator Gizmo to quickly generate a secure password.
+
+# Roadmap
+
+🚀 Released
+
+⭐ It was released with TODO
+
+❌ Open
+
+| **Milestone**          | **Category**     | **Status** |
+|------------------------|------------------|------------|
+| Diff Checker           | Text             | 🚀         |
+| Case Converter         | Text             | ❌         |
+| Lorem Ipsum Generator  | Text             | ❌         |
+| URL Parser             | Text             | ❌         |
+| Slug Generator         | Text             | ❌         |
+| C# String Builder      | Text             | 🚀         |
+| HTML Beautifier        | Formatters       | ❌         |
+| HTML Minifier          | Formatters       | ❌         |
+| CSS Beautifier         | Formatters       | ❌         |
+| CSS Minifier           | Formatters       | ❌         |
+| Javascript Beautifier  | Formatters       | ❌         |
+| Javascript Minifier    | Formatters       | ❌         |
+| JSON Beautifier        | Formatters       | 🚀         |
+| JSON Minifier          | Formatters       | ❌         |
+| SQL Beautifier         | Formatters       | ❌         |
+| SQL Minifier           | Formatters       | ❌         |
+| JSON Validator         | Validators       | ❌         |
+| Regex Tester           | Validators       | ❌         |
+| Checksum Calculator    | Cryptography     | ❌         |
+| Password Generator     | Cryptography     | ⭐         |
+| Guid Generator         | Cryptography     | 🚀         |
+| URL                    | Encode - Decode  | 🚀         |
+| Base64                 | Encode - Decode  | 🚀         |
+| JWT Decoder            | Encode - Decode  | ❌         |
+| Unix Timestamp         | Converters       | ❌         |
+| RGB / HEX              | Converters       | ❌         |
+| Color Picker           | Design           | ❌         |
+| SVG QR Code Generator  | Design           | ❌         |
+| What's my IP?          | Network          | 🚀         |
+| CIDR Calculator        | Network          | ❌         |
