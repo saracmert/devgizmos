@@ -8,7 +8,7 @@ export default {
     return {
       categories: [
         {
-          title: 'Code Gizmos',
+          title: 'Text Gizmos',
           items: [
             {
               title: 'Diff Checker',
@@ -16,29 +16,39 @@ export default {
               gizmo: 'DiffChecker'
             },
             {
-              title: 'Guid Generator',
-              description: 'You can use the Guid Generator Gizmo to quickly generate a compliant version 4 GUID.',
-              gizmo: 'GuidGenerator'
+              title: 'Case Converter',
+              description: 'You can use the Case Converter Gizmo to convert your texts to diffrent case formats.',
+              gizmo: 'CaseConverter'
+            },
+            {
+              title: 'String Builder',
+              description: 'Automatic StringBuilder escaper code generation.',
+              gizmo: 'StringBuilder'
             }
           ]
         },
         {
-          title: 'JSON Gizmos',
+          title: 'Cryptography Gizmos',
+          items: [
+            {
+              title: 'Guid Generator',
+              description: 'You can use the Guid Generator Gizmo to quickly generate a compliant version 4 GUID.',
+              gizmo: 'GuidGenerator'
+            },
+            {
+              title: 'Password Generator',
+              description: 'You can use the Password Generator Gizmo to quickly generate a secure password.',
+              gizmo: 'PasswordGenerator'
+            }
+          ]
+        },
+        {
+          title: 'Formatter Gizmos',
           items: [
             {
               title: 'JSON Beautifier',
               description: 'Beautify your JSON files.',
               gizmo: 'JSONBeautifier'
-            }
-          ]
-        },
-        {
-          title: 'C# Gizmos',
-          items: [
-            {
-              title: 'String Builder',
-              description: 'Automatic StringBuilder escaper code generation.',
-              gizmo: 'StringBuilder'
             }
           ]
         },
@@ -64,16 +74,6 @@ export default {
               title: 'My IP Address',
               description: 'You can use the My IP Address Gizmo to get your public IP address.',
               gizmo: 'MyIPAddress'
-            }
-          ]
-        },
-        {
-          title: 'Other Gizmos',
-          items: [
-            {
-              title: 'Password Generator',
-              description: 'You can use the Password Generator Gizmo to quickly generate a secure password.',
-              gizmo: 'PasswordGenerator'
             }
           ]
         }

@@ -5,16 +5,24 @@ import Gizmos from '../components/AppGizmos.vue'
 import Footer from '../components/AppFooter.vue'
 import NotFound from "../components/AppNotFound.vue"
 
-// Gizmos Begin
-import JsonBeautifier from '../gizmos/JSON/JSONBeautifier.vue'
-import StringBuilder from '../gizmos/csharp/StringBuilder.vue'
+// Text Gizmos
+import StringBuilder from '../gizmos/text/StringBuilder.vue'
+import DiffChecker from '../gizmos/text/DiffChecker.vue'
+import CaseConverter from '../gizmos/text/CaseConverter.vue'
+
+// Formatter Gizmos
+import JsonBeautifier from '../gizmos/formatter/JSONBeautifier.vue'
+
+// Encode - Decode Gizmos
 import Base64 from '../gizmos/encode-decode/Base64.vue'
-import DiffChecker from '../gizmos/code/DiffChecker.vue'
-import GuidGenerator from '../gizmos/code/GuidGenerator.vue'
-import PasswordGenerator from '../gizmos/other/PasswordGenerator.vue'
-import MyIPAddress from '../gizmos/network/MyIPAddress.vue'
 import URL from '../gizmos/encode-decode/URL.vue'
-// Gizmos End
+
+// Cryptography Gizmos
+import GuidGenerator from '../gizmos/cryptography/GuidGenerator.vue'
+import PasswordGenerator from '../gizmos/cryptography/PasswordGenerator.vue'
+
+// Network Gizmos
+import MyIPAddress from '../gizmos/network/MyIPAddress.vue'
 
 const routes = {
   '/': Gizmos,
@@ -25,7 +33,8 @@ const routes = {
   "/GuidGenerator": GuidGenerator,
   "/PasswordGenerator": PasswordGenerator,
   "/MyIPAddress": MyIPAddress,
-  "/URL": URL
+  "/URL": URL,
+  "/CaseConverter": CaseConverter
 }
 
 const currentPath = ref(window.location.hash)

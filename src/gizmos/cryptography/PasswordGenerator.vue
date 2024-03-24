@@ -35,13 +35,11 @@ function generate() {
         characters = characters.concat(extendedSymbol.split(''));
     }
 
-    console.log(characters)
-
+    // TODO : At least 1 character must be taken from each selected character set.
     var generatedPassword = "";
     for (var i = 0; i < length.value; i++) {
         generatedPassword += characters[Math.floor(Math.random() * characters.length)];
     }
-
     passwordOutput.value = generatedPassword;
 }
 </script>

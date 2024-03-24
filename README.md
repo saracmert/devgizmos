@@ -54,7 +54,7 @@ You can use the Password Generator Gizmo to quickly generate a secure password.
 | **Milestone**                   | **Category**     | **Status** |
 |---------------------------------|------------------|------------|
 | Diff Checker                    | Text             | 🚀         |
-| Case Converter                  | Text             | ❌         |
+| Case Converter                  | Text             | 🚀         |
 | Lorem Ipsum Generator           | Text             | ❌         |
 | URL Parser                      | Text             | ❌         |
 | Slug Generator                  | Text             | ❌         |
