@@ -16,14 +16,24 @@ export default {
               gizmo: 'DiffChecker'
             },
             {
+              title: 'String Builder',
+              description: 'Automatic StringBuilder escaper code generation.',
+              gizmo: 'StringBuilder'
+            },
+            {
               title: 'Case Converter',
               description: 'You can use the Case Converter Gizmo to convert your texts to diffrent case formats.',
               gizmo: 'CaseConverter'
             },
             {
-              title: 'String Builder',
-              description: 'Automatic StringBuilder escaper code generation.',
-              gizmo: 'StringBuilder'
+              title: 'Lorem Ipsum Generator',
+              description: 'You can use the Lorem Ipsum Generator Gizmo to generate Lorem Ipsum texts.',
+              gizmo: 'LoremIpsumGenerator'
+            },
+            {
+              title: 'Fake E-mail Address Generator',
+              description: 'You can use the Fake E-mail Address Generator Gizmo to generate dummy e-mail addresses.',
+              gizmo: 'FakeEmailGenerator'
             }
           ]
         },

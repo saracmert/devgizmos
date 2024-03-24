@@ -10,7 +10,7 @@ export default {
 
 <template>
   <div class="col-4">    
-    <div class="card border p-3">
+    <div class="card border p-3 mb-3">
       <div class="card-body">
         <h5 class="card-title">{{ title }}</h5>
         <p class="card-text">{{ description }}</p>

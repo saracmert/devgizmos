@@ -9,6 +9,8 @@ import NotFound from "../components/AppNotFound.vue"
 import StringBuilder from '../gizmos/text/StringBuilder.vue'
 import DiffChecker from '../gizmos/text/DiffChecker.vue'
 import CaseConverter from '../gizmos/text/CaseConverter.vue'
+import LoremIpsumGenerator from '../gizmos/text/LoremIpsumGenerator.vue'
+import FakeEmailGenerator from '../gizmos/text/FakeEmailGenerator.vue'
 
 // Formatter Gizmos
 import JsonBeautifier from '../gizmos/formatter/JSONBeautifier.vue'
@@ -34,7 +36,9 @@ const routes = {
   "/PasswordGenerator": PasswordGenerator,
   "/MyIPAddress": MyIPAddress,
   "/URL": URL,
-  "/CaseConverter": CaseConverter
+  "/CaseConverter": CaseConverter,
+  "/LoremIpsumGenerator": LoremIpsumGenerator,
+  "/FakeEmailGenerator": FakeEmailGenerator
 }
 
 const currentPath = ref(window.location.hash)
