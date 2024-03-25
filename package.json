@@ -24,7 +24,7 @@
     "jabber": "^1.5.3",
     "monaco-editor": "^0.47.0",
     "monaco-editor-webpack-plugin": "^7.1.0",
-    "monaco-languageclient": "^7.3.0",
+    "monaco-languageclient": "^8.1.0",
     "vue": "^3.4.21"
   },
   "devDependencies": {
