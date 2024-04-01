@@ -28,23 +28,23 @@ import MyIPAddress from '../gizmos/network/MyIPAddress.vue'
 
 const routes = {
   '/': Gizmos,
-  '/JSONBeautifier': JsonBeautifier,
-  '/StringBuilder': StringBuilder,
-  '/Base64': Base64,
-  '/DiffChecker': DiffChecker,
-  "/GuidGenerator": GuidGenerator,
-  "/PasswordGenerator": PasswordGenerator,
-  "/MyIPAddress": MyIPAddress,
-  "/URL": URL,
-  "/CaseConverter": CaseConverter,
-  "/LoremIpsumGenerator": LoremIpsumGenerator,
-  "/FakeEmailGenerator": FakeEmailGenerator
+  'JSONBeautifier': JsonBeautifier,
+  'StringBuilder': StringBuilder,
+  'Base64': Base64,
+  'DiffChecker': DiffChecker,
+  "GuidGenerator": GuidGenerator,
+  "PasswordGenerator": PasswordGenerator,
+  "MyIPAddress": MyIPAddress,
+  "URL": URL,
+  "CaseConverter": CaseConverter,
+  "LoremIpsumGenerator": LoremIpsumGenerator,
+  "FakeEmailGenerator": FakeEmailGenerator
 }
 
-const currentPath = ref(window.location.hash)
+const currentPath = ref(window.location.pathname)
 
-window.addEventListener('hashchange', () => {
-  currentPath.value = window.location.hash
+window.addEventListener('popstate', () => {
+  currentPath.value = window.location.pathname
 })
 
 const currentView = computed(() => {
