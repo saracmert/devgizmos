@@ -111,6 +111,7 @@ generate()
                 <div class="mb-3">
                     Count: <input type="number" class="form-control" v-model="count" @change="generate()" />
                 </div>
+                <button class="btn btn-primary" @click="generate()">Regenerate</button>
             </div>
             <div class="col-10">
                 <div class="row">
