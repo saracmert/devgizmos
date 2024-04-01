@@ -26,6 +26,8 @@ import PasswordGenerator from '../gizmos/cryptography/PasswordGenerator.vue'
 // Network Gizmos
 import MyIPAddress from '../gizmos/network/MyIPAddress.vue'
 
+import robots from '../../public/robots.txt'
+
 const routes = {
   '/': Gizmos,
   'JSONBeautifier': JsonBeautifier,
@@ -38,7 +40,9 @@ const routes = {
   "URL": URL,
   "CaseConverter": CaseConverter,
   "LoremIpsumGenerator": LoremIpsumGenerator,
-  "FakeEmailGenerator": FakeEmailGenerator
+  "FakeEmailGenerator": FakeEmailGenerator,
+
+  "robots.txt": robots
 }
 
 const currentPath = ref(window.location.pathname)

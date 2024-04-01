@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://devgizmos.com/sitemap.xml
+Sitemap: https://devgizmos.com/sitemap/sitemap.xml
