@@ -9,12 +9,10 @@ import { Popover } from 'bootstrap';
 
 createApp(App).mount('#app')
 
-// Create an example popover
 document.querySelectorAll('[data-bs-toggle="popover"]')
   .forEach(popover => {
     new Popover(popover)
   })
-
 
 const getPreferredTheme = () => {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
@@ -23,3 +21,32 @@ const getPreferredTheme = () => {
 window.addEventListener('DOMContentLoaded', () => {
   document.documentElement.setAttribute('data-bs-theme', getPreferredTheme());
 })
+
+/* Copy Button */
+const copyButtonLabel = "Copy";
+let blocks = document.querySelectorAll("pre");
+
+blocks.forEach((block) => {
+  if (navigator.clipboard) {
+    let button = document.createElement("button");
+    button.className = "btn btn-sm btn-primary ms-2";
+    button.innerText = copyButtonLabel;
+    block.appendChild(button);
+    button.addEventListener("click", async () => {
+      await copy(block, button);
+    });
+  }
+});
+
+async function copy(block, button) {
+  let code = block.querySelector("code");
+  let text = code.innerText;
+
+  await navigator.clipboard.writeText(text);
+
+  button.innerText = "Copied!";
+
+  setTimeout(() => {
+    button.innerText = copyButtonLabel;
+  }, 700);
+}

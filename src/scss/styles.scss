@@ -100,3 +100,9 @@ body {
 .editor-min {
   height: calc(50vh - 300px);
 }
+
+pre code {
+  color: var(--bs-code-color) !important;
+  word-wrap: break-word !important;
+  font-size: 0.875em !important;
+}

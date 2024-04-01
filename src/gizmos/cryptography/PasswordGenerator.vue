@@ -1,21 +1,26 @@
 <script setup>
 import { ref } from 'vue'
+import { zxcvbn } from '@zxcvbn-ts/core'
+import PasswordItem from '../../components/AppPasswordItem.vue'
 
 const numbers = ref(true)
 const lowercase = ref(true)
 const uppercase = ref(true)
 const symbols = ref(true)
 const extendedSymbols = ref(false)
-const length = ref(16)
+const similarCharacters = ref(false)
+const length = ref(12)
+const count = ref(12)
 
-const passwordOutput = ref()
+const items = ref([])
 
 function generate() {
-    var number = '1234567890';
-    var lower = 'abcdefghijklmnopqrstuvwxyz';
+    var number = '3456789';
+    var lower = 'abcdefghjkmnpqrstuvwxy';
     var upper = lower.toUpperCase();
-    var symbol = '!@#$%&*()_?[]-+.';
-    var extendedSymbol = ',-:;<=>^{|}~';
+    var symbol = '!@#$%&*_?[]-+.';
+    var extendedSymbol = ',-:;<=>^{}~()';
+    var similar = 'O0il1|2Z';
 
     var characters = [];
 
@@ -34,14 +39,24 @@ function generate() {
     if (extendedSymbols.value) {
         characters = characters.concat(extendedSymbol.split(''));
     }
-
-    // TODO : At least 1 character must be taken from each selected character set.
-    var generatedPassword = "";
-    for (var i = 0; i < length.value; i++) {
-        generatedPassword += characters[Math.floor(Math.random() * characters.length)];
+    if (similarCharacters.value) {
+        characters = characters.concat(similar.split(''));
     }
-    passwordOutput.value = generatedPassword;
+
+    items.value = [];
+    for (var j = 0; j < count.value; j++) {
+        // TODO : At least 1 character must be taken from each selected character set.
+        var generatedPassword = "";
+        for (var i = 0; i < length.value; i++) {
+            var arr = new Uint32Array(1);
+            crypto.getRandomValues(arr);
+            generatedPassword += characters[Math.floor((arr[0] * Math.pow(2,-32)) * characters.length)];
+        }
+        items.value.push(zxcvbn(generatedPassword))
+    }
 }
+
+generate()
 </script>
 
 <template>
@@ -55,42 +70,52 @@ function generate() {
         <div class="row justify-content-center h-100 mt-3">
             <div class="col-2">
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" v-model="numbers" id="cbNumbers">
+                    <input class="form-check-input" type="checkbox" v-model="numbers" id="cbNumbers" @change="generate()">
                     <label class="form-check-label" for="cbNumbers">
                         Numbers
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" v-model="lowercase" id="cbLowercase">
+                    <input class="form-check-input" type="checkbox" v-model="lowercase" id="cbLowercase" @change="generate()">
                     <label class="form-check-label" for="cbLowercase">
                         Lowercase
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" v-model="uppercase" id="cbUppercase">
+                    <input class="form-check-input" type="checkbox" v-model="uppercase" id="cbUppercase" @change="generate()">
                     <label class="form-check-label" for="cbUppercase">
                         Uppercase
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" v-model="symbols" id="cbSymbols">
+                    <input class="form-check-input" type="checkbox" v-model="symbols" id="cbSymbols" @change="generate()">
                     <label class="form-check-label" for="cbSymbols">
-                        Symbols<br />(!@#$%&*()_?[]-+.)
+                        Symbols<br />!@#$%&*_?[]-+.
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" v-model="extendedSymbols" id="cbExtendedSymbols">
+                    <input class="form-check-input" type="checkbox" v-model="extendedSymbols" id="cbExtendedSymbols" @change="generate()">
                     <label class="form-check-label" for="cbExtendedSymbols">
-                        Extended Symbols<br />(,-.:;<=>^{|}~)
+                        Extended Symbols<br />,-.:;<=>^{|}~()
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" v-model="similarCharacters" id="cbSimilarCharacters" @change="generate()">
+                    <label class="form-check-label" for="cbSimilarCharacters">
+                        Similar Characters <br />O0il1|2Z
                     </label>
                 </div>
                 <div class="mb-3">
-                    Length: <input type="number" class="form-control" v-model="length" />
+                    Length: <input type="number" class="form-control" v-model="length" @change="generate()" />
                 </div>
-                <button class="btn btn-primary" @click="generate()">Generate</button>
+                <div class="mb-3">
+                    Count: <input type="number" class="form-control" v-model="count" @change="generate()" />
+                </div>
             </div>
             <div class="col-10">
-                <textarea v-model="passwordOutput" class="form-control" rows="14" disabled />
+                <div class="row">
+                    <PasswordItem v-for="item in items" :password="item.password" :score="item.score" />
+                </div>
             </div>
         </div>
     </div>
