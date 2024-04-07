@@ -9,8 +9,8 @@ export default {
 </script>
 
 <template>
-  <div class="col-4">    
-    <div class="card border p-3 mb-3">
+  <div class="col-4 mb-3">
+    <div class="card border p-3 h-100">
       <div class="card-body">
         <h4 class="card-title">{{ title }}</h4>
         <p class="card-text">{{ description }}</p>
