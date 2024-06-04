@@ -19,7 +19,7 @@
   "dependencies": {
     "@monaco-editor/loader": "^1.4.0",
     "@popperjs/core": "^2.11.8",
-    "@vueuse/core": "^10.9.0",
+    "@vueuse/core": "^10.10.0",
     "@zxcvbn-ts/core": "^3.0.4",
     "bootstrap": "^5.3.3",
     "jabber": "^1.5.3",
@@ -29,10 +29,10 @@
     "vue": "^3.4.27"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue": "^5.0.5",
     "eslint": "^9.4.0",
     "eslint-plugin-vue": "^9.26.0",
-    "sass": "^1.77.2",
+    "sass": "^1.77.4",
     "sass-loader": "^14.2.1",
     "vite": "^5.2.11",
     "vue-loader": "^17.4.2"
