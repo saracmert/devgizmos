@@ -26,7 +26,7 @@
     "monaco-editor": "^0.50.0",
     "monaco-editor-webpack-plugin": "^7.1.0",
     "monaco-languageclient": "^8.7.0",
-    "vue": "^3.4.35"
+    "vue": "^3.4.37"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
