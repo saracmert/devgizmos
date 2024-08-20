@@ -29,6 +29,18 @@ export default {
                 });
             }
         });
+        window.addEventListener("resize", this.resize);
+    },
+    async unmounted() {
+      window.removeEventListener("resize", this.resize);
+    },
+    methods: {
+      resize(e) {
+        var editors = monaco.editor.getEditors();
+        for (var i = 0; i < editors.length; i++) {
+            editors[i].layout();
+        }
+      }
     }
 };
 </script>
