@@ -30,13 +30,15 @@ function initCopy() {
 
     blocks.forEach((block) => {
       if (navigator.clipboard) {
-        let button = document.createElement("button");
-        button.className = "btn btn-sm btn-primary ms-2";
-        button.innerText = copyButtonLabel;
-        block.appendChild(button);
-        button.addEventListener("click", async () => {
-          await copy(block, button);
-        });
+        if (block.querySelector("button") == null) {
+          let button = document.createElement("button");
+          button.className = "btn btn-sm btn-primary ms-2";
+          button.innerText = copyButtonLabel;
+          block.appendChild(button);
+          button.addEventListener("click", async () => {
+            await copy(block, button);
+          });
+        }
       }
     });
   }, 150);
