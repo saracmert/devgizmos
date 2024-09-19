@@ -12,7 +12,7 @@ const campaignContent = ref()
 let urlOutput = ref()
 
 function generate() {
-    if (url.value == undefined || url.value == "" || !validURL(url.value)) {
+    if (url.value == undefined || url.value == "" || !isValidUrl(url.value)) {
         alert("Invalid URL!");
         return;
     }
@@ -52,14 +52,13 @@ function generate() {
     window.initCopy();
 }
 
-function validURL(str) {
-  var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-    '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-  return !!pattern.test(str);
+function isValidUrl(url) {
+    try {
+        new URL(url);
+    } catch (e) {
+        return false;
+    }
+    return true;
 }
 </script>
 
