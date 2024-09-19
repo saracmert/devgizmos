@@ -54,6 +54,6 @@ Whether you’re working on web applications, mobile apps, or desktop software, 
 | RGB / HEX                       | Converters       | ❌         |
 | Color Picker                    | Design           | ❌         |
 | SVG QR Code Generator           | Design           | ❌         |
-| UTM Generator                   | Marketing        | ❌         |
+| UTM Generator                   | Marketing        | 🚀         |
 | What's my IP?                   | Network          | 🚀         |
 | CIDR Calculator                 | Network          | ❌         |

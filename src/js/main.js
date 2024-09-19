@@ -20,23 +20,27 @@ const getPreferredTheme = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   document.documentElement.setAttribute('data-bs-theme', getPreferredTheme());
+  initCopy();
 })
 
-/* Copy Button */
-const copyButtonLabel = "Copy";
-let blocks = document.querySelectorAll("pre");
+function initCopy() {
+  setTimeout(function() {
+    const copyButtonLabel = "Copy";
+    let blocks = document.querySelectorAll("pre");
 
-blocks.forEach((block) => {
-  if (navigator.clipboard) {
-    let button = document.createElement("button");
-    button.className = "btn btn-sm btn-primary ms-2";
-    button.innerText = copyButtonLabel;
-    block.appendChild(button);
-    button.addEventListener("click", async () => {
-      await copy(block, button);
+    blocks.forEach((block) => {
+      if (navigator.clipboard) {
+        let button = document.createElement("button");
+        button.className = "btn btn-sm btn-primary ms-2";
+        button.innerText = copyButtonLabel;
+        block.appendChild(button);
+        button.addEventListener("click", async () => {
+          await copy(block, button);
+        });
+      }
     });
-  }
-});
+  }, 150);
+}
 
 async function copy(block, button) {
   let code = block.querySelector("code");
@@ -50,3 +54,5 @@ async function copy(block, button) {
     button.innerText = copyButtonLabel;
   }, 700);
 }
+
+window.initCopy = () => initCopy();

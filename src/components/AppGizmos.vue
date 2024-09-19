@@ -1,5 +1,7 @@
 <script setup>
+import { ref } from 'vue'
 import GizmoCategory from './AppGizmoCategory.vue'
+const quickSearchInput = ref('')
 </script>
 
 <script>
@@ -86,6 +88,16 @@ export default {
               gizmo: 'MyIPAddress'
             }
           ]
+        },
+        {
+          title: 'Marketing Gizmos',
+          items: [
+            {
+              title: 'UTM Link Generator',
+              description: 'You can create campaign links for Google Analytics using the UTM Link Generator Gizmo.',
+              gizmo: 'UTMLinkGenerator'
+            }
+          ]
         }
       ]
     }
@@ -111,7 +123,14 @@ export default {
       range of utilities to enhance your productivity and streamline your workflow. 🚀</p>
   </div>
 
-  <div class="row mt-5">
-    <GizmoCategory v-for="category in categories" :text="category.title" :items="category.items" />
+  <div class="row">
+    <div class="mt-3 mb-3">
+      <label for="txtQuickSearch" class="form-label fw-bold">Quick Search:</label>
+      <input type="text" v-model="quickSearchInput" class="form-control border-primary" id="txtQuickSearch" placeholder="Enter your keyword" autofocus>
+    </div>
+  </div>
+
+  <div class="row">
+    <GizmoCategory v-for="category in categories" :text="category.title" :items="category.items" :filter="quickSearchInput" />
   </div>
 </template>

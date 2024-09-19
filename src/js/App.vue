@@ -26,6 +26,9 @@ import PasswordGenerator from '../gizmos/cryptography/PasswordGenerator.vue'
 // Network Gizmos
 import MyIPAddress from '../gizmos/network/MyIPAddress.vue'
 
+// Marketing Gizmos
+import UTMLinkGenerator from '../gizmos/marketing/UTMLinkGenerator.vue'
+
 import robots from '../../public/robots.txt'
 
 const routes = {
@@ -41,6 +44,7 @@ const routes = {
   "CaseConverter": CaseConverter,
   "LoremIpsumGenerator": LoremIpsumGenerator,
   "FakeEmailGenerator": FakeEmailGenerator,
+  "UTMLinkGenerator": UTMLinkGenerator,
 
   "robots.txt": robots
 }
@@ -57,7 +61,7 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <div class="container py-4 px-3 mx-auto">
+  <div class="container-fluid py-4 px-3 mx-auto">
     <Header />
     <component :is="currentView" />
     <Footer />
