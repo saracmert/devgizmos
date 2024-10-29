@@ -23,17 +23,17 @@
     "@zxcvbn-ts/core": "^3.0.4",
     "bootstrap": "^5.3.3",
     "jabber": "^1.5.3",
-    "monaco-editor": "^0.51.0",
+    "monaco-editor": "^0.52.0",
     "monaco-editor-webpack-plugin": "^7.1.0",
     "monaco-languageclient": "^8.8.3",
     "vue": "^3.5.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.3",
-    "eslint": "^9.10.0",
+    "eslint": "^9.13.0",
     "eslint-plugin-vue": "^9.28.0",
     "sass": "^1.78.0",
-    "sass-loader": "^16.0.1",
+    "sass-loader": "^16.0.2",
     "vite": "^5.4.10",
     "vue-loader": "^17.4.2"
   }
