@@ -19,7 +19,7 @@
   "dependencies": {
     "@monaco-editor/loader": "^1.4.0",
     "@popperjs/core": "^2.11.8",
-    "@vueuse/core": "^11.0.3",
+    "@vueuse/core": "^12.0.0",
     "@zxcvbn-ts/core": "^3.0.4",
     "bootstrap": "^5.3.3",
     "jabber": "^1.5.3",
