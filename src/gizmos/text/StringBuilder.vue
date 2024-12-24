@@ -24,7 +24,7 @@ export default {
             var result = "StringBuilder myString = new StringBuilder();" + newLine + newLine;
             var arrayOfLines = string.match(/[^\r\n]+/g);
             for (var i = 0; i < arrayOfLines.length; i++){
-                result += "myString.AppendLine(\"" + arrayOfLines[i].replace(/"/g, '\\"') + "\");" + newLine;
+                result += "myString.AppendLine(\"" + arrayOfLines[i].replace(/\\/g, '\\\\').replace(/"/g, '\\"') + "\");" + newLine;
             }
             result += newLine + "Console.WriteLine(myString.ToString());"
             return result;
