@@ -23,7 +23,7 @@
     "@zxcvbn-ts/core": "^3.0.4",
     "bootstrap": "^5.3.3",
     "jabber": "^1.5.3",
-    "monaco-editor": "^0.52.0",
+    "monaco-editor": "^0.52.2",
     "monaco-editor-webpack-plugin": "^7.1.0",
     "monaco-languageclient": "^8.8.3",
     "vue": "^3.5.13"
