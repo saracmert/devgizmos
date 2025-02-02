@@ -105,6 +105,7 @@ body {
   $height: 1vh * $i;
   .editor-#{$i} { 
         height: calc($height - 200px);
+        min-height: 250px;
       }
 }
 
