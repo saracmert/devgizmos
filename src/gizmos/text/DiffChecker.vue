@@ -50,20 +50,18 @@ export default {
         <div class="row">
             <div class="col mb-3">
                 <h1>Diff Checker</h1>
-                <span>You can use the Diff Checker Gizmo to view the differences between 2 codes.</span>
             </div>
         </div>
         <div class="row justify-content-center h-100">
-            <div class="col-6">
+            <div class="col-6 p-0">
                 <h3>Original Code</h3>
                 <div id="editor1" class="editor-min w-100"></div>
             </div>
-            <div class="col-6">
+            <div class="col-6 p-0">
                 <h3>Modified Code</h3>
                 <div id="editor2" class="editor-min w-100"></div>
             </div>
-            <div class="col-12 mt-3">
-                <h3>Result</h3>
+            <div class="col-12 p-0 mt-3">
                 <div id="editor3" class="editor-min w-100"></div>
             </div>
         </div>
