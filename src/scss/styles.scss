@@ -101,12 +101,11 @@ body {
   height: calc(50vh - 200px);
 }
 
-.editor-25 {
-  height: calc(25vh - 200px);
-}
-
-.editor-75 {
-  height: calc(75vh - 200px);
+@for $i from 1 through 100 {
+  $height: 1vh * $i;
+  .editor-#{$i} { 
+        height: calc($height - 200px);
+      }
 }
 
 pre code {
