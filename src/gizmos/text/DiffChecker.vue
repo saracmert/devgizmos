@@ -53,16 +53,16 @@ export default {
             </div>
         </div>
         <div class="row justify-content-center h-100">
-            <div class="col-6 p-0">
+            <div class="col-6 pe-0 pt-0 pb-0">
                 <h3>Original Code</h3>
-                <div id="editor1" class="editor-min w-100"></div>
+                <div id="editor1" class="editor-25 w-100"></div>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-6 ps-0 pt-0 pb-0">
                 <h3>Modified Code</h3>
-                <div id="editor2" class="editor-min w-100"></div>
+                <div id="editor2" class="editor-25 w-100"></div>
             </div>
-            <div class="col-12 p-0 mt-3">
-                <div id="editor3" class="editor-min w-100"></div>
+            <div class="col-12 pt-0 pb-0 mt-3">
+                <div id="editor3" class="editor-75 w-100"></div>
             </div>
         </div>
     </div>
