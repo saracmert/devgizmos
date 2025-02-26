@@ -47,6 +47,8 @@ Whether you’re working on web applications, mobile apps, or desktop software, 
 | Checksum Calculator             | Cryptography     | ❌         |
 | Password Generator              | Cryptography     | ⭐         |
 | Guid Generator                  | Cryptography     | 🚀         |
+| MD5 Hash Generator              | Cryptography     | 🚀         |
+| SHA Hash Generator              | Cryptography     | 🚀         |
 | URL                             | Encode - Decode  | 🚀         |
 | Base64                          | Encode - Decode  | 🚀         |
 | JWT Decoder                     | Encode - Decode  | ❌         |

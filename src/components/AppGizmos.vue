@@ -51,6 +51,16 @@ export default {
               title: 'Password Generator',
               description: 'You can use the Password Generator Gizmo to quickly generate a secure password.',
               gizmo: 'PasswordGenerator'
+            },
+            {
+              title: 'MD5 Hash Generator',
+              description: 'You can use the Guid Generator Gizmo to quickly generate a MD5 Hash.',
+              gizmo: 'MD5'
+            },
+            {
+              title: 'SHA Hash Generator',
+              description: 'You can use the Guid Generator Gizmo to quickly generate a SHA-512, SHA-384, SHA-512/224, SHA-512/256 Hash.',
+              gizmo: 'SHA'
             }
           ]
         },
@@ -116,11 +126,12 @@ export default {
     <p>It's called “<a href="https://eksisozluk.com/zamazingo--61113" target="_blank">zamazingo</a>”, “<a
         href="https://eksisozluk.com/zimbirti--60489" target="_blank">zımbırtı</a>” or “<a
         href="https://eksisozluk.com/dalgametre--93562" target="_blank">dalgametre</a>” in Turkish.</p>
-    <p class="fs-4">Devgizmos, an open-source project, brings together tools frequently needed during software
+    <p class="fs-5">Devgizmos, an open-source project, brings together tools frequently needed during software
       development. It aims to facilitate the development process by providing a collection of essential tools for
-      developers.</p>
-    <p class="fs-4">Whether you’re working on web applications, mobile apps, or desktop software, Devgizmos offers a
+      developers. Whether you’re working on web applications, mobile apps, or desktop software, Devgizmos offers a
       range of utilities to enhance your productivity and streamline your workflow. 🚀</p>
+    <p class="fs-5">Devgizmos utilizes other open-source libraries within its simple toolsets.
+      <strong>You will never see ads here.</strong> If you'd like to support the domain name and Cloudflare payments, <a href="https://www.buymeacoffee.com/mertsarac" target="_blank">you can buy us a coffee.</a></p>
   </div>
 
   <div class="row">

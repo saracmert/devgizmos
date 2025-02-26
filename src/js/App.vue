@@ -22,6 +22,8 @@ import URL from '../gizmos/encode-decode/URL.vue'
 // Cryptography Gizmos
 import GuidGenerator from '../gizmos/cryptography/GuidGenerator.vue'
 import PasswordGenerator from '../gizmos/cryptography/PasswordGenerator.vue'
+import MD5 from '../gizmos/cryptography/MD5.vue'
+import SHA from '../gizmos/cryptography/SHA.vue'
 
 // Network Gizmos
 import MyIPAddress from '../gizmos/network/MyIPAddress.vue'
@@ -39,6 +41,8 @@ const routes = {
   'DiffChecker': DiffChecker,
   "GuidGenerator": GuidGenerator,
   "PasswordGenerator": PasswordGenerator,
+  "MD5": MD5,
+  "SHA": SHA,
   "MyIPAddress": MyIPAddress,
   "URL": URL,
   "CaseConverter": CaseConverter,
@@ -61,7 +65,7 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <div class="container-fluid py-4 px-3 mx-auto">
+  <div class="container-fluid py-2 px-3 mx-auto">
     <Header />
     <component :is="currentView" />
     <Footer />
