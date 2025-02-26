@@ -131,7 +131,7 @@ export default {
       developers. Whether you’re working on web applications, mobile apps, or desktop software, Devgizmos offers a
       range of utilities to enhance your productivity and streamline your workflow. 🚀</p>
     <p class="fs-5">Devgizmos utilizes other open-source libraries within its simple toolsets.
-      <strong>You will never see ads here.</strong> If you'd like to support the domain name and Cloudflare payments, <a href="https://www.buymeacoffee.com/mertsarac" target="_blank">you can buy us a coffee.</a></p>
+      <strong>You will never see ads here.</strong> If you'd like to support the domain name and Cloudflare payments, <a href="https://www.buymeacoffee.com/mertsarac" target="_blank">you can buy us a coffee.</a> ☕</p>
   </div>
 
   <div class="row">
