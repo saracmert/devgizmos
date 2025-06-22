@@ -45,7 +45,6 @@ function copyTags(tags) {
   navigator.clipboard.writeText(text)
 }
 
-// Favicon ve domain yardımcıları
 function getDomain(link) {
   try {
     return new URL(link).hostname.replace(/^www\./, '')
@@ -53,10 +52,16 @@ function getDomain(link) {
     return ''
   }
 }
+
 function getFavicon(link) {
   try {
-    const domain = new URL(link).origin
-    return `${domain}/favicon.ico`
+    const domain = new URL(link).hostname.replace(/^www\./, '')
+    const origin = new URL(link).origin
+    const favicon = `${origin}/favicon.ico`
+    if (favicon.endsWith('.ico')) {
+      return `https://icons.duckduckgo.com/ip3/${domain}.ico`
+    }
+    return favicon
   } catch {
     return ''
   }
@@ -64,53 +69,52 @@ function getFavicon(link) {
 </script>
 
 <template>
-  <div class="container-fluid p-0">
-    <div class="row">
-      <div class="col mb-3">
-        <h1>Open Graph & X Card Preview</h1>
-        <span>
-          You can use the Open Graph & X Card Preview Gizmo to preview and generate Open Graph and X Card meta tags for your web pages.
-        </span>
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-lg-6 col-12">
-        <div class="mb-3">
-          <label class="form-label">URL</label>
-          <input class="form-control" v-model="url" placeholder="https://example.com" @keyup.enter="fetchMeta" />
-        </div>
-        <button class="btn btn-primary" @click="fetchMeta" :disabled="loading">
-          {{ loading ? 'Loading...' : 'Fetch Meta Tags' }}
-        </button>
-        <div v-if="error" class="alert alert-danger mt-3">{{ error }}</div>
-      </div>
-      <div class="col-lg-6 col-12 mt-3 mt-lg-0">
-
-
-        <!-- Card Preview -->
-        <div
-          class="og-card-preview shadow-sm mt-4"
-          v-if="og['og:title'] || og['og:description'] || og['og:image']"
-        >
-          <div class="og-card-image" v-if="og['og:image']">
-            <img :src="og['og:image']" alt="Preview Image" />
-          </div>
-          <div class="og-card-content">
-            <div class="og-card-site mb-1">
-              <img v-if="getFavicon(url)" :src="getFavicon(url)" class="og-card-favicon" alt="favicon" />
-              <span>{{ og['og:site_name'] || getDomain(url) }}</span>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col mb-3">
+                <h1>Open Graph & X Card Preview</h1>
+                <span>
+                    You can use the Open Graph & X Card Preview Gizmo to preview and generate Open Graph and X Card meta
+                    tags for your web pages.
+                </span>
             </div>
-            <div class="og-card-title">{{ og['og:title'] || 'Preview Title' }}</div>
-            <div class="og-card-desc">{{ og['og:description'] || 'Preview description...' }}</div>
-            <div class="og-card-url text-muted">{{ og['og:url'] || url }}</div>
-          </div>
         </div>
-        <div v-else-if="Object.keys(og).length === 0 && Object.keys(twitter).length === 0 && !error && !loading" class="text-muted mt-3">
-          No meta tags to preview yet.
+        <div class="row mt-3">
+            <div class="col-lg-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">URL</label>
+                    <input class="form-control" v-model="url" placeholder="https://example.com"
+                        @keyup.enter="fetchMeta" />
+                </div>
+                <button class="btn btn-primary" @click="fetchMeta" :disabled="loading">
+                    {{ loading ? 'Loading...' : 'Fetch Meta Tags' }}
+                </button>
+                <div v-if="error" class="alert alert-danger mt-3">{{ error }}</div>
+            </div>
+            <div class="col-lg-6 col-12 mt-3 mt-lg-0">
+                <!-- Card Preview -->
+                <div class="og-card-preview shadow-sm mt-4"
+                    v-if="og['og:title'] || og['og:description'] || og['og:image'] || og['og:site_name']">
+                    <div class="og-card-image" v-if="og['og:image']">
+                        <img :src="og['og:image']" alt="Preview Image" />
+                    </div>
+                    <div class="og-card-content">
+                        <div class="og-card-site mb-1">
+                            <img v-if="getFavicon(url)" :src="getFavicon(url)" class="og-card-favicon" alt="favicon" />
+                            <span>{{ og['og:site_name'] || getDomain(url) }}</span>
+                        </div>
+                        <div class="og-card-title">{{ og['og:title'] || 'Preview Title' }}</div>
+                        <div class="og-card-desc">{{ og['og:description'] || 'Preview description...' }}</div>
+                        <div class="og-card-url">{{ og['og:url'] || url }}</div>
+                    </div>
+                </div>
+                <div v-else-if="Object.keys(og).length === 0 && Object.keys(twitter).length === 0 && !error && !loading"
+                    class="text-muted mt-3">
+                    No meta tags to preview yet.
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </template>
 
 <style scoped>
