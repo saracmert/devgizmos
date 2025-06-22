@@ -161,7 +161,7 @@ function getFavicon(link) {
                 <div v-if="Object.keys(og).length">
                     <div class="mb-2 fw-semibold d-flex align-items-center">
                         Open Graph Tags
-                        <button class="btn btn-outline-secondary btn-sm ms-auto" @click="copyTags(og)">Copy</button>
+                        <button class="btn btn-primary btn-sm ms-auto" @click="copyTags(og)">Copy</button>
                     </div>
                     <textarea class="form-control mb-3" rows="7" readonly
                         :value="Object.entries(og).map(([k, v]) => `<meta property=&quot;${k}&quot; content=&quot;${v}&quot;>`).join('\n')"></textarea>
@@ -169,7 +169,7 @@ function getFavicon(link) {
                 <div v-if="Object.keys(twitter).length">
                     <div class="mb-2 fw-semibold d-flex align-items-center">
                         X Card Tags
-                        <button class="btn btn-outline-secondary btn-sm ms-auto"
+                        <button class="btn btn-primary btn-sm ms-auto"
                             @click="copyTags(twitter)">Copy</button>
                     </div>
                     <textarea class="form-control mb-3" rows="7" readonly
