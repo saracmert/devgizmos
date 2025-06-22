@@ -82,7 +82,7 @@ Whether you’re working on web applications, mobile apps, or desktop software, 
 | Color Palette Generator         | Design           | ❌         |
 | Contrast Checker                | Design           | ❌         |
 | UTM Generator                   | Marketing        | 🚀         |
-| Open Graph & X Card Preview     | Marketing        | ❌         |
+| Open Graph & X Card Preview     | Marketing        | 🚀         |
 | Emoji Picker                    | Marketing        | ❌         |
 | Hashtag Suggestion Tool         | Marketing        | ❌         |
 | What's my IP?                   | Network          | 🚀         |

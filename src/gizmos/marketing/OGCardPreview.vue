@@ -73,14 +73,24 @@ function copyTags(tags) {
             Open Graph Tags
             <button class="btn btn-outline-secondary btn-sm ms-auto" @click="copyTags(og)">Copy</button>
           </div>
-          <textarea class="form-control bg-light mb-3" rows="7" readonly :value="Object.entries(og).map(([k,v]) => `<meta property=\"${k}\" content=\"${v}\">`).join('\n')"></textarea>
+          <textarea
+            class="form-control bg-light mb-3"
+            rows="7"
+            readonly
+            :value="Object.entries(og).map(([k,v]) => `<meta property=&quot;${k}&quot; content=&quot;${v}&quot;>`).join('\n')"
+          ></textarea>
         </div>
         <div v-if="Object.keys(twitter).length">
           <div class="mb-2 fw-semibold d-flex align-items-center">
             X Card Tags
             <button class="btn btn-outline-secondary btn-sm ms-auto" @click="copyTags(twitter)">Copy</button>
           </div>
-          <textarea class="form-control bg-light mb-3" rows="7" readonly :value="Object.entries(twitter).map(([k,v]) => `<meta name=\"${k}\" content=\"${v}\">`).join('\n')"></textarea>
+          <textarea
+            class="form-control bg-light mb-3"
+            rows="7"
+            readonly
+            :value="Object.entries(twitter).map(([k,v]) => `<meta name=&quot;${k}&quot; content=&quot;${v}&quot;>`).join('\n')"
+          ></textarea>
         </div>
         <div class="card shadow-sm mt-4" v-if="og['og:title'] || og['og:description'] || og['og:image']">
           <div class="card-body">
