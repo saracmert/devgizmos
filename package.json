@@ -18,7 +18,6 @@
   },
   "dependencies": {
     "@monaco-editor/loader": "^1.5.0",
-    "@opengovsg/credits-generator": "^1.0.7",
     "@popperjs/core": "^2.11.8",
     "@vueuse/core": "^13.3.0",
     "@zxcvbn-ts/core": "^3.0.4",
