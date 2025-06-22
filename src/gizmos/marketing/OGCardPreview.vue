@@ -6,22 +6,20 @@ const loading = ref(false)
 const error = ref('')
 const og = ref({})
 const twitter = ref({})
+const structuredData = ref([])
 
-// OG zorunlu alanlar
 const requiredOgTags = [
   { name: 'og:title', label: 'og:title' },
   { name: 'og:description', label: 'og:description' },
   { name: 'og:image', label: 'og:image' }
 ]
 
-// OG opsiyonel alanlar
 const infoOgTags = [
   { name: 'og:site_name', label: 'og:site_name' },
   { name: 'og:url', label: 'og:url' },
   { name: 'og:type', label: 'og:type' }
 ]
 
-// Twitter Card zorunlu alanlar (summary_large_image için)
 const requiredTwitterTags = [
   { name: 'twitter:card', label: 'twitter:card' },
   { name: 'twitter:title', label: 'twitter:title' },
@@ -29,13 +27,11 @@ const requiredTwitterTags = [
   { name: 'twitter:image', label: 'twitter:image' }
 ]
 
-// Twitter opsiyonel alanlar
 const infoTwitterTags = [
   { name: 'twitter:site', label: 'twitter:site' },
   { name: 'twitter:creator', label: 'twitter:creator' }
 ]
 
-// OG uyarı listeleri
 const emptyOgTags = computed(() =>
   Object.entries(og.value)
     .filter(([k, v]) => v === '' && !infoOgTags.some(t => t.name === k))
@@ -52,7 +48,6 @@ const infoEmptyOgTags = computed(() =>
     .map(tag => tag.label)
 )
 
-// Twitter uyarı listeleri
 const emptyTwitterTags = computed(() =>
   Object.entries(twitter.value)
     .filter(([k, v]) => v === '' && !infoTwitterTags.some(t => t.name === k))
@@ -73,6 +68,7 @@ async function fetchMeta() {
   error.value = ''
   og.value = {}
   twitter.value = {}
+  structuredData.value = []
   if (!url.value) {
     error.value = 'Please enter a URL.'
     return
@@ -84,8 +80,13 @@ async function fetchMeta() {
     if (resp.ok) {
       og.value = data.og || {}
       twitter.value = data.twitter || {}
-      if (Object.keys(og.value).length === 0 && Object.keys(twitter.value).length === 0) {
-        error.value = 'No Open Graph or X Card meta tags found.'
+      structuredData.value = data.structuredData || []
+      if (
+        Object.keys(og.value).length === 0 &&
+        Object.keys(twitter.value).length === 0 &&
+        structuredData.value.length === 0
+      ) {
+        error.value = 'No Open Graph, X Card or structured data meta tags found.'
       }
     } else {
       error.value = data.error || 'Failed to fetch meta tags.'
@@ -94,6 +95,10 @@ async function fetchMeta() {
     error.value = 'Network error or invalid response.'
   }
   loading.value = false
+}
+
+function formatJson(obj) {
+  return JSON.stringify(obj, null, 2)
 }
 
 function copyTags(tags) {
@@ -128,6 +133,134 @@ function getFavicon(link) {
     return ''
   }
 }
+
+function getStructuredCardComponent(item) {
+  if (!item || !item['@type']) return StructuredDataRawCard
+  const type = Array.isArray(item['@type']) ? item['@type'][0] : item['@type']
+  if (type === 'Product') return ProductCard
+  if (type === 'Event') return EventCard
+  if (type === 'Recipe') return RecipeCard
+  if (type === 'Article' || type === 'NewsArticle' || type === 'BlogPosting') return ArticleCard
+  return StructuredDataRawCard
+}
+
+const ProductCard = {
+  props: ['data'],
+  template: `
+    <div class="card border-success shadow-sm mb-2">
+      <div class="card-body d-flex flex-row">
+        <div v-if="data.image" class="me-3" style="min-width:120px;">
+          <img :src="Array.isArray(data.image) ? data.image[0] : data.image"
+               alt="Product Image"
+               style="width:120px;height:120px;object-fit:contain;border-radius:8px;background:#fafafa;">
+        </div>
+        <div>
+          <div class="fw-bold fs-5 mb-1">{{ data.name || 'Product Name' }}</div>
+          <div class="mb-2 text-muted" v-if="data.brand">
+            Brand: <span>{{ typeof data.brand === 'object' ? data.brand.name : data.brand }}</span>
+          </div>
+          <div class="mb-2" v-if="data.description">{{ data.description }}</div>
+          <div v-if="data.offers">
+            <span class="badge bg-success fs-6">
+              {{ data.offers.priceCurrency || '$' }}{{ data.offers.price }}
+            </span>
+            <span class="ms-2 text-muted" v-if="data.offers.availability">
+              {{ data.offers.availability.replace(/^.*\//, '') }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+}
+
+const EventCard = {
+  props: ['data'],
+  template: `
+    <div class="card border-info shadow-sm mb-2">
+      <div class="card-body">
+        <div class="fw-bold fs-5 mb-1">{{ data.name || 'Event Name' }}</div>
+        <div class="mb-2" v-if="data.startDate">
+          <span>📅</span> {{ data.startDate }}
+        </div>
+        <div class="mb-2" v-if="data.location">
+          <span>📍</span>
+          {{ typeof data.location === 'object' ? data.location.name : data.location }}
+        </div>
+        <div class="mb-2" v-if="data.description">{{ data.description }}</div>
+      </div>
+    </div>
+  `
+}
+
+const RecipeCard = {
+  props: ['data'],
+  template: `
+    <div class="card border-warning shadow-sm mb-2">
+      <div class="card-body">
+        <div class="fw-bold fs-5 mb-1">{{ data.name || 'Recipe Name' }}</div>
+        <div class="mb-2" v-if="data.image">
+          <img :src="Array.isArray(data.image) ? data.image[0] : data.image"
+               alt="Recipe Image"
+               style="width:100px;height:100px;object-fit:cover;border-radius:8px;background:#fafafa;">
+        </div>
+        <div class="mb-2" v-if="data.recipeIngredient">
+          <strong>Ingredients:</strong>
+          <ul>
+            <li v-for="(ing, i) in data.recipeIngredient" :key="i">{{ ing }}</li>
+          </ul>
+        </div>
+        <div class="mb-2" v-if="data.recipeInstructions">
+          <strong>Instructions:</strong>
+          <div v-if="Array.isArray(data.recipeInstructions)">
+            <ol>
+              <li v-for="(step, i) in data.recipeInstructions" :key="i">
+                {{ typeof step === 'string' ? step : step.text }}
+              </li>
+            </ol>
+          </div>
+          <div v-else>{{ data.recipeInstructions }}</div>
+        </div>
+      </div>
+    </div>
+  `
+}
+
+const ArticleCard = {
+  props: ['data'],
+  template: `
+    <div class="card border-primary shadow-sm mb-2">
+      <div class="card-body">
+        <div class="fw-bold fs-5 mb-1">{{ data.headline || data.name || 'Article Title' }}</div>
+        <div class="mb-2 text-muted" v-if="data.author">
+          <span>✍️</span>
+          {{ typeof data.author === 'object' ? data.author.name : data.author }}
+        </div>
+        <div class="mb-2" v-if="data.datePublished">
+          <span>📅</span> {{ data.datePublished }}
+        </div>
+        <div class="mb-2" v-if="data.image">
+          <img :src="Array.isArray(data.image) ? data.image[0] : data.image"
+               alt="Article Image"
+               style="width:100px;height:100px;object-fit:cover;border-radius:8px;background:#fafafa;">
+        </div>
+        <div class="mb-2" v-if="data.description">{{ data.description }}</div>
+      </div>
+    </div>
+  `
+}
+
+const StructuredDataRawCard = {
+  props: ['data'],
+  template: `
+    <div class="card border-secondary shadow-sm mb-2">
+      <div class="card-body">
+        <div class="fw-bold fs-6 mb-2">Structured Data ({{ data['@type'] || 'Unknown' }})</div>
+        <pre class="bg-light p-2 rounded" style="font-size:0.95em; max-height:300px; overflow:auto;">{{ JSON.stringify(data, null, 2) }}</pre>
+      </div>
+    </div>
+  `
+}
 </script>
 
 <template>
@@ -150,8 +283,6 @@ function getFavicon(link) {
           {{ loading ? 'Loading...' : 'Fetch Meta Tags' }}
         </button>
         <div v-if="error" class="alert alert-danger mt-3">{{ error }}</div>
-
-        <!-- OG Uyarıları -->
         <div v-if="emptyOgTags.length" class="alert alert-warning mt-3">
           <strong>Warning:</strong> The following Open Graph tags are present but empty:
           <ul class="mb-0">
@@ -171,8 +302,6 @@ function getFavicon(link) {
           </ul>
           These tags are not required, but filling them can improve your card's appearance.
         </div>
-
-        <!-- Twitter Uyarıları -->
         <div v-if="emptyTwitterTags.length" class="alert alert-warning mt-3">
           <strong>Warning:</strong> The following Twitter Card tags are present but empty:
           <ul class="mb-0">
@@ -192,9 +321,11 @@ function getFavicon(link) {
           </ul>
           These tags are not required, but filling them can improve your card's appearance on X (Twitter).
         </div>
+        <div v-for="(item, idx) in structuredData" :key="idx" class="mb-3">
+          <component :is="getStructuredCardComponent(item)" :data="item" />
+        </div>
       </div>
       <div class="col-lg-6 col-12 mt-3 mt-lg-0">
-        <!-- Card Preview -->
         <div
           class="og-card-preview shadow-sm mt-4"
           v-if="og['og:title'] || og['og:description'] || og['og:image'] || og['og:site_name'] || twitter['twitter:card']"

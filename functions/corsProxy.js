@@ -31,22 +31,13 @@ export async function onRequest(context) {
         
         const og = {}
         const tw = {}
-        
+        const structuredData = []
+
         const ogKeys = [
-            'og:title',
-            'og:description',
-            'og:image',
-            'og:url',
-            'og:site_name',
-            'og:type'
+            'og:title', 'og:description', 'og:image', 'og:url', 'og:site_name', 'og:type'
         ]
         const twitterKeys = [
-            'twitter:card',
-            'twitter:title',
-            'twitter:description',
-            'twitter:image',
-            'twitter:site',
-            'twitter:creator'
+            'twitter:card', 'twitter:title', 'twitter:description', 'twitter:image', 'twitter:site', 'twitter:creator'
         ]
 
         ogKeys.forEach(key => { og[key] = '' })
@@ -64,7 +55,18 @@ export async function onRequest(context) {
                 if (name && name[1].startsWith('twitter:')) tw[name[1]] = content[1]
             }
         }
-        return new Response(JSON.stringify({ og, twitter: tw }), {
+
+        // Structured data (JSON-LD) yakala
+        const ldJsonRegex = /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi
+        let ldMatch
+        while ((ldMatch = ldJsonRegex.exec(html))) {
+            try {
+                const json = JSON.parse(ldMatch[1].trim())
+                structuredData.push(json)
+            } catch { /* ignore parse errors */ }
+        }
+
+        return new Response(JSON.stringify({ og, twitter: tw, structuredData }), {
             headers: { 'content-type': 'application/json' }
         })
     } catch (e) {
