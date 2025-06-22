@@ -42,6 +42,7 @@ import CIDRCalculator from '../gizmos/network/CIDRCalculator.vue'
 
 // Marketing Gizmos
 import UTMLinkGenerator from '../gizmos/marketing/UTMLinkGenerator.vue'
+import OGCardPreview from '../gizmos/marketing/OGCardPreview.vue'
 
 // Validator Gizmos
 import RegexTester from '../gizmos/validators/RegexTester.vue'
@@ -77,6 +78,7 @@ const routes = {
   "TextDeduplicator": TextDeduplicator,
   "TextSorterReverser": TextSorterReverser,
   "AsciiUnicodeConverter": AsciiUnicodeConverter,
+  "OGCardPreview": OGCardPreview,
 
   "robots.txt": robots
 }

@@ -161,6 +161,11 @@ export default {
               title: 'UTM Link Generator',
               description: 'You can create campaign links for Google Analytics using the UTM Link Generator Gizmo.',
               gizmo: 'UTMLinkGenerator'
+            },
+            {
+              title: 'Open Graph & X Card Preview',
+              description: 'You can use the Open Graph & X Card Preview Gizmo to preview and generate Open Graph and X Card meta tags for your web pages.',
+              gizmo: 'OGCardPreview'
             }
           ]
         },
