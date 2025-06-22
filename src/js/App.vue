@@ -16,7 +16,7 @@ import URLParser from '../gizmos/text/URLParser.vue'
 import SlugGenerator from '../gizmos/text/SlugGenerator.vue'
 import TextDeduplicator from '../gizmos/text/TextDeduplicator.vue'
 import TextSorterReverser from '../gizmos/text/TextSorterReverser.vue'
-import AsciiUnicodeConverter from '../gizmos/text/AsciiUnicodeConverter.vue'
+import AsciiUnicodeConverter from '../gizmos/text/ASCIIUnicodeConverter.vue'
 
 // Formatter Gizmos
 import JsonBeautifier from '../gizmos/formatter/JSONBeautifier.vue'
