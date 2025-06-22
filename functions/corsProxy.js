@@ -11,13 +11,34 @@ export async function onRequest(context) {
         
         const og = {}
         const tw = {}
+        
+        const ogKeys = [
+            'og:title',
+            'og:description',
+            'og:image',
+            'og:url',
+            'og:site_name',
+            'og:type'
+        ]
+        const twitterKeys = [
+            'twitter:card',
+            'twitter:title',
+            'twitter:description',
+            'twitter:image',
+            'twitter:site',
+            'twitter:creator'
+        ]
+
+        ogKeys.forEach(key => { og[key] = '' })
+        twitterKeys.forEach(key => { tw[key] = '' })
+
         const metaRegex = /<meta\s+([^>]+)>/gi
         let match
         while ((match = metaRegex.exec(html))) {
             const attrs = match[1]
             const prop = /property=["']([^"']+)["']/.exec(attrs)
             const name = /name=["']([^"']+)["']/.exec(attrs)
-            const content = /content=["']([^"']+)["']/.exec(attrs)
+            const content = /content=["']([^"']*)["']/.exec(attrs) // Boş content için * kullandık
             if (content) {
                 if (prop && prop[1].startsWith('og:')) og[prop[1]] = content[1]
                 if (name && name[1].startsWith('twitter:')) tw[name[1]] = content[1]
