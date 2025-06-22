@@ -11,6 +11,11 @@ import DiffChecker from '../gizmos/text/DiffChecker.vue'
 import CaseConverter from '../gizmos/text/CaseConverter.vue'
 import LoremIpsumGenerator from '../gizmos/text/LoremIpsumGenerator.vue'
 import FakeEmailGenerator from '../gizmos/text/FakeEmailGenerator.vue'
+import URLParser from '../gizmos/text/URLParser.vue'
+import SlugGenerator from '../gizmos/text/SlugGenerator.vue'
+import TextDeduplicator from '../gizmos/text/TextDeduplicator.vue'
+import TextSorterReverser from '../gizmos/text/TextSorterReverser.vue'
+import AsciiUnicodeConverter from '../gizmos/text/AsciiUnicodeConverter.vue'
 
 // Formatter Gizmos
 import JsonBeautifier from '../gizmos/formatter/JSONBeautifier.vue'
@@ -65,6 +70,11 @@ const routes = {
   "JWT": JWT,
   "ChecksumCalculator": ChecksumCalculator,
   "SQLBeautifier": SQLBeautifier,
+  "URLParser": URLParser,
+  "SlugGenerator": SlugGenerator,
+  "TextDeduplicator": TextDeduplicator,
+  "TextSorterReverser": TextSorterReverser,
+  "AsciiUnicodeConverter": AsciiUnicodeConverter,
 
   "robots.txt": robots
 }

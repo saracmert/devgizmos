@@ -36,6 +36,31 @@ export default {
               title: 'Fake E-mail Address Generator',
               description: 'You can use the Fake E-mail Address Generator Gizmo to generate dummy e-mail addresses.',
               gizmo: 'FakeEmailGenerator'
+            },
+            {
+              title: 'URL Parser',
+              description: 'You can use the URL Parser Gizmo to parse and inspect any URL. See its protocol, host, path, query parameters, and more.',
+              gizmo: 'URLParser'
+            },
+            {
+              title: 'Slug Generator',
+              description: 'You can use the Slug Generator Gizmo to convert your text into a SEO and URL-friendly slug. Turkish, German, French, and Spanish characters are automatically converted.',
+              gizmo: 'SlugGenerator'
+            },
+            {
+              title: 'Text Deduplicator',
+              description: 'You can use the Text Deduplicator Gizmo to remove duplicate lines or words from your text. Choose deduplication mode, case sensitivity, output format, and more.',
+              gizmo: 'TextDeduplicator'
+            },
+            {
+              title: 'Text Sorter & Reverser',
+              description: 'You can use the Text Sorter & Reverser Gizmo to sort, reverse, deduplicate, or clean up your text lines with flexible options.',
+              gizmo: 'TextSorterReverser'
+            },
+            {
+              title: 'ASCII - Unicode Converter',
+              description: 'You can use the ASCII - Unicode Converter Gizmo to convert text to ASCII or Unicode format, and vice versa.',
+              gizmo: 'AsciiUnicodeConverter'
             }
           ]
         },

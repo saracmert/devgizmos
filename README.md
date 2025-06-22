@@ -29,8 +29,11 @@ Whether you’re working on web applications, mobile apps, or desktop software, 
 | Case Converter                  | Text             | 🚀         |
 | Lorem Ipsum Generator           | Text             | 🚀         |
 | Fake E-mail Address Generator   | Text             | 🚀         |
-| URL Parser                      | Text             | ❌         |
-| Slug Generator                  | Text             | ❌         |
+| URL Parser                      | Text             | 🚀         |
+| Slug Generator                  | Text             | 🚀         |
+| Text Deduplicator               | Text             | 🚀         |
+| Text Sorter & Reverser          | Text             | 🚀         |
+| ASCII/Unicode Converter         | Text             | 🚀         |
 | C# String Builder               | Text             | 🚀         |
 | HTML Beautifier                 | Formatters       | 🚀         |
 | HTML Minifier                   | Formatters       | 🚀         |
@@ -42,20 +45,45 @@ Whether you’re working on web applications, mobile apps, or desktop software, 
 | JSON Minifier                   | Formatters       | ❌         |
 | SQL Beautifier                  | Formatters       | 🚀         |
 | SQL Minifier                    | Formatters       | ❌         |
+| XML Beautifier                  | Formatters       | ❌         |
+| XML Minifier                    | Formatters       | ❌         |
+| YAML Beautifier                 | Formatters       | ❌         |
+| YAML Minifier                   | Formatters       | ❌         |
+| CSV Beautifier & Viewer         | Formatters       | ❌         |
+| Markdown Formatter              | Formatters       | ❌         |
+| CSS-in-JS Formatter             | Formatters       | ❌         |
+| Code Prettifier                 | Formatters       | ❌         |
 | JSON Validator                  | Validators       | ❌         |
+| XML Validator                   | Validators       | ❌         |
+| UUID/GUID Validator             | Validators       | ❌         |
 | Regex Tester                    | Validators       | 🚀         |
+| Credit Card Validator           | Validators       | ❌         |
+| IBAN Validator                  | Validators       | ❌         |
 | Checksum Calculator             | Cryptography     | 🚀         |
 | Password Generator              | Cryptography     | ⭐         |
+| Random Key / Token Generator    | Cryptography     | ❌         |
+| RSA Key Pair Generator          | Cryptography     | ❌         |
 | Guid Generator                  | Cryptography     | 🚀         |
 | MD5 Hash Generator              | Cryptography     | 🚀         |
 | SHA Hash Generator              | Cryptography     | 🚀         |
 | URL                             | Encode - Decode  | 🚀         |
 | Base64                          | Encode - Decode  | 🚀         |
 | JWT Decoder                     | Encode - Decode  | 🚀         |
+| Morse Code Encoder / Decoder    | Encode - Decode  | ❌         |
 | Unix Timestamp                  | Converters       | ❌         |
-| RGB / HEX                       | Converters       | ❌         |
+| RGB / HEX / HSL                 | Converters       | ❌         |
+| Roman Numeral Converter         | Converters       | ❌         |
+| File Size Converter             | Converters       | ❌         |
 | Color Picker                    | Design           | ❌         |
 | SVG QR Code Generator           | Design           | ❌         |
+| CSS Gradient Generator          | Design           | ❌         |
+| CSS Box Shadow Generator        | Design           | ❌         |
+| CSS Border Radius Generator     | Design           | ❌         |
+| Color Palette Generator         | Design           | ❌         |
+| Contrast Checker                | Design           | ❌         |
 | UTM Generator                   | Marketing        | 🚀         |
+| Open Graph & X Card Preview     | Marketing        | ❌         |
+| Emoji Picker                    | Marketing        | ❌         |
+| Hashtag Suggestion Tool         | Marketing        | ❌         |
 | What's my IP?                   | Network          | 🚀         |
 | CIDR Calculator                 | Network          | 🚀         |
