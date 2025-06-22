@@ -32,30 +32,30 @@ Whether you’re working on web applications, mobile apps, or desktop software, 
 | URL Parser                      | Text             | ❌         |
 | Slug Generator                  | Text             | ❌         |
 | C# String Builder               | Text             | 🚀         |
-| HTML Beautifier                 | Formatters       | ❌         |
-| HTML Minifier                   | Formatters       | ❌         |
+| HTML Beautifier                 | Formatters       | 🚀         |
+| HTML Minifier                   | Formatters       | 🚀         |
 | CSS Beautifier                  | Formatters       | ❌         |
 | CSS Minifier                    | Formatters       | ❌         |
 | Javascript Beautifier           | Formatters       | ❌         |
 | Javascript Minifier             | Formatters       | ❌         |
 | JSON Beautifier                 | Formatters       | 🚀         |
 | JSON Minifier                   | Formatters       | ❌         |
-| SQL Beautifier                  | Formatters       | ❌         |
+| SQL Beautifier                  | Formatters       | 🚀         |
 | SQL Minifier                    | Formatters       | ❌         |
 | JSON Validator                  | Validators       | ❌         |
-| Regex Tester                    | Validators       | ❌         |
-| Checksum Calculator             | Cryptography     | ❌         |
+| Regex Tester                    | Validators       | 🚀         |
+| Checksum Calculator             | Cryptography     | 🚀         |
 | Password Generator              | Cryptography     | ⭐         |
 | Guid Generator                  | Cryptography     | 🚀         |
 | MD5 Hash Generator              | Cryptography     | 🚀         |
 | SHA Hash Generator              | Cryptography     | 🚀         |
 | URL                             | Encode - Decode  | 🚀         |
 | Base64                          | Encode - Decode  | 🚀         |
-| JWT Decoder                     | Encode - Decode  | ❌         |
+| JWT Decoder                     | Encode - Decode  | 🚀         |
 | Unix Timestamp                  | Converters       | ❌         |
 | RGB / HEX                       | Converters       | ❌         |
 | Color Picker                    | Design           | ❌         |
 | SVG QR Code Generator           | Design           | ❌         |
 | UTM Generator                   | Marketing        | 🚀         |
 | What's my IP?                   | Network          | 🚀         |
-| CIDR Calculator                 | Network          | ❌         |
+| CIDR Calculator                 | Network          | 🚀         |

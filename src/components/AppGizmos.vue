@@ -61,6 +61,11 @@ export default {
               title: 'SHA Hash Generator',
               description: 'You can use the Guid Generator Gizmo to quickly generate a SHA-512, SHA-384, SHA-512/224, SHA-512/256 Hash.',
               gizmo: 'SHA'
+            },
+            {
+              title: 'Checksum Calculator',
+              description: 'You can use the Checksum Calculator Gizmo to calculate CRC32, Adler-32, MD5, SHA1, SHA256, SHA512 checksums from text or file.',
+              gizmo: 'ChecksumCalculator'
             }
           ]
         },
@@ -71,6 +76,21 @@ export default {
               title: 'JSON Beautifier',
               description: 'Beautify your JSON files.',
               gizmo: 'JSONBeautifier'
+            },
+            {
+              title: 'HTML Beautifier',
+              description: 'Beautify your HTML codes.',
+              gizmo: 'HTMLBeautifier'
+            },
+            {
+              title: 'HTML Minifier',
+              description: 'Minify your HTML codes.',
+              gizmo: 'HTMLMinifier'
+            },
+            {
+              title: 'SQL Beautifier',
+              description: 'Format your SQL queries for better readability. Supports MySQL, PostgreSQL and SQL Server.',
+              gizmo: 'SQLBeautifier'
             }
           ]
         },
@@ -86,6 +106,11 @@ export default {
               title: 'URL Encoder / Decoder',
               description: 'You can use the URL Encoder / Decoder Gizmo to encode or decode URL strings.',
               gizmo: 'URL'
+            },
+            {
+              title: 'JWT Decoder',
+              description: 'Paste a JWT (JSON Web Token) to decode its header and payload. Signature is not verified. No data is sent to a server; decoding is done locally in your browser.',
+              gizmo: 'JWT'
             }
           ]
         },
@@ -96,6 +121,11 @@ export default {
               title: 'My IP Address',
               description: 'You can use the My IP Address Gizmo to get your public IP address.',
               gizmo: 'MyIPAddress'
+            },
+            {
+              title: 'CIDR Calculator',
+              description: 'You can use the CIDR Calculator Gizmo to analyze your given IP address in CIDR notation and easily calculate details such as network address, broadcast address, first and last usable IP, subnet mask, and total host count.',
+              gizmo: 'CIDRCalculator'
             }
           ]
         },
@@ -106,6 +136,16 @@ export default {
               title: 'UTM Link Generator',
               description: 'You can create campaign links for Google Analytics using the UTM Link Generator Gizmo.',
               gizmo: 'UTMLinkGenerator'
+            }
+          ]
+        },
+        {
+          title: 'Validator Gizmos',
+          items: [
+            {
+              title: 'Regex Tester',
+              description: 'Enter a JavaScript regular expression and test it against a target string. Supports all JS regex flags and named groups.',
+              gizmo: 'RegexTester'
             }
           ]
         }

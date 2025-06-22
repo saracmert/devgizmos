@@ -14,28 +14,39 @@ import FakeEmailGenerator from '../gizmos/text/FakeEmailGenerator.vue'
 
 // Formatter Gizmos
 import JsonBeautifier from '../gizmos/formatter/JSONBeautifier.vue'
+import HtmlBeautifier from '../gizmos/formatter/HTMLBeautifier.vue'
+import HtmlMinifier from '../gizmos/formatter/HTMLMinifier.vue'
+import SQLBeautifier from '../gizmos/formatter/SQLBeautifier.vue'
 
 // Encode - Decode Gizmos
 import Base64 from '../gizmos/encode-decode/Base64.vue'
 import URL from '../gizmos/encode-decode/URL.vue'
+import JWT from '../gizmos/encode-decode/JWT.vue'
 
 // Cryptography Gizmos
 import GuidGenerator from '../gizmos/cryptography/GuidGenerator.vue'
 import PasswordGenerator from '../gizmos/cryptography/PasswordGenerator.vue'
 import MD5 from '../gizmos/cryptography/MD5.vue'
 import SHA from '../gizmos/cryptography/SHA.vue'
+import ChecksumCalculator from '../gizmos/cryptography/ChecksumCalculator.vue'
 
 // Network Gizmos
 import MyIPAddress from '../gizmos/network/MyIPAddress.vue'
+import CIDRCalculator from '../gizmos/network/CIDRCalculator.vue'
 
 // Marketing Gizmos
 import UTMLinkGenerator from '../gizmos/marketing/UTMLinkGenerator.vue'
+
+// Validator Gizmos
+import RegexTester from '../gizmos/validators/RegexTester.vue'
 
 import robots from '../../public/robots.txt'
 
 const routes = {
   '/': Gizmos,
   'JSONBeautifier': JsonBeautifier,
+  'HTMLBeautifier': HtmlBeautifier,
+  'HTMLMinifier': HtmlMinifier,
   'StringBuilder': StringBuilder,
   'Base64': Base64,
   'DiffChecker': DiffChecker,
@@ -44,11 +55,16 @@ const routes = {
   "MD5": MD5,
   "SHA": SHA,
   "MyIPAddress": MyIPAddress,
+  "CIDRCalculator": CIDRCalculator,
   "URL": URL,
   "CaseConverter": CaseConverter,
   "LoremIpsumGenerator": LoremIpsumGenerator,
   "FakeEmailGenerator": FakeEmailGenerator,
   "UTMLinkGenerator": UTMLinkGenerator,
+  "RegexTester": RegexTester,
+  "JWT": JWT,
+  "ChecksumCalculator": ChecksumCalculator,
+  "SQLBeautifier": SQLBeautifier,
 
   "robots.txt": robots
 }
