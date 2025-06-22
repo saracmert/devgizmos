@@ -1,4 +1,5 @@
 export async function onRequest(context) {
+    const { request } = context;
     const { searchParams } = new URL(request.url)
     const targetUrl = searchParams.get('url')
     if (!targetUrl) {
