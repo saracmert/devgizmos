@@ -141,7 +141,7 @@ function getFavicon(link) {
 .og-card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .og-card-content {
   padding: 16px 18px 12px 18px;
