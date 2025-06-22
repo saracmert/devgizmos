@@ -7,6 +7,24 @@ const error = ref('')
 const og = ref({})
 const twitter = ref({})
 
+const requiredTwitterTags = [
+  { name: 'twitter:card', label: 'twitter:card' },
+  { name: 'twitter:title', label: 'twitter:title' },
+  { name: 'twitter:description', label: 'twitter:description' },
+  { name: 'twitter:image', label: 'twitter:image' }
+]
+
+const emptyTwitterTags = computed(() =>
+  Object.entries(twitter.value)
+    .filter(([k, v]) => v === '')
+    .map(([k]) => k)
+)
+const missingTwitterTags = computed(() =>
+  requiredTwitterTags
+    .filter(tag => !twitter.value[tag.name])
+    .map(tag => tag.label)
+)
+
 async function fetchMeta() {
   error.value = ''
   og.value = {}
@@ -69,52 +87,88 @@ function getFavicon(link) {
 </script>
 
 <template>
-    <div class="container-fluid p-0">
-        <div class="row">
-            <div class="col mb-3">
-                <h1>Open Graph & X Card Preview</h1>
-                <span>
-                    You can use the Open Graph & X Card Preview Gizmo to preview and generate Open Graph and X Card meta
-                    tags for your web pages.
-                </span>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-lg-6 col-12">
-                <div class="mb-3">
-                    <label class="form-label">URL</label>
-                    <input class="form-control" v-model="url" placeholder="https://example.com"
-                        @keyup.enter="fetchMeta" />
-                </div>
-                <button class="btn btn-primary" @click="fetchMeta" :disabled="loading">
-                    {{ loading ? 'Loading...' : 'Fetch Meta Tags' }}
-                </button>
-                <div v-if="error" class="alert alert-danger mt-3">{{ error }}</div>
-            </div>
-            <div class="col-lg-6 col-12 mt-3 mt-lg-0">
-                <!-- Card Preview -->
-                <div class="og-card-preview shadow-sm mt-4"
-                    v-if="og['og:title'] || og['og:description'] || og['og:image'] || og['og:site_name']">
-                    <div class="og-card-image" v-if="og['og:image']">
-                        <img :src="og['og:image']" alt="Preview Image" />
-                    </div>
-                    <div class="og-card-content">
-                        <div class="og-card-site mb-1">
-                            <img v-if="getFavicon(url)" :src="getFavicon(url)" class="og-card-favicon" alt="favicon" />
-                            <span>{{ og['og:site_name'] || getDomain(url) }}</span>
-                        </div>
-                        <div class="og-card-title">{{ og['og:title'] || 'Preview Title' }}</div>
-                        <div class="og-card-desc">{{ og['og:description'] || 'Preview description...' }}</div>
-                        <div class="og-card-url">{{ og['og:url'] || url }}</div>
-                    </div>
-                </div>
-                <div v-else-if="Object.keys(og).length === 0 && Object.keys(twitter).length === 0 && !error && !loading"
-                    class="text-muted mt-3">
-                    No meta tags to preview yet.
-                </div>
-            </div>
-        </div>
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col mb-3">
+        <h1>Open Graph & X Card Preview</h1>
+        <span>
+          You can use the Open Graph & X Card Preview Gizmo to preview and generate Open Graph and X Card meta tags for your web pages.
+        </span>
+      </div>
     </div>
+    <div class="row mt-3">
+      <div class="col-lg-6 col-12">
+        <div class="mb-3">
+          <label class="form-label">URL</label>
+          <input class="form-control" v-model="url" placeholder="https://example.com" @keyup.enter="fetchMeta" />
+        </div>
+        <button class="btn btn-primary" @click="fetchMeta" :disabled="loading">
+          {{ loading ? 'Loading...' : 'Fetch Meta Tags' }}
+        </button>
+        <div v-if="error" class="alert alert-danger mt-3">{{ error }}</div>
+        <div v-if="emptyTwitterTags.length" class="alert alert-warning mt-3">
+          <strong>Warning:</strong> The following Twitter Card tags are present but empty:
+          <ul class="mb-0">
+            <li v-for="tag in emptyTwitterTags" :key="tag"><code>{{ tag }}</code></li>
+          </ul>
+        </div>
+        <div v-if="missingTwitterTags.length" class="alert alert-warning mt-3">
+          <strong>Warning:</strong> The following required Twitter Card tags are missing:
+          <ul class="mb-0">
+            <li v-for="tag in missingTwitterTags" :key="tag"><code>{{ tag }}</code></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12 mt-3 mt-lg-0">
+        <!-- Card Preview -->
+        <div
+          class="og-card-preview shadow-sm mt-4"
+          v-if="og['og:title'] || og['og:description'] || og['og:image'] || og['og:site_name'] || twitter['twitter:card']"
+        >
+          <div class="og-card-image" v-if="og['og:image'] || twitter['twitter:image']">
+            <img :src="og['og:image'] || twitter['twitter:image']" alt="Preview Image" />
+          </div>
+          <div class="og-card-content">
+            <div class="og-card-site mb-1">
+              <img v-if="getFavicon(url)" :src="getFavicon(url)" class="og-card-favicon" alt="favicon" />
+              <span>{{ og['og:site_name'] || getDomain(url) }}</span>
+            </div>
+            <div class="og-card-title">{{ og['og:title'] || twitter['twitter:title'] || 'Preview Title' }}</div>
+            <div class="og-card-desc">{{ og['og:description'] || twitter['twitter:description'] || 'Preview description...' }}</div>
+            <div class="og-card-url">{{ og['og:url'] || url }}</div>
+          </div>
+        </div>
+        <div v-else-if="Object.keys(og).length === 0 && Object.keys(twitter).length === 0 && !error && !loading"
+          class="text-muted mt-3">
+          No meta tags to preview yet.
+        </div>
+        <div v-if="Object.keys(og).length">
+          <div class="mb-2 fw-semibold d-flex align-items-center">
+            Open Graph Tags
+            <button class="btn btn-outline-secondary btn-sm ms-auto" @click="copyTags(og)">Copy</button>
+          </div>
+          <textarea
+            class="form-control bg-light mb-3"
+            rows="7"
+            readonly
+            :value="Object.entries(og).map(([k,v]) => `<meta property=&quot;${k}&quot; content=&quot;${v}&quot;>`).join('\n')"
+          ></textarea>
+        </div>
+        <div v-if="Object.keys(twitter).length">
+          <div class="mb-2 fw-semibold d-flex align-items-center">
+            X Card Tags
+            <button class="btn btn-outline-secondary btn-sm ms-auto" @click="copyTags(twitter)">Copy</button>
+          </div>
+          <textarea
+            class="form-control bg-light mb-3"
+            rows="7"
+            readonly
+            :value="Object.entries(twitter).map(([k,v]) => `<meta name=&quot;${k}&quot; content=&quot;${v}&quot;>`).join('\n')"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
