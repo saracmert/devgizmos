@@ -4,6 +4,7 @@ import Header from '../components/AppHeader.vue'
 import Gizmos from '../components/AppGizmos.vue'
 import Footer from '../components/AppFooter.vue'
 import NotFound from "../components/AppNotFound.vue"
+import Credits from '../components/Credits.vue'
 
 // Text Gizmos
 import StringBuilder from '../gizmos/text/StringBuilder.vue'
@@ -49,6 +50,7 @@ import robots from '../../public/robots.txt'
 
 const routes = {
   '/': Gizmos,
+  'Credits': Credits,
   'JSONBeautifier': JsonBeautifier,
   'HTMLBeautifier': HtmlBeautifier,
   'HTMLMinifier': HtmlMinifier,

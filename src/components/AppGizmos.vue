@@ -186,17 +186,26 @@ export default {
     <small class="text-muted">/ˈɡɪzmoʊ/</small>
   </h1>
   <div class="col-lg-12 px-0">
-    <p>According to the definition on <a href="https://en.wikipedia.org/wiki/Gizmo" target="_blank">Wikipedia</a>,
-      “Gizmo” is a gadget, especially one whose real name is unknown or forgotten.</p>
-    <p>It's called “<a href="https://eksisozluk.com/zamazingo--61113" target="_blank">zamazingo</a>”, “<a
-        href="https://eksisozluk.com/zimbirti--60489" target="_blank">zımbırtı</a>” or “<a
-        href="https://eksisozluk.com/dalgametre--93562" target="_blank">dalgametre</a>” in Turkish.</p>
-    <p class="fs-5">Devgizmos, an open-source project, brings together tools frequently needed during software
-      development. It aims to facilitate the development process by providing a collection of essential tools for
-      developers. Whether you’re working on web applications, mobile apps, or desktop software, Devgizmos offers a
-      range of utilities to enhance your productivity and streamline your workflow. 🚀</p>
-    <p class="fs-5">Devgizmos utilizes other open-source libraries within its simple toolsets.
-      <strong>You will never see ads here.</strong> If you'd like to support the domain name and Cloudflare payments, <a href="https://www.buymeacoffee.com/mertsarac" target="_blank">you can buy us a coffee.</a> ☕</p>
+    <p>
+      <strong>Devgizmos</strong> is an open-source project that brings together a wide range of essential tools for developers, all in one place. Whether you’re working on web, mobile, or desktop projects, Devgizmos helps you boost your productivity and streamline your workflow.
+    </p>
+    <p>
+      The term <a href="https://en.wikipedia.org/wiki/Gizmo" target="_blank">“gizmo”</a> refers to a gadget, especially one whose real name is unknown or forgotten. In Turkish, it’s also called <a href="https://eksisozluk.com/zamazingo--61113" target="_blank">zamazingo</a>, <a href="https://eksisozluk.com/zimbirti--60489" target="_blank">zımbırtı</a>, or <a href="https://eksisozluk.com/dalgametre--93562" target="_blank">dalgametre</a>.
+    </p>
+    <p class="fs-5">
+      <strong>Devgizmos is fully offline-first and privacy-focused.</strong>
+      <br />All tools run entirely in your browser, so your data never leaves your device. This makes Devgizmos more secure than most alternatives and ideal for sensitive or private work.
+    </p>
+    <p class="fs-5">
+      The project is <strong>constantly updated</strong> and <strong>open source.</strong>
+      <br />Anyone can contribute or suggest new features. Thanks to its open nature, Devgizmos evolves with the needs of the developer community.
+    </p>
+    <p class="fs-5">
+      <strong>You will never see ads here.</strong> If you’d like to support the project and help cover domain and Cloudflare costs, <a href="https://www.buymeacoffee.com/mertsarac" target="_blank">you can buy us a coffee</a> ☕.
+    </p>
+    <p class="fs-6 text-muted">
+      <strong>Roadmap:</strong> We are continuously adding new gizmos and improving existing ones based on user feedback. You can follow the progress and contribute on our GitHub page.
+    </p>
   </div>
 
   <div class="row">
