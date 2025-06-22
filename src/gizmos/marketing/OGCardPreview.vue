@@ -107,13 +107,13 @@ function getFavicon(link) {
         </button>
         <div v-if="error" class="alert alert-danger mt-3">{{ error }}</div>
         <div v-if="emptyTwitterTags.length" class="alert alert-warning mt-3">
-          <strong>Warning:</strong> The following Twitter Card tags are present but empty:
+          <strong>Warning:</strong> The following X Card tags are present but empty:
           <ul class="mb-0">
             <li v-for="tag in emptyTwitterTags" :key="tag"><code>{{ tag }}</code></li>
           </ul>
         </div>
         <div v-if="missingTwitterTags.length" class="alert alert-warning mt-3">
-          <strong>Warning:</strong> The following required Twitter Card tags are missing:
+          <strong>Warning:</strong> The following required X Card tags are missing:
           <ul class="mb-0">
             <li v-for="tag in missingTwitterTags" :key="tag"><code>{{ tag }}</code></li>
           </ul>
@@ -148,7 +148,7 @@ function getFavicon(link) {
             <button class="btn btn-outline-secondary btn-sm ms-auto" @click="copyTags(og)">Copy</button>
           </div>
           <textarea
-            class="form-control bg-light mb-3"
+            class="form-control mb-3"
             rows="7"
             readonly
             :value="Object.entries(og).map(([k,v]) => `<meta property=&quot;${k}&quot; content=&quot;${v}&quot;>`).join('\n')"
@@ -160,7 +160,7 @@ function getFavicon(link) {
             <button class="btn btn-outline-secondary btn-sm ms-auto" @click="copyTags(twitter)">Copy</button>
           </div>
           <textarea
-            class="form-control bg-light mb-3"
+            class="form-control mb-3"
             rows="7"
             readonly
             :value="Object.entries(twitter).map(([k,v]) => `<meta name=&quot;${k}&quot; content=&quot;${v}&quot;>`).join('\n')"
