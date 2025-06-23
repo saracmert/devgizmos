@@ -174,6 +174,9 @@ const ProductGroupCard = {
           <div class="mb-2 text-muted" v-if="data.brand">
             Brand: <span>{{ typeof data.brand === 'object' ? data.brand.name : data.brand }}</span>
           </div>
+          <div class="mb-2" v-if="data.sku">
+            <strong>SKU: </strong> {{ data.sku }}
+          </div>
           <div class="mb-2" v-if="data.description">{{ data.description }}</div>
           <div class="mb-2" v-if="data.hasVariant && Array.isArray(data.hasVariant)">
             <strong>Variants:</strong>
@@ -181,6 +184,32 @@ const ProductGroupCard = {
               <li v-for="(variant, i) in data.hasVariant" :key="i">
                 {{ variant.name || variant.sku || variant }}
               </li>
+            </ul>
+          </div>
+          <div class="mb-2" v-if="data.audience">
+            <strong>Audience: </strong>
+            <span v-if="typeof data.audience === 'object'">
+              <span v-if="data.audience.name">{{ data.audience.name }}</span>
+              <span v-if="data.audience.suggestedGender"> ({{ data.audience.suggestedGender }})</span>
+            </span>
+            <span v-else>{{ data.audience }}</span>
+          </div>
+          <div class="mb-2" v-if="data.aggregateRating">
+            <strong>Rating: </strong>
+            <span v-if="data.aggregateRating.ratingValue">
+              {{ data.aggregateRating.ratingValue }} / {{ data.aggregateRating.bestRating || 5 }}
+              <span v-if="data.aggregateRating.reviewCount">({{ data.aggregateRating.reviewCount }} reviews)</span>
+            </span>
+          </div>
+          <div class="mb-2" v-if="data.review && Array.isArray(data.review)">
+            <strong>Reviews:</strong>
+            <ul>
+              <li v-for="(review, i) in data.review.slice(0, 5)" :key="i">
+                <span v-if="review.author">{{ typeof review.author === 'object' ? review.author.name : review.author }}: </span>
+                <span v-if="review.reviewRating">Rating: {{ review.reviewRating.ratingValue }}</span>
+                <span v-if="review.reviewBody"><br />{{ review.reviewBody }}</span>
+              </li>
+              <li v-if="data.review.length > 5" class="text-muted">...and {{ data.review.length - 5 }} more</li>
             </ul>
           </div>
           <div class="mb-2" v-if="data.additionalProperty && Array.isArray(data.additionalProperty)">
@@ -192,17 +221,24 @@ const ProductGroupCard = {
             </ul>
           </div>
           <div class="mb-2" v-if="data.isRelatedTo">
-            <strong>Related:</strong>
+            <strong>Related: </strong><br />
             <span v-if="Array.isArray(data.isRelatedTo)">
               <span v-for="(rel, i) in data.isRelatedTo" :key="i">
-                <a v-if="typeof rel === 'string'" :href="rel" target="_blank" rel="noopener">{{ rel }}</a>
-                <span v-else>{{ rel.name || rel }}</span>
-                <span v-if="i < data.isRelatedTo.length - 1">, </span>
+                <a v-if="typeof rel === 'string'" :href="rel" target="_blank" rel="noopener">{{ rel }}</a><br />
+                <span v-if="i < data.isRelatedTo.length - 1"></span>
               </span>
             </span>
             <span v-else>
               <a v-if="typeof data.isRelatedTo === 'string'" :href="data.isRelatedTo" target="_blank" rel="noopener">{{ data.isRelatedTo }}</a>
               <span v-else>{{ data.isRelatedTo.name || data.isRelatedTo }}</span>
+            </span>
+          </div>
+          <div v-if="data.offers">
+            <span class="badge bg-primary p-2 fs-6">
+              {{ data.offers.priceCurrency || '$' }}{{ data.offers.price }}
+            </span>
+            <span class="ms-2 text-muted" v-if="data.offers.availability">
+              {{ data.offers.availability === 'https://schema.org/InStock' ? 'In Stock' : 'Out of Stock' }}
             </span>
           </div>
         </div>
