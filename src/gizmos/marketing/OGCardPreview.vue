@@ -75,7 +75,7 @@ async function fetchMeta() {
   }
   loading.value = true
   try {
-    const resp = await fetch(`https://devgizmos.com/corsProxy?url=${encodeURIComponent(url.value)}`)
+    const resp = await fetch(`/corsProxy?url=${encodeURIComponent(url.value)}`)
     const data = await resp.json()
     if (resp.ok) {
       og.value = data.og || {}
