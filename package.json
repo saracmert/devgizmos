@@ -32,7 +32,7 @@
     "leaflet": "^1.9.4",
     "monaco-editor": "^0.52.2",
     "monaco-editor-webpack-plugin": "^7.1.0",
-    "monaco-languageclient": "^9.7.0",
+    "monaco-languageclient": "^9.7.1",
     "sql-formatter": "^15.6.5",
     "vue": "^3.5.14",
     "vue-i18n": "^11.1.7"
