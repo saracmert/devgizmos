@@ -72,7 +72,7 @@ onMounted(async () => {
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="mb-2 d-flex align-items-center">
                                     <strong class="me-2">{{ t('myIpAddress.ip') }}:</strong>
                                     <span class="me-2">{{ ipInfo.ip }}</span>
@@ -126,8 +126,8 @@ onMounted(async () => {
                                     <span class="me-2">{{ ipInfo.latitude }}, {{ ipInfo.longitude }}</span>
                                 </div>
                             </div>
-                            <div class="col-md-6" v-if="ipInfo.latitude && ipInfo.longitude">
-                                <div id="ip-map" style="height:400px;width:100%;border-radius:8px;border:1px solid #ccc;"></div>
+                            <div class="col-md-8" v-if="ipInfo.latitude && ipInfo.longitude">
+                                <div id="ip-map" style="height:450px;width:100%;border-radius:8px;border:1px solid #ccc;"></div>
                             </div>
                         </div>
                     </div>
