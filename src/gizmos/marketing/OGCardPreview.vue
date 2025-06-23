@@ -243,7 +243,7 @@ const ProductGroupCard = {
           </div>
           <div v-if="data.offers">
             <span class="badge bg-primary p-2 fs-6">
-              {{ data.offers.priceCurrency || '$' }}{{ data.offers.price }}
+              {{ data.offers.priceCurrency || '$' }} {{ data.offers.price }} {{ data.offers.lowPrice }}
             </span>
             <span class="ms-2 text-muted" v-if="data.offers.availability">
               {{ data.offers.availability === 'https://schema.org/InStock' ? 'In Stock' : 'Out of Stock' }}
@@ -335,7 +335,7 @@ const ProductCard = {
           <div class="mb-2" v-if="data.description">{{ data.description }}</div>
           <div v-if="data.offers">
             <span class="badge bg-primary p-2 fs-6">
-              {{ data.offers.priceCurrency || '$' }}{{ data.offers.price }} {{ data.offers.lowPrice }}
+              {{ data.offers.priceCurrency || '$' }} {{ data.offers.price }} {{ data.offers.lowPrice }}
             </span>
             <span class="ms-2 text-muted" v-if="data.offers.availability">
               {{ data.offers.availability === 'https://schema.org/InStock' ? 'In Stock' : 'Out of Stock' }}
