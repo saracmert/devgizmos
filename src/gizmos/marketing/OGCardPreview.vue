@@ -436,6 +436,9 @@ const StructuredDataRawCard = {
         <span>
           You can use the Open Graph & X Card Preview Gizmo to preview and generate Open Graph and X Card meta tags for your web pages.
         </span>
+        <div class="alert alert-info mt-2" role="alert">
+            <strong>Privacy Notice:</strong> This Gizmo uses a proxy running on Cloudflare Workers to bypass CORS restrictions. Your IP address is temporarily stored to enforce rate limit rules.
+        </div>
       </div>
     </div>
     <div class="row mt-3">
