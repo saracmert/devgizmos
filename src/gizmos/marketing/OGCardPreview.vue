@@ -170,7 +170,7 @@ const ProductGroupCard = {
     }
   },
   template: `
-    <div class="card border-success shadow-sm mb-2">
+    <div class="card border-success mb-2">
       <div class="card-body d-flex flex-row">
         <div v-if="imageUrl" class="me-3" style="min-width:120px;">
           <img :src="imageUrl"
@@ -270,7 +270,7 @@ const ProductCard = {
     }
   },
   template: `
-    <div class="card border-success shadow-sm mb-2">
+    <div class="card border-success mb-2">
       <div class="card-body d-flex flex-row">
         <div v-if="imageUrl" class="me-3" style="min-width:120px;">
           <img :src="imageUrl"
@@ -350,7 +350,7 @@ const ProductCard = {
 const EventCard = {
   props: ['data'],
   template: `
-    <div class="card border-info shadow-sm mb-2">
+    <div class="card border-info mb-2">
       <div class="card-body">
         <div class="fw-bold fs-5 mb-1">{{ data.name || 'Event Name' }}</div>
         <div class="mb-2" v-if="data.startDate">
@@ -369,7 +369,7 @@ const EventCard = {
 const RecipeCard = {
   props: ['data'],
   template: `
-    <div class="card border-warning shadow-sm mb-2">
+    <div class="card border-warning mb-2">
       <div class="card-body">
         <div class="fw-bold fs-5 mb-1">{{ data.name || 'Recipe Name' }}</div>
         <div class="mb-2" v-if="data.image">
@@ -402,7 +402,7 @@ const RecipeCard = {
 const ArticleCard = {
   props: ['data'],
   template: `
-    <div class="card border-primary shadow-sm mb-2">
+    <div class="card border-primary mb-2">
       <div class="card-body">
         <div class="fw-bold fs-5 mb-1">{{ data.headline || data.name || 'Article Title' }}</div>
         <div class="mb-2 text-muted" v-if="data.author">
@@ -426,7 +426,7 @@ const ArticleCard = {
 const StructuredDataRawCard = {
   props: ['data'],
   template: `
-    <div class="card border-secondary shadow-sm mb-2">
+    <div class="card border-secondary mb-2">
       <div class="card-body">
         <div class="fw-bold fs-6 mb-2">Structured Data ({{ data['@type'] || 'Unknown' }})</div>
         <pre class="p-2 rounded" style="font-size:0.95em; max-height:300px; overflow:auto;">{{ JSON.stringify(data, null, 2) }}</pre>
@@ -504,7 +504,7 @@ const StructuredDataRawCard = {
       </div>
       <div class="col-lg-6 col-12 mt-3 mt-lg-0">
         <div
-          class="og-card-preview shadow-sm mt-4"
+          class="og-card-preview mt-4"
           v-if="og['og:title'] || og['og:description'] || og['og:image'] || og['og:site_name'] || twitter['twitter:card']"
         >
           <div class="og-card-image" v-if="og['og:image'] || twitter['twitter:image']">
@@ -519,26 +519,26 @@ const StructuredDataRawCard = {
             <div class="og-card-desc">{{ og['og:description'] || twitter['twitter:description'] || 'Preview description...' }}</div>
             <div class="og-card-url">{{ og['og:url'] || url }}</div>
           </div>
-          <div v-if="twitter['twitter:app:name:iphone'] || twitter['twitter:app:name:ipad']" class="mt-3">
+          <div v-if="twitter['twitter:app:name:iphone'] || twitter['twitter:app:name:ipad']" class="m-3">
             <strong>App Links:</strong>
             <ul class="mb-0">
                 <li v-if="twitter['twitter:app:name:iphone'] && twitter['twitter:app:id:iphone']">
-                <a
-                    :href="`https://apps.apple.com/app/id${twitter['twitter:app:id:iphone']}`"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    {{ twitter['twitter:app:name:iphone'] }} (iPhone)
-                </a>
+                    <a
+                        :href="`https://apps.apple.com/app/id${twitter['twitter:app:id:iphone']}`"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        {{ twitter['twitter:app:name:iphone'] }} (iPhone)
+                    </a>
                 </li>
                 <li v-if="twitter['twitter:app:name:ipad'] && twitter['twitter:app:id:ipad']">
-                <a
-                    :href="`https://apps.apple.com/app/id${twitter['twitter:app:id:ipad']}`"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    {{ twitter['twitter:app:name:ipad'] }} (iPad)
-                </a>
+                    <a
+                        :href="`https://apps.apple.com/app/id${twitter['twitter:app:id:ipad']}`"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        {{ twitter['twitter:app:name:ipad'] }} (iPad)
+                    </a>
                 </li>
             </ul>
           </div>
