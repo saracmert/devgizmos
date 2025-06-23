@@ -365,10 +365,13 @@
         "region": "Region",
         "timezone": "Timezone",
         "asn": "ASN",
+        "asOrganization": "AS Organization",
         "colo": "Data Center",
         "postalCode": "Postal Code",
         "location": "Location",
-        "error": "Could not fetch IP info."
+        "error": "Could not fetch IP info.",
+        "privacyNoticeTitle": "Privacy Notice:",
+        "privacyNotice": "This Gizmo uses Cloudflare Workers to retrieve information about your IP address."
     },
     "regexTester": {
         "pattern": "Pattern",

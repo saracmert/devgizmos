@@ -30,14 +30,14 @@ export async function onRequest(context) {
     const cf = request.cf || {};
 
     const userAgent = request.headers.get('user-agent') || '';
-    const tlsVersion = request.headers.get('cf-tls-version') || '';
-    const httpProtocol = request.headers.get('x-forwarded-proto') || request.headers.get('cf-visitor') || '';
-
+    const tlsVersion = cf.tlsVersion || request.headers.get('cf-tls-version') || '';
+    const httpProtocol = cf.httpProtocol || request.headers.get('x-forwarded-proto') || request.headers.get('cf-visitor') || '';
+    const asn = cf.asn || '';
+    const asOrganization = cf.asOrganization || '';
     const country = cf.country || '';
     const city = cf.city || '';
     const region = cf.region || '';
     const timezone = cf.timezone || '';
-    const asn = cf.asn || '';
     const colo = cf.colo || '';
     const postalCode = cf.postalCode || '';
     const latitude = cf.latitude || '';
@@ -49,11 +49,12 @@ export async function onRequest(context) {
         userAgent,
         tlsVersion,
         httpProtocol,
+        asn,
+        asOrganization,
         country,
         city,
         region,
         timezone,
-        asn,
         colo,
         postalCode,
         latitude,

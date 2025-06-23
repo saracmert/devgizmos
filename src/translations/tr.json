@@ -356,7 +356,7 @@
     "myIpAddress": {
         "loading": "Yükleniyor...",
         "ip": "IP Adresi",
-        "userAgent": "Kullanıcı Aracısı",
+        "userAgent": "Kullanıcı Tarayıcı Bilgisi",
         "http": "HTTP",
         "tls": "TLS",
         "poweredBy": "{provider} tarafından sunulmaktadır",
@@ -365,10 +365,13 @@
         "region": "Bölge",
         "timezone": "Zaman Dilimi",
         "asn": "ASN",
+        "asOrganization": "Internet Sağlayıcı",
         "colo": "Veri Merkezi",
         "postalCode": "Posta Kodu",
         "location": "Konum",
-        "error": "IP bilgisi alınamadı."
+        "error": "IP bilgisi alınamadı.",
+        "privacyNoticeTitle": "Gizlilik Uyarısı:",
+        "privacyNotice": "Bu Gizmo IP adresinize ait bilgileri almak için Cloudflare Workers'ı kullanır."
     },
     "regexTester": {
         "pattern": "Desen",
