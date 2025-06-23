@@ -1,5 +1,10 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useGizmoI18n } from '../../composables/gizmo-i18n'
+
+const { t } = useI18n()
+const { getGizmoTitle, getGizmoDescription } = useGizmoI18n()
 
 const input = ref('192.168.1.0/24')
 const networkAddress = ref('')
@@ -95,17 +100,17 @@ const resultList = computed(() => [
 
 <template>
   <div class="container-fluid my-4">
-    <h2 class="mb-3">CIDR Calculator</h2>
+    <h2 class="mb-3">{{ getGizmoTitle('CIDRCalculator') }}</h2>
     <p>
-      You can use the CIDR Calculator Gizmo to analyze your given IP address in CIDR notation and easily calculate details such as network address, broadcast address, first and last usable IP, subnet mask, and total host count.
+      {{ getGizmoDescription('CIDRCalculator') }}
     </p>
-    <input v-model="input" class="form-control mb-3" @input="parseCIDR(input)" />
+    <input v-model="input" class="form-control mb-3" :placeholder="t('cidrCalculator.inputPlaceholder')" @input="parseCIDR(input)" />
     <div v-if="error" class="alert alert-danger">{{ error }}</div>
     <div class="row mt-3 g-3" v-else>
         <div class="col-md-4" v-for="item in resultList" :key="item.label">
             <div class="card h-100 shadow-sm border-primary">
                 <div class="card-body">
-                    <h5 class="card-title mb-1">{{ item.label }}</h5>
+                    <h5 class="card-title mb-1">{{ t('cidrCalculator.' + item.key) }}</h5>
                     <p class="card-text fs-5 fw-semibold">{{ item.value }}</p>
                 </div>
             </div>

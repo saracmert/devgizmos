@@ -2,6 +2,11 @@
 import { ref } from 'vue'
 import { sha512, sha384, sha512_256, sha512_224 } from 'js-sha512'
 import { useClipboard } from '@vueuse/core'
+import { useI18n } from 'vue-i18n'
+import { useGizmoI18n } from '../../composables/gizmo-i18n'
+
+const { t } = useI18n()
+const { getGizmoTitle, getGizmoDescription } = useGizmoI18n()
 
 const encodeInput = ref('')
 const uppercase = ref()
@@ -23,8 +28,8 @@ function generate() {
     <div class="container-fluid p-0">
         <div class="row">
             <div class="col mb-3">
-                <h1>SHA Hash Generator</h1>
-                <span>You can use the Guid Generator Gizmo to quickly generate a SHA-512, SHA-384, SHA-512/224, SHA-512/256 Hash.</span>
+                <h1>{{ getGizmoTitle('SHA') }}</h1>
+                <span>{{ getGizmoDescription('SHA') }}</span>
             </div>
         </div>
         <div class="row justify-content-center h-100 mt-3">
@@ -32,35 +37,35 @@ function generate() {
                 <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" v-model="uppercase" id="cbUppercase">
                     <label class="form-check-label" for="cbUppercase">
-                        Uppercase
+                        {{ t('sha.uppercase') }}
                     </label>
                 </div>
                 <div class="mb-3">
-                    <label for="txtInput" class="form-label">Input String:</label>
+                    <label for="txtInput" class="form-label">{{ t('sha.inputString') }}</label>
                     <textarea v-model="encodeInput" class="form-control" id="txtInput" rows="5"></textarea>
                 </div>
-                <button class="btn btn-primary" @click="generate()">Generate</button>
+                <button class="btn btn-primary" @click="generate()">{{ t('sha.generate') }}</button>
             </div>
 
             <div class="col-3 mt-3">
-                <h2>SHA-512</h2>
+                <h2>{{ t('sha.sha512') }}</h2>
                 <textarea v-model="sha512Output" class="form-control" rows="6" disabled />
-                <button class="btn btn-primary mt-2" @click="copy(sha512Output)">Copy</button>
+                <button class="btn btn-primary mt-2" @click="copy(sha512Output)">{{ t('generic.copy') }}</button>
             </div>
             <div class="col-3 mt-3">
-                <h2>SHA-384</h2>
+                <h2>{{ t('sha.sha384') }}</h2>
                 <textarea v-model="sha384Output" class="form-control" rows="6" disabled />
-                <button class="btn btn-primary mt-2" @click="copy(sha384Output)">Copy</button>
+                <button class="btn btn-primary mt-2" @click="copy(sha384Output)">{{ t('generic.copy') }}</button>
             </div>
             <div class="col-3 mt-3">
-                <h2>SHA-512/256</h2>
+                <h2>{{ t('sha.sha512_256') }}</h2>
                 <textarea v-model="sha512_256Output" class="form-control" rows="6" disabled />
-                <button class="btn btn-primary mt-2" @click="copy(sha512_256Output)">Copy</button>
+                <button class="btn btn-primary mt-2" @click="copy(sha512_256Output)">{{ t('generic.copy') }}</button>
             </div>
             <div class="col-3 mt-3">
-                <h2>SHA-512/224</h2>
+                <h2>{{ t('sha.sha512_224') }}</h2>
                 <textarea v-model="sha512_224Output" class="form-control" rows="6" disabled />
-                <button class="btn btn-primary mt-2" @click="copy(sha512_224Output)">Copy</button>
+                <button class="btn btn-primary mt-2" @click="copy(sha512_224Output)">{{ t('generic.copy') }}</button>
             </div>
         </div>
     </div>

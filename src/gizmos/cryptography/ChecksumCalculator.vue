@@ -7,14 +7,18 @@ import md5 from 'js-md5'
 import sha1 from 'js-sha1'
 import sha256 from 'js-sha256'
 import { sha512 } from 'js-sha512'
+import { useI18n } from 'vue-i18n'
+import { useGizmoI18n } from '../../composables/gizmo-i18n'
 
+const { t } = useI18n()
 const encodeInput = ref('')
 const checksumOutput = ref('')
 const algorithm = ref('CRC32')
 const { copy } = useClipboard({ encodeInput })
 const file = ref(null)
 const fileName = ref('')
-const inputMode = ref('text') // 'text' veya 'file'
+const inputMode = ref('text')
+const { getGizmoTitle, getGizmoDescription } = useGizmoI18n()
 
 function handleFileChange(e) {
   const uploadedFile = e.target.files[0]
@@ -22,7 +26,6 @@ function handleFileChange(e) {
   fileName.value = uploadedFile.name
   const reader = new FileReader()
   reader.onload = function(event) {
-    // Dosyayı ArrayBuffer olarak oku, binary ve metin dosyaları için uygundur.
     const content = event.target.result
     encodeInput.value = new Uint8Array(content)
   }
@@ -32,7 +35,7 @@ function handleFileChange(e) {
 function generate() {
   let result = ''
   let input = encodeInput.value
-  // Dosya yüklendiyse Uint8Array, metin ise string olur
+
   switch (algorithm.value) {
     case 'CRC32':
       if (input instanceof Uint8Array) {
@@ -99,16 +102,16 @@ function resetInput() {
   <div class="container-fluid p-0">
     <div class="row">
       <div class="col mb-3">
-        <h1>Checksum Calculator</h1>
+        <h1>{{ getGizmoTitle('ChecksumCalculator') }}</h1>
         <span>
-          You can use the Checksum Calculator Gizmo to calculate CRC32, Adler-32, MD5, SHA1, SHA256, SHA512 checksums from text or file.
+          {{ getGizmoDescription('ChecksumCalculator') }}
         </span>
       </div>
     </div>
     <div class="row justify-content-center h-100 mt-3">
       <div class="col-12">
         <div class="mb-3">
-          <label for="algorithm" class="form-label">Algorithm:</label>
+          <label for="algorithm" class="form-label">{{ t('checksum.algorithm') }}</label>
           <select v-model="algorithm" class="form-select" id="algorithm">
             <option value="CRC32">CRC32</option>
             <option value="Adler32">Adler-32</option>
@@ -119,30 +122,30 @@ function resetInput() {
           </select>
         </div>
         <div class="mb-3">
-          <label class="form-label">Input Type:</label>
+          <label class="form-label">{{ t('checksum.inputType') }}</label>
           <div>
             <input type="radio" id="textMode" value="text" v-model="inputMode" @change="resetInput">
-            <label for="textMode">&nbsp;Text</label>
+            <label for="textMode">&nbsp;{{ t('checksum.text') }}</label>
             <input type="radio" id="fileMode" value="file" v-model="inputMode" @change="resetInput" class="ms-3">
-            <label for="fileMode">&nbsp;File</label>
+            <label for="fileMode">&nbsp;{{ t('checksum.file') }}</label>
           </div>
         </div>
         <div v-if="inputMode === 'text'" class="mb-3">
-          <label for="txtInput" class="form-label">Input String:</label>
+          <label for="txtInput" class="form-label">{{ t('checksum.inputString') }}</label>
           <textarea v-model="encodeInput" class="form-control" id="txtInput" rows="5"></textarea>
         </div>
         <div v-else class="mb-3">
-          <label for="fileInput" class="form-label">Select File:</label>
+          <label for="fileInput" class="form-label">{{ t('checksum.selectFile') }}</label>
           <input type="file" class="form-control" id="fileInput" ref="file" @change="handleFileChange">
           <div v-if="fileName" class="mt-2">
-            <strong>Selected File:</strong> {{ fileName }}
+            <strong>{{ t('checksum.selectedFile') }}</strong> {{ fileName }}
           </div>
         </div>
-        <button class="btn btn-primary" @click="generate()" :disabled="inputMode === 'text' ? !encodeInput : !fileName">Generate</button>
+        <button class="btn btn-primary" @click="generate()" :disabled="inputMode === 'text' ? !encodeInput : !fileName">{{ t('checksum.generate') }}</button>
       </div>
       <div class="col-12 mt-3">
         <textarea v-model="checksumOutput" class="form-control" rows="2" disabled />
-        <button class="btn btn-primary mt-2" @click="copy(checksumOutput)">Copy</button>
+        <button class="btn btn-primary mt-2" @click="copy(checksumOutput)">{{ t('generic.copy') }}</button>
       </div>
     </div>
   </div>

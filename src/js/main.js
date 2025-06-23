@@ -1,5 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import { createI18n } from 'vue-i18n'
+
+// Translations
+import en from '../translations/en.json'
+import tr from '../translations/tr.json'
 
 // Import our custom CSS
 import '../scss/styles.scss'
@@ -7,7 +12,18 @@ import '../scss/styles.scss'
 // Import only the Bootstrap components we need
 import { Popover } from 'bootstrap';
 
-createApp(App).mount('#app')
+const browserLocale = navigator.language?.split('-')[0] || 'en'
+const savedLocale = localStorage.getItem('locale') || (['en', 'tr'].includes(browserLocale) ? browserLocale : 'en')
+
+const i18n = createI18n({
+  locale: savedLocale,
+  fallbackLocale: 'en',
+  messages: { en, tr }
+})
+
+const app = createApp(App)
+app.use(i18n)
+app.mount('#app')
 
 document.querySelectorAll('[data-bs-toggle="popover"]')
   .forEach(popover => {
@@ -50,7 +66,7 @@ async function copy(block, button) {
 
   await navigator.clipboard.writeText(text);
 
-  button.innerText = "Copied!";
+  button.innerText = t('generic.copied');
 
   setTimeout(() => {
     button.innerText = copyButtonLabel;
