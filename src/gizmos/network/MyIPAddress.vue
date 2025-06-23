@@ -14,7 +14,7 @@ let map
 
 onMounted(async () => {
     try {
-        const res = await fetch('https://devgizmos.com/ipinfo')
+        const res = await fetch('/ipinfo')
         if (!res.ok) throw new Error('Network error')
         ipInfo.value = await res.json()
         loader.value = false
@@ -27,7 +27,16 @@ onMounted(async () => {
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: '&copy; OpenStreetMap contributors'
                 }).addTo(map)
-                L.marker([ipInfo.value.latitude, ipInfo.value.longitude]).addTo(map)
+
+                var blueIcon = new L.Icon({
+                    iconUrl: '/img/marker-icon-2x-blue.png',
+                    shadowUrl: '/img/marker-shadow.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize: [41, 41]
+                });
+                L.marker([ipInfo.value.latitude, ipInfo.value.longitude], { icon: blueIcon }).addTo(map)
             }
         }
     } catch (e) {
@@ -118,7 +127,7 @@ onMounted(async () => {
                                 </div>
                             </div>
                             <div class="col-md-6" v-if="ipInfo.latitude && ipInfo.longitude">
-                                <div id="ip-map" style="height:300px;width:100%;border-radius:8px;border:1px solid #ccc;"></div>
+                                <div id="ip-map" style="height:400px;width:100%;border-radius:8px;border:1px solid #ccc;"></div>
                             </div>
                         </div>
                     </div>
