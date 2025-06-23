@@ -24,7 +24,7 @@ const requiredTwitterTags = [
   { name: 'twitter:card', label: 'twitter:card' },
   { name: 'twitter:title', label: 'twitter:title' },
   { name: 'twitter:description', label: 'twitter:description' },
-  { name: 'twitter:image', label: 'twitter:image' }
+  // twitter:image ve twitter:image:src ikisinden biri varsa yeterli
 ]
 
 const infoTwitterTags = [
@@ -53,11 +53,19 @@ const emptyTwitterTags = computed(() =>
     .filter(([k, v]) => v === '' && !infoTwitterTags.some(t => t.name === k))
     .map(([k]) => k)
 )
-const missingTwitterTags = computed(() =>
-  requiredTwitterTags
-    .filter(tag => !twitter.value[tag.name])
-    .map(tag => tag.label)
-)
+const missingTwitterTags = computed(() => {
+  const tags = []
+  if (!twitter.value['twitter:card']) tags.push('twitter:card')
+  if (!twitter.value['twitter:title']) tags.push('twitter:title')
+  if (!twitter.value['twitter:description']) tags.push('twitter:description')
+  if (
+    !twitter.value['twitter:image'] &&
+    !twitter.value['twitter:image:src']
+  ) {
+    tags.push('twitter:image')
+  }
+  return tags
+})
 const infoEmptyTwitterTags = computed(() =>
   infoTwitterTags
     .filter(tag => tag.name in twitter.value && twitter.value[tag.name] === '')
@@ -510,6 +518,29 @@ const StructuredDataRawCard = {
             <div class="og-card-title">{{ og['og:title'] || twitter['twitter:title'] || 'Preview Title' }}</div>
             <div class="og-card-desc">{{ og['og:description'] || twitter['twitter:description'] || 'Preview description...' }}</div>
             <div class="og-card-url">{{ og['og:url'] || url }}</div>
+          </div>
+          <div v-if="twitter['twitter:app:name:iphone'] || twitter['twitter:app:name:ipad']" class="mt-3">
+            <strong>App Links:</strong>
+            <ul class="mb-0">
+                <li v-if="twitter['twitter:app:name:iphone'] && twitter['twitter:app:id:iphone']">
+                <a
+                    :href="`https://apps.apple.com/app/id${twitter['twitter:app:id:iphone']}`"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    {{ twitter['twitter:app:name:iphone'] }} (iPhone)
+                </a>
+                </li>
+                <li v-if="twitter['twitter:app:name:ipad'] && twitter['twitter:app:id:ipad']">
+                <a
+                    :href="`https://apps.apple.com/app/id${twitter['twitter:app:id:ipad']}`"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    {{ twitter['twitter:app:name:ipad'] }} (iPad)
+                </a>
+                </li>
+            </ul>
           </div>
         </div>
         <div v-else-if="Object.keys(og).length === 0 && Object.keys(twitter).length === 0 && !error && !loading"
