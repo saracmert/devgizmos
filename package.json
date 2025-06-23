@@ -33,7 +33,7 @@
     "monaco-editor-webpack-plugin": "^7.1.0",
     "monaco-languageclient": "^9.7.0",
     "sql-formatter": "^15.6.5",
-    "vue": "^3.5.14"
+    "vue": "^3.5.17"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.4",
