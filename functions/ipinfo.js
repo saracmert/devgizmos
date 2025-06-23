@@ -1,5 +1,6 @@
-export default {
-  async fetch(request, env, ctx) {
+export async function onRequest(context) {
+    const { request, env } = context;
+
     const ip =
       request.headers.get('cf-connecting-ip') ||
       request.headers.get('x-forwarded-for') ||
@@ -61,5 +62,4 @@ export default {
         }
       }
     );
-  }
 }
