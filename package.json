@@ -29,11 +29,13 @@
     "js-sha1": "^0.7.0",
     "js-sha256": "^0.11.1",
     "js-sha512": "^0.9.0",
+    "leaflet": "^1.9.4",
     "monaco-editor": "^0.52.2",
     "monaco-editor-webpack-plugin": "^7.1.0",
     "monaco-languageclient": "^9.7.0",
     "sql-formatter": "^15.6.5",
-    "vue": "^3.5.14"
+    "vue": "^3.5.14",
+    "vue-i18n": "^11.1.7"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.4",

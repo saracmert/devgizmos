@@ -1,0 +1,382 @@
+{
+    "generic": {
+        "copy": "Kopyala",
+        "copied": "Kopyalandı!"
+    },
+    "gizmos": {
+        "title": "Gizmo",
+        "pronunciation": "/ˈɡɪzmoʊ/",
+        "intro": "geliştiriciler için gerekli birçok aracı tek bir yerde bir araya getiren açık kaynaklı bir projedir. Web, mobil veya masaüstü projelerinde çalışıyor olun, Devgizmos verimliliğinizi artırmanıza ve iş akışınızı kolaylaştırmanıza yardımcı olur.",
+        "gizmoTerm": "“<a href=\"https://en.wikipedia.org/wiki/Gizmo\" target=\"_blank\">Gizmo</a>” terimi, özellikle gerçek adı bilinmeyen ya da unutulmuş olan bir şeyleri ifade eder. Türkçede bu kavram, <a href=\"https://eksisozluk.com/zamazingo--61113\" target=\"_blank\">zamazingo</a>, <a href=\"https://eksisozluk.com/zimbirti--60489\" target=\"_blank\">zımbırtı</a> veya <a href=\"https://eksisozluk.com/dalgametre--93562\" target=\"_blank\">dalgametre</a> olarak da bilinir.",
+        "offlineTitle": "Devgizmos tamamen offline çalışabilmeyi amaçlar ve gizlilik odaklıdır.",
+        "offlineDesc": "Tüm araçlar tamamen tarayıcınızda çalışır, verileriniz asla cihazınızı terk etmez. Bu, Devgizmos'u çoğu alternatife göre daha güvenli ve hassas işler için ideal kılar.",
+        "openSourceTitle": "Proje sürekli güncellenir ve açık kaynaklıdır.",
+        "openSourceDesc": "Herkes katkıda bulunabilir veya yeni özellikler önerebilir. Açık yapısı sayesinde Devgizmos, geliştirici topluluğunun ihtiyaçlarıyla birlikte evrilir.",
+        "noAds": "Burada asla reklam görmeyeceksiniz.",
+        "support": " Eğer projeyi desteklemek ve alan adı ile Cloudflare masraflarına katkı sağlamak isterseniz, <a href=\"https://www.buymeacoffee.com/mertsarac\" target=\"_blank\">bize bir kahve ısmarlayabilirsiniz</a> ☕.",
+        "supportDesc": "* CORS gibi tarayıcı kısıtlamaları bazı gizmo'ların sunucu üzerinde çalışmasını zorunlu tutar. Bu gizmo'larda gizlilik uyarıları yer alır. Henüz büyük bir topluluk olmadığımız için sponsorumuz yok. Cloudflare Workers üzerinde çalışan tüm gizmo'ların ödemeleri bireysel olarak karşılanıyor.",
+        "roadmapTitle": "Yol Haritası:",
+        "roadmapDesc": "Kullanıcı geri bildirimlerine göre sürekli yeni gizmo'lar ekliyor ve mevcutları iyileştiriyoruz. Gelişmeleri takip edebilir ve GitHub sayfamızdan katkıda bulunabilirsiniz.",
+        "quickSearch": "Hızlı Arama:",
+        "quickSearchPlaceholder": "Anahtar kelimenizi girin",
+        "tryGizmo": "{title} Gizmo'sunu Dene",
+        "categories": [
+            {
+                "title": "Metin Araçları",
+                "items": [
+                    {
+                        "title": "Fark Karşılaştırıcı",
+                        "description": "Fark Karşılaştırıcı Gizmo ile iki kod arasındaki farkları görebilirsiniz.",
+                        "gizmo": "DiffChecker"
+                    },
+                    {
+                        "title": "String Builder",
+                        "description": "Otomatik StringBuilder kodu üretimi.",
+                        "gizmo": "StringBuilder"
+                    },
+                    {
+                        "title": "Büyük/Küçük Harf Dönüştürücü",
+                        "description": "Metinlerinizi farklı harf formatlarına dönüştürmek için Harf Dönüştürücü Gizmo'yu kullanabilirsiniz.",
+                        "gizmo": "CaseConverter"
+                    },
+                    {
+                        "title": "Lorem Ipsum Üretici",
+                        "description": "Lorem Ipsum Üretici Gizmo ile Lorem Ipsum metinleri oluşturabilirsiniz.",
+                        "gizmo": "LoremIpsumGenerator"
+                    },
+                    {
+                        "title": "Sahte E-posta Adresi Üretici",
+                        "description": "Sahte E-posta Adresi Üretici Gizmo ile sahte e-posta adresleri oluşturabilirsiniz.",
+                        "gizmo": "FakeEmailGenerator"
+                    },
+                    {
+                        "title": "URL Ayrıştırıcı",
+                        "description": "URL Ayrıştırıcı Gizmo ile herhangi bir URL'yi ayrıştırabilir ve inceleyebilirsiniz. Protokol, host, yol, sorgu parametreleri ve daha fazlasını görebilirsiniz.",
+                        "gizmo": "URLParser"
+                    },
+                    {
+                        "title": "Slug Üretici",
+                        "description": "Slug Üretici Gizmo ile metninizi SEO ve URL dostu bir sluga dönüştürebilirsiniz. Türkçe, Almanca, Fransızca ve İspanyolca karakterler otomatik olarak dönüştürülür.",
+                        "gizmo": "SlugGenerator"
+                    },
+                    {
+                        "title": "Metin Tekilleştirici",
+                        "description": "Metin Tekilleştirici Gizmo ile metninizdeki tekrar eden satır veya kelimeleri kaldırabilirsiniz. Tekilleştirme modu, büyük/küçük harf duyarlılığı, çıktı formatı ve daha fazlasını seçebilirsiniz.",
+                        "gizmo": "TextDeduplicator"
+                    },
+                    {
+                        "title": "Metin Sıralayıcı & Ters Çevirici",
+                        "description": "Metin Sıralayıcı & Ters Çevirici Gizmo ile metin satırlarınızı esnek seçeneklerle sıralayabilir, ters çevirebilir, tekilleştirebilir veya temizleyebilirsiniz.",
+                        "gizmo": "TextSorterReverser"
+                    },
+                    {
+                        "title": "ASCII - Unicode Dönüştürücü",
+                        "description": "ASCII - Unicode Dönüştürücü Gizmo ile metni ASCII veya Unicode formatına dönüştürebilir, tersini de yapabilirsiniz.",
+                        "gizmo": "AsciiUnicodeConverter"
+                    }
+                ]
+            },
+            {
+                "title": "Kriptografi Araçları",
+                "items": [
+                    {
+                        "title": "Guid Üretici",
+                        "description": "Guid Üretici Gizmo ile hızlıca geçerli bir sürüm 4 GUID oluşturabilirsiniz.",
+                        "gizmo": "GuidGenerator"
+                    },
+                    {
+                        "title": "Şifre Üretici",
+                        "description": "Şifre Üretici Gizmo ile hızlıca güvenli bir şifre oluşturabilirsiniz.",
+                        "gizmo": "PasswordGenerator"
+                    },
+                    {
+                        "title": "MD5 Hash Üretici",
+                        "description": "Guid Üretici Gizmo ile hızlıca bir MD5 Hash oluşturabilirsiniz.",
+                        "gizmo": "MD5"
+                    },
+                    {
+                        "title": "SHA Hash Üretici",
+                        "description": "Guid Üretici Gizmo ile hızlıca SHA-512, SHA-384, SHA-512/224, SHA-512/256 Hash oluşturabilirsiniz.",
+                        "gizmo": "SHA"
+                    },
+                    {
+                        "title": "Checksum Hesaplayıcı",
+                        "description": "Checksum Hesaplayıcı Gizmo ile metin veya dosyadan CRC32, Adler-32, MD5, SHA1, SHA256, SHA512 checksum hesaplayabilirsiniz.",
+                        "gizmo": "ChecksumCalculator"
+                    }
+                ]
+            },
+            {
+                "title": "Biçimlendirici Araçlar",
+                "items": [
+                    {
+                        "title": "JSON Güzelleştirici",
+                        "description": "JSON dosyalarınızı güzelleştirin.",
+                        "gizmo": "JSONBeautifier"
+                    },
+                    {
+                        "title": "HTML Güzelleştirici",
+                        "description": "HTML kodlarınızı güzelleştirin.",
+                        "gizmo": "HTMLBeautifier"
+                    },
+                    {
+                        "title": "HTML Küçültücü",
+                        "description": "HTML kodlarınızı küçültün.",
+                        "gizmo": "HTMLMinifier"
+                    },
+                    {
+                        "title": "SQL Güzelleştirici",
+                        "description": "SQL sorgularınızı daha okunabilir hale getirin. MySQL, PostgreSQL ve SQL Server desteklenir.",
+                        "gizmo": "SQLBeautifier"
+                    }
+                ]
+            },
+            {
+                "title": "Encode - Decode Araçları",
+                "items": [
+                    {
+                        "title": "Base64",
+                        "description": "Base64 Gizmo ile metni kodlayabilir/çözebilir, dosyaları Base64 string'e dönüştürebilirsiniz.",
+                        "gizmo": "Base64"
+                    },
+                    {
+                        "title": "URL Kodlayıcı / Çözücü",
+                        "description": "URL Kodlayıcı / Çözücü Gizmo ile URL stringlerini kodlayabilir veya çözebilirsiniz.",
+                        "gizmo": "URL"
+                    },
+                    {
+                        "title": "JWT Çözücü",
+                        "description": "Bir JWT (JSON Web Token) yapıştırarak başlık ve yükünü çözebilirsiniz. İmza doğrulanmaz. Hiçbir veri sunucuya gönderilmez; çözümleme tamamen tarayıcınızda yapılır.",
+                        "gizmo": "JWT"
+                    }
+                ]
+            },
+            {
+                "title": "Ağ Araçları",
+                "items": [
+                    {
+                        "title": "IP Adresim",
+                        "description": "IP Adresim Gizmo ile genel IP adresinizi öğrenebilirsiniz.",
+                        "gizmo": "MyIPAddress"
+                    },
+                    {
+                        "title": "CIDR Hesaplayıcı",
+                        "description": "CIDR Hesaplayıcı Gizmo ile verilen IP adresini CIDR gösteriminde analiz edebilir, ağ adresi, yayın adresi, ilk ve son kullanılabilir IP, alt ağ maskesi ve toplam host sayısı gibi detayları kolayca hesaplayabilirsiniz.",
+                        "gizmo": "CIDRCalculator"
+                    }
+                ]
+            },
+            {
+                "title": "Pazarlama Araçları",
+                "items": [
+                    {
+                        "title": "UTM Link Üretici",
+                        "description": "UTM Link Üretici Gizmo ile Google Analytics için kampanya linkleri oluşturabilirsiniz.",
+                        "gizmo": "UTMLinkGenerator"
+                    },
+                    {
+                        "title": "Open Graph & X Kart Önizleme",
+                        "description": "Open Graph ve X Kart meta etiketlerini önizlemek ve oluşturmak için bu aracı kullanabilirsiniz.",
+                        "gizmo": "OGCardPreview"
+                    }
+                ]
+            },
+            {
+                "title": "Doğrulama Araçları",
+                "items": [
+                    {
+                        "title": "Regex Test Aracı",
+                        "description": "Bir JavaScript düzenli ifadesi girin ve bir hedef metin üzerinde test edin. Bayraklar ve çok satırlı desenler desteklenir. Varsa isimli gruplar gösterilir.",
+                        "gizmo": "RegexTester"
+                    }
+                ]
+            }
+        ]
+    },
+    "checksum": {
+        "algorithm": "Algoritma:",
+        "inputType": "Girdi Türü:",
+        "text": "Metin",
+        "file": "Dosya",
+        "inputString": "Girdi Metni:",
+        "selectFile": "Dosya Seç:",
+        "selectedFile": "Seçilen Dosya:",
+        "generate": "Oluştur"
+    },
+    "guid": {
+        "uppercase": "Büyük Harf",
+        "count": "Adet",
+        "generate": "Oluştur"
+    },
+    "md5": {
+        "uppercase": "Büyük Harf",
+        "inputString": "Girdi Metni:",
+        "generate": "Oluştur"
+    },
+    "password": {
+        "numbers": "Rakamlar",
+        "lowercase": "Küçük Harf",
+        "uppercase": "Büyük Harf",
+        "symbols": "Semboller",
+        "symbolsHint": "Semboller<br />!@#$%&*_?[]-+.",
+        "extendedSymbols": "Genişletilmiş Semboller",
+        "extendedSymbolsHint": "Genişletilmiş Semboller<br />,-.:;<=>^{|}~()",
+        "similarCharacters": "Benzer Karakterler",
+        "similarCharactersHint": "Benzer Karakterler <br />O0il1|2Z",
+        "length": "Uzunluk",
+        "count": "Adet",
+        "regenerate": "Yeniden Oluştur"
+    },
+    "sha": {
+        "uppercase": "Büyük Harf",
+        "inputString": "Girdi Metni:",
+        "generate": "Oluştur",
+        "sha512": "SHA-512",
+        "sha384": "SHA-384",
+        "sha512_256": "SHA-512/256",
+        "sha512_224": "SHA-512/224"
+    },
+    "base64": {
+        "encodeText": "Metni Kodla",
+        "decodeText": "Metni Çöz",
+        "encodeFile": "Dosyayı Kodla",
+        "textInput": "Metin Girişi",
+        "textOutput": "Metin Çıkışı",
+        "fileInput": "Dosya Girişi",
+        "copy": "Kopyala",
+        "encode": "Kodla",
+        "decode": "Çöz"
+    },
+    "jwt": {
+        "privacyNote": "Hiçbir veri sunucuya gönderilmez; çözümleme tamamen tarayıcınızda yapılır.",
+        "placeholder": "JWT'nizi buraya yapıştırın (x.y.z)",
+        "header": "Başlık",
+        "payload": "Yük",
+        "signature": "İmza",
+        "copy": "Kopyala",
+        "copied": "Kopyalandı!",
+        "invalidParts": "Geçersiz JWT: Nokta ile ayrılmış üç bölüm olmalı.",
+        "invalidHeader": "Geçersiz JWT: Başlık çözümlenemedi.",
+        "invalidHeaderJson": "Geçersiz JWT: Başlık geçerli bir JSON değil.",
+        "invalidPayload": "Geçersiz JWT: Yük çözümlenemedi.",
+        "invalidPayloadJson": "Geçersiz JWT: Yük geçerli bir JSON değil."
+    },
+    "url": {
+        "encodeUrl": "URL Kodla",
+        "decodeUrl": "URL Çöz",
+        "input": "Girdi",
+        "output": "Çıktı",
+        "encode": "Kodla",
+        "decode": "Çöz",
+        "copy": "Kopyala"
+    },
+    "htmlBeautifier": {
+        "invalidInput": "Geçersiz HTML girişi"
+    },
+    "htmlMinifier": {
+        "invalidInput": "Geçersiz HTML girişi"
+    },
+    "jsonBeautifier": {
+        "invalidInput": "Geçersiz JSON girişi"
+    },
+    "sqlBeautifier": {
+        "dialect": "SQL Diyalekti:",
+        "input": "SQL Girişi:",
+        "placeholder": "SQL'inizi buraya yapıştırın",
+        "beautify": "Güzelleştir",
+        "output": "Güzelleştirilmiş SQL:",
+        "copy": "Kopyala",
+        "error": "Hata: Geçersiz SQL"
+    },
+    "ogCardPreview": {
+        "privacyNotice": "Gizlilik Notu: Bu araç, CORS kısıtlamalarını aşmak için Cloudflare Workers üzerinde çalışan bir proxy kullanır. IP adresiniz oran sınırlama kurallarını uygulamak için geçici olarak saklanır.",
+        "url": "URL",
+        "fetch": "Meta Etiketleri Getir",
+        "loading": "Yükleniyor...",
+        "noTags": "Henüz önizlenecek meta etiket yok.",
+        "noMetaFound": "Open Graph, X Kart veya yapılandırılmış veri meta etiketi bulunamadı.",
+        "copy": "Kopyala",
+        "ogTags": "Open Graph Etiketleri",
+        "twitterTags": "X Kart Etiketleri",
+        "warningEmptyOg": "Aşağıdaki Open Graph etiketleri mevcut ancak boş:",
+        "warningMissingOg": "Aşağıdaki gerekli Open Graph etiketleri eksik:",
+        "infoEmptyOg": "Aşağıdaki isteğe bağlı Open Graph etiketleri mevcut ancak boş:",
+        "infoEmptyOgNote": "Bu etiketler zorunlu değildir, ancak doldurulmaları kartınızın görünümünü iyileştirebilir.",
+        "warningEmptyTwitter": "Aşağıdaki X Kart etiketleri mevcut ancak boş:",
+        "warningMissingTwitter": "Aşağıdaki gerekli X Kart etiketleri eksik:",
+        "infoEmptyTwitter": "Aşağıdaki isteğe bağlı X Kart etiketleri mevcut ancak boş:",
+        "infoEmptyTwitterNote": "Bu etiketler zorunlu değildir, ancak doldurulmaları X (Twitter) üzerindeki kartınızın görünümünü iyileştirebilir.",
+        "appLinks": "Uygulama Bağlantıları:",
+        "inStock": "Stokta",
+        "outOfStock": "Stokta Yok",
+        "previewTitle": "Önizleme Başlığı",
+        "previewDescription": "Önizleme açıklaması...",
+        "errorEnterUrl": "Lütfen bir URL girin.",
+        "errorNoMeta": "Open Graph, X Kart veya yapılandırılmış veri meta etiketi bulunamadı.",
+        "errorFetch": "Meta etiketleri alınamadı.",
+        "errorNetwork": "Ağ hatası veya geçersiz yanıt."
+    },
+    "utmLinkGenerator": {
+        "required": "* Zorunlu alanlar",
+        "optional": "Opsiyonel alanlar",
+        "url": "URL",
+        "urlPlaceholder": "Tam web sitesi adresi (örn. https://www.ornek.com/urunler)",
+        "campaignSource": "Kampanya Kaynağı",
+        "campaignSourcePlaceholder": "Yönlendiren (örn. google, bulten)",
+        "campaignMedium": "Kampanya Aracı",
+        "campaignMediumPlaceholder": "Pazarlama aracı (örn. cpc, banner, e-posta)",
+        "campaignName": "Kampanya Adı",
+        "campaignNamePlaceholder": "Ürün, promosyon kodu veya slogan (örn. bahar_indirimi)",
+        "campaignID": "Kampanya ID",
+        "campaignIDPlaceholder": "Reklam kampanya kimliği.",
+        "campaignTerm": "Kampanya Terimi",
+        "campaignTermPlaceholder": "Ücretli anahtar kelimeleri belirtin",
+        "campaignContent": "Kampanya İçeriği",
+        "campaignContentPlaceholder": "Reklamları ayırt etmek için kullanılır",
+        "generate": "Oluştur",
+        "copy": "Kopyala",
+        "copied": "Kopyalandı!",
+        "output": "Oluşturulan UTM Linki",
+        "errorInvalidUrl": "Geçersiz URL!",
+        "errorSourceRequired": "Kampanya Kaynağı alanı boş bırakılamaz.",
+        "errorMediumRequired": "Kampanya Aracı alanı boş bırakılamaz.",
+        "errorNameRequired": "Kampanya Adı alanı boş bırakılamaz."
+    },
+    "cidrCalculator": {
+        "inputPlaceholder": "CIDR gösteriminde IP adresi girin (örn. 192.168.1.0/24)",
+        "networkAddress": "Ağ Adresi",
+        "broadcastAddress": "Yayın Adresi",
+        "subnetMask": "Alt Ağ Maskesi",
+        "firstHost": "İlk Host",
+        "lastHost": "Son Host",
+        "hostCount": "Host Sayısı",
+        "invalidFormat": "Geçersiz CIDR formatı",
+        "invalidIP": "Geçersiz IP"
+    },
+    "myIpAddress": {
+        "loading": "Yükleniyor...",
+        "ip": "IP Adresi",
+        "userAgent": "Kullanıcı Aracısı",
+        "http": "HTTP",
+        "tls": "TLS",
+        "poweredBy": "{provider} tarafından sunulmaktadır",
+        "country": "Ülke",
+        "city": "Şehir",
+        "region": "Bölge",
+        "timezone": "Zaman Dilimi",
+        "asn": "ASN",
+        "colo": "Veri Merkezi",
+        "postalCode": "Posta Kodu",
+        "location": "Konum",
+        "error": "IP bilgisi alınamadı."
+    },
+    "regexTester": {
+        "pattern": "Desen",
+        "flags": "Bayraklar",
+        "testString": "Test Edilecek Metin",
+        "matches": "Eşleşmeler:",
+        "noMatches": "Eşleşme bulunamadı.",
+        "invalidPattern": "Lütfen bir regex deseni girin.",
+        "invalidRegex": "Geçersiz düzenli ifade: {msg}"
+    }
+}

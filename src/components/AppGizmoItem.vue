@@ -1,3 +1,7 @@
+<script setup>
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+</script>
 <script>
 export default {
   props: {
@@ -15,7 +19,7 @@ export default {
         <h4 class="card-title">{{ title }}</h4>
         <p class="card-text">{{ description }}</p>
         <p class="mt-auto align-self-start">
-          <a v-bind:href="'/' + gizmo" class="btn btn-sm btn-primary">Try {{ title }} Gizmo</a>
+          <a v-bind:href="'/' + gizmo" class="btn btn-sm btn-primary">{{ t('gizmos.tryGizmo', { title }) }}</a>
         </p>
       </div>
     </div>

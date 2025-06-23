@@ -1,5 +1,10 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useGizmoI18n } from '../../composables/gizmo-i18n'
+
+const { t } = useI18n()
+const { getGizmoTitle, getGizmoDescription } = useGizmoI18n()
 
 const pattern = ref('^(?<user>\\w+)@(\\w+).([a-z]{2,3})$')
 const flagsArray = ref(['g', 'm']) // default: global & multiline
@@ -17,7 +22,6 @@ HELLO@EXAMPLE.COM`)
 const matchResults = ref([])
 const error = ref('')
 
-// Flags birleşik string olarak
 const flags = computed(() => flagsArray.value.join(''))
 
 function testRegex() {
@@ -69,19 +73,18 @@ watch([pattern, flagsArray, testString], testRegex, { immediate: true })
 
 <template>
   <div class="container-fluid my-4">
-    <h2 class="mb-3">Regex Tester</h2>
+    <h2 class="mb-3">{{ getGizmoTitle('RegexTester') }}</h2>
     <p>
-      Enter a JavaScript regular expression and test it against a target string.<br>
-      Flags and multiline patterns are supported. Named groups will be shown if present.
+      {{ getGizmoDescription('RegexTester') }}
     </p>
     <form @submit.prevent>
       <div class="row align-items-end mb-3">
         <div class="col-md-7 mb-2">
-          <label class="form-label">Pattern</label>
+          <label class="form-label">{{ t('regexTester.pattern') }}</label>
           <textarea v-model="pattern" class="form-control font-monospace" rows="3" spellcheck="false" style="resize:vertical" />
         </div>
         <div class="col-md-3 mb-2">
-          <label class="form-label">Flags</label>
+          <label class="form-label">{{ t('regexTester.flags') }}</label>
           <select v-model="flagsArray" class="form-select" multiple style="min-height: 120px;">
             <option v-for="opt in flagsOptions" :value="opt.value" :key="opt.value">
               {{ opt.label }}
@@ -95,13 +98,13 @@ watch([pattern, flagsArray, testString], testRegex, { immediate: true })
         </div>
       </div>
       <div class="mb-3">
-        <label class="form-label">Test String</label>
+        <label class="form-label">{{ t('regexTester.testString') }}</label>
         <textarea v-model="testString" class="form-control font-monospace" rows="4" spellcheck="false" style="resize:vertical" />
       </div>
     </form>
     <div v-if="error" class="alert alert-warning mt-3">{{ error }}</div>
     <div v-else-if="matchResults.length > 0" class="mt-3">
-      <h5>Matches:</h5>
+      <h5>{{ t('regexTester.matches') }}</h5>
       <ul class="list-group mb-2">
         <li v-for="(res, i) in matchResults" :key="i" class="list-group-item">
           <strong>#{{ i+1 }}: </strong>

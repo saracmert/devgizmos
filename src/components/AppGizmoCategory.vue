@@ -11,7 +11,7 @@ export default {
   },
   computed: {
     filteredItems() {
-        return this.items.filter(item => (item.title.toLowerCase().indexOf(this.filter.toLocaleLowerCase()) != -1) || (item.description.toLowerCase().indexOf(this.filter.toLocaleLowerCase()) != -1));
+        return this.items?.filter(item => (item.title.toLowerCase().indexOf(this.filter.toLocaleLowerCase()) != -1) || (item.description.toLowerCase().indexOf(this.filter.toLocaleLowerCase()) != -1));
     }
   }
 }

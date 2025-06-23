@@ -1,5 +1,10 @@
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useGizmoI18n } from '../../composables/gizmo-i18n'
+
+const { t } = useI18n()
+const { getGizmoTitle, getGizmoDescription } = useGizmoI18n()
 
 const count = ref(1)
 const uppercase = ref()
@@ -28,8 +33,8 @@ function generateGuid() {
     <div class="container-fluid p-0">
         <div class="row">
             <div class="col mb-3">
-                <h1>Guid Generator</h1>
-                <span>You can use the Guid Generator Gizmo to quickly generate a compliant version 4 GUID.</span>
+                <h1>{{ getGizmoTitle('GuidGenerator') }}</h1>
+                <span>{{ getGizmoDescription('GuidGenerator') }}</span>
             </div>
         </div>
         <div class="row justify-content-center h-100 mt-3">
@@ -37,13 +42,13 @@ function generateGuid() {
                 <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" v-model="uppercase" id="cbUppercase">
                     <label class="form-check-label" for="cbUppercase">
-                        Uppercase
+                        {{ t('guid.uppercase') }}
                     </label>
                 </div>
                 <div class="mb-3">
-                    Count: <input type="number" id="txtCount" class="form-control" v-model="count" />
+                    {{ t('guid.count') }}: <input type="number" id="txtCount" class="form-control" v-model="count" />
                 </div>
-                <button class="btn btn-primary" @click="generate()">Generate</button>
+                <button class="btn btn-primary" @click="generate()">{{ t('guid.generate') }}</button>
             </div>
             <div class="col-10">
                 <textarea v-model="guidsOutput" class="form-control" rows="6" disabled />
