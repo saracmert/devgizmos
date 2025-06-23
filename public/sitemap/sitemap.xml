@@ -1,51 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://devgizmos.com/DiffChecker</loc>
-    <lastmod>2024-04-08</lastmod>
+    <loc>https://devgizmos.com/</loc>
+    <lastmod>2024-06-24</lastmod>
   </url>
   <url>
-    <loc>https://devgizmos.com/StringBuilder</loc>
-    <lastmod>2024-04-08</lastmod>
-  </url>
-  <url>
-    <loc>https://devgizmos.com/CaseConverter</loc>
-    <lastmod>2024-04-08</lastmod>
-  </url>
-  <url>
-    <loc>https://devgizmos.com/LoremIpsumGenerator</loc>
-    <lastmod>2024-04-08</lastmod>
-  </url>
-  <url>
-    <loc>https://devgizmos.com/FakeEmailGenerator</loc>
-    <lastmod>2024-04-08</lastmod>
-  </url>
-  <url>
-    <loc>https://devgizmos.com/GuidGenerator</loc>
-    <lastmod>2024-04-08</lastmod>
-  </url>
-  <url>
-    <loc>https://devgizmos.com/PasswordGenerator</loc>
-    <lastmod>2024-04-08</lastmod>
+    <loc>https://devgizmos.com/Credits</loc>
+    <lastmod>2024-06-24</lastmod>
   </url>
   <url>
     <loc>https://devgizmos.com/JSONBeautifier</loc>
-    <lastmod>2024-04-08</lastmod>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/HTMLBeautifier</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/HTMLMinifier</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/StringBuilder</loc>
+    <lastmod>2024-06-24</lastmod>
   </url>
   <url>
     <loc>https://devgizmos.com/Base64</loc>
-    <lastmod>2024-04-08</lastmod>
+    <lastmod>2024-06-24</lastmod>
   </url>
   <url>
-    <loc>https://devgizmos.com/URL</loc>
-    <lastmod>2024-04-08</lastmod>
+    <loc>https://devgizmos.com/DiffChecker</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/GuidGenerator</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/PasswordGenerator</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/MD5</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/SHA</loc>
+    <lastmod>2024-06-24</lastmod>
   </url>
   <url>
     <loc>https://devgizmos.com/MyIPAddress</loc>
-    <lastmod>2024-04-08</lastmod>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/CIDRCalculator</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/URL</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/CaseConverter</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/LoremIpsumGenerator</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/FakeEmailGenerator</loc>
+    <lastmod>2024-06-24</lastmod>
   </url>
   <url>
     <loc>https://devgizmos.com/UTMLinkGenerator</loc>
-    <lastmod>2024-09-20</lastmod>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/RegexTester</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/JWT</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/ChecksumCalculator</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/SQLBeautifier</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/URLParser</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/SlugGenerator</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/TextDeduplicator</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/TextSorterReverser</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/AsciiUnicodeConverter</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/OGCardPreview</loc>
+    <lastmod>2024-06-24</lastmod>
   </url>
 </urlset>
