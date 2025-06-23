@@ -8,7 +8,10 @@ export async function onRequest(context) {
       request.headers.get('client-ip') ||
       request.headers.get('remote-addr') ||
       '';
+    
     const key = `rate:${ip}`;
+    const limit = 10;
+    const windowSeconds = 60;
 
     if (env && env.RATE_LIMIT) {
         const now = Date.now();
