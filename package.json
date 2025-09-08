@@ -35,7 +35,7 @@
     "monaco-languageclient": "^9.10.0",
     "sql-formatter": "^15.6.6",
     "vue": "^3.5.19",
-    "vue-i18n": "^11.1.11"
+    "vue-i18n": "^11.1.12"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.4",
