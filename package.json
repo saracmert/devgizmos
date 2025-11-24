@@ -17,7 +17,7 @@
     "test": "npm run build && npm run lint"
   },
   "dependencies": {
-    "@monaco-editor/loader": "^1.6.1",
+    "@monaco-editor/loader": "^1.7.0",
     "@popperjs/core": "^2.11.8",
     "@vueuse/core": "^14.0.0",
     "@zxcvbn-ts/core": "^3.0.4",
