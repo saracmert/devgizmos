@@ -34,7 +34,7 @@
     "monaco-editor-webpack-plugin": "^7.1.1",
     "monaco-languageclient": "^10.4.0",
     "sql-formatter": "^15.6.11",
-    "vue": "^3.5.25",
+    "vue": "^3.5.26",
     "vue-i18n": "^11.2.2"
   },
   "devDependencies": {
