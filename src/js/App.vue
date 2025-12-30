@@ -20,9 +20,12 @@ import AsciiUnicodeConverter from '../gizmos/text/ASCIIUnicodeConverter.vue'
 
 // Formatter Gizmos
 import JsonBeautifier from '../gizmos/formatter/JSONBeautifier.vue'
+import JsonMinifier from '../gizmos/formatter/JSONMinifier.vue'
+import MongoDBJsonConverter from '../gizmos/formatter/MongoDBJsonConverter.vue'
 import HtmlBeautifier from '../gizmos/formatter/HTMLBeautifier.vue'
 import HtmlMinifier from '../gizmos/formatter/HTMLMinifier.vue'
 import SQLBeautifier from '../gizmos/formatter/SQLBeautifier.vue'
+import EInvoiceViewer from '../gizmos/formatter/EInvoiceViewer.vue'
 
 // Encode - Decode Gizmos
 import Base64 from '../gizmos/encode-decode/Base64.vue'
@@ -44,8 +47,20 @@ import CIDRCalculator from '../gizmos/network/CIDRCalculator.vue'
 import UTMLinkGenerator from '../gizmos/marketing/UTMLinkGenerator.vue'
 import OGCardPreview from '../gizmos/marketing/OGCardPreview.vue'
 
+// Design Gizmos
+import QRCodeGenerator from '../gizmos/design/QRCodeGenerator.vue'
+import ColorPaletteGenerator from '../gizmos/design/ColorPaletteGenerator.vue'
+import ColorContrastChecker from '../gizmos/design/ColorContrastChecker.vue'
+
 // Validator Gizmos
 import RegexTester from '../gizmos/validators/RegexTester.vue'
+import UUIDValidator from '../gizmos/validators/UUIDValidator.vue'
+import JSONValidator from '../gizmos/validators/JSONValidator.vue'
+
+// Converter Gizmos
+import UnixTimestamp from '../gizmos/converters/UnixTimestamp.vue'
+import FileSizeConverter from '../gizmos/converters/FileSizeConverter.vue'
+import RomanNumeralConverter from '../gizmos/converters/RomanNumeralConverter.vue'
 
 import robots from '../../public/robots.txt'
 
@@ -53,6 +68,8 @@ const routes = {
   '/': Gizmos,
   'Credits': Credits,
   'JSONBeautifier': JsonBeautifier,
+  'JSONMinifier': JsonMinifier,
+  'MongoDBJsonConverter': MongoDBJsonConverter,
   'HTMLBeautifier': HtmlBeautifier,
   'HTMLMinifier': HtmlMinifier,
   'StringBuilder': StringBuilder,
@@ -70,15 +87,24 @@ const routes = {
   "FakeEmailGenerator": FakeEmailGenerator,
   "UTMLinkGenerator": UTMLinkGenerator,
   "RegexTester": RegexTester,
+  "UUIDValidator": UUIDValidator,
+  "JSONValidator": JSONValidator,
+  "UnixTimestamp": UnixTimestamp,
+  "FileSizeConverter": FileSizeConverter,
+  "RomanNumeralConverter": RomanNumeralConverter,
   "JWT": JWT,
   "ChecksumCalculator": ChecksumCalculator,
   "SQLBeautifier": SQLBeautifier,
+  "EInvoiceViewer": EInvoiceViewer,
   "URLParser": URLParser,
   "SlugGenerator": SlugGenerator,
   "TextDeduplicator": TextDeduplicator,
   "TextSorterReverser": TextSorterReverser,
   "AsciiUnicodeConverter": AsciiUnicodeConverter,
   "OGCardPreview": OGCardPreview,
+  "QRCodeGenerator": QRCodeGenerator,
+  "ColorPaletteGenerator": ColorPaletteGenerator,
+  "ColorContrastChecker": ColorContrastChecker,
 
   "robots.txt": robots
 }

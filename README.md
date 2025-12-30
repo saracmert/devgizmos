@@ -42,8 +42,10 @@ Whether you’re working on web applications, mobile apps, or desktop software, 
 | Javascript Beautifier           | Formatters       | ❌         |
 | Javascript Minifier             | Formatters       | ❌         |
 | JSON Beautifier                 | Formatters       | 🚀         |
-| JSON Minifier                   | Formatters       | ❌         |
+| JSON Minifier                   | Formatters       | 🚀         |
+| MongoDB JSON Converter          | Formatters       | 🚀         |
 | SQL Beautifier                  | Formatters       | 🚀         |
+| E-Invoice Viewer                | Formatters       | 🚀         |
 | SQL Minifier                    | Formatters       | ❌         |
 | XML Beautifier                  | Formatters       | ❌         |
 | XML Minifier                    | Formatters       | ❌         |
@@ -53,9 +55,9 @@ Whether you’re working on web applications, mobile apps, or desktop software, 
 | Markdown Formatter              | Formatters       | ❌         |
 | CSS-in-JS Formatter             | Formatters       | ❌         |
 | Code Prettifier                 | Formatters       | ❌         |
-| JSON Validator                  | Validators       | ❌         |
+| JSON Validator                  | Validators       | 🚀         |
 | XML Validator                   | Validators       | ❌         |
-| UUID/GUID Validator             | Validators       | ❌         |
+| UUID/GUID Validator             | Validators       | 🚀         |
 | Regex Tester                    | Validators       | 🚀         |
 | Credit Card Validator           | Validators       | ❌         |
 | IBAN Validator                  | Validators       | ❌         |
@@ -70,17 +72,17 @@ Whether you’re working on web applications, mobile apps, or desktop software, 
 | Base64                          | Encode - Decode  | 🚀         |
 | JWT Decoder                     | Encode - Decode  | 🚀         |
 | Morse Code Encoder / Decoder    | Encode - Decode  | ❌         |
-| Unix Timestamp                  | Converters       | ❌         |
+| Unix Timestamp                  | Converters       | 🚀         |
 | RGB / HEX / HSL                 | Converters       | ❌         |
-| Roman Numeral Converter         | Converters       | ❌         |
-| File Size Converter             | Converters       | ❌         |
+| Roman Numeral Converter         | Converters       | 🚀         |
+| File Size Converter             | Converters       | 🚀         |
 | Color Picker                    | Design           | ❌         |
-| SVG QR Code Generator           | Design           | ❌         |
+| QR Code Generator               | Design           | 🚀         |
 | CSS Gradient Generator          | Design           | ❌         |
 | CSS Box Shadow Generator        | Design           | ❌         |
 | CSS Border Radius Generator     | Design           | ❌         |
-| Color Palette Generator         | Design           | ❌         |
-| Contrast Checker                | Design           | ❌         |
+| Color Palette Generator         | Design           | 🚀         |
+| Color Contrast Checker          | Design           | 🚀         |
 | UTM Generator                   | Marketing        | 🚀         |
 | Open Graph & X Card Preview     | Marketing        | 🚀         |
 | Emoji Picker                    | Marketing        | ❌         |
