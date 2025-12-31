@@ -26,52 +26,52 @@
                 "items": [
                     {
                         "title": "Diff Checker",
-                        "description": "You can use the Diff Checker Gizmo to view the differences between 2 codes.",
+                        "description": "Compare two pieces of code or text to identify differences with visual highlighting. Perfect for code reviews, file comparisons, version control analysis, and spotting changes between text documents. Works with any programming language including JavaScript, Python, HTML, CSS, JSON, and plain text files.",
                         "gizmo": "DiffChecker"
                     },
                     {
                         "title": "String Builder",
-                        "description": "Automatic StringBuilder escaper code generation.",
+                        "description": "Generate C# StringBuilder code automatically with proper string escaping. Convert multiline text, quotes, and special characters into valid StringBuilder.Append() statements. Essential tool for C# developers working with dynamic string construction, SQL query builders, and text processing applications.",
                         "gizmo": "StringBuilder"
                     },
                     {
                         "title": "Case Converter",
-                        "description": "You can use the Case Converter Gizmo to convert your texts to diffrent case formats.",
+                        "description": "Convert text between different case formats including camelCase, PascalCase, snake_case, kebab-case, UPPERCASE, lowercase, and Title Case. Perfect for developers working with variable names, API endpoints, database columns, CSS classes, and file naming conventions across different programming languages.",
                         "gizmo": "CaseConverter"
                     },
                     {
                         "title": "Lorem Ipsum Generator",
-                        "description": "You can use the Lorem Ipsum Generator Gizmo to generate Lorem Ipsum texts.",
+                        "description": "Generate Lorem Ipsum placeholder text for web design, graphic design, and content layouts. Create custom amounts of words, sentences, or paragraphs of dummy text. Essential for mockups, prototypes, website templates, and testing text layouts without getting distracted by content.",
                         "gizmo": "LoremIpsumGenerator"
                     },
                     {
                         "title": "Fake E-mail Address Generator",
-                        "description": "You can use the Fake E-mail Address Generator Gizmo to generate dummy e-mail addresses.",
+                        "description": "Generate realistic fake email addresses for testing, development, and demonstration purposes. Create random email addresses with various domains and formats. Perfect for populating databases, testing registration forms, email validation systems, and creating sample data for applications without using real email addresses.",
                         "gizmo": "FakeEmailGenerator"
                     },
                     {
                         "title": "URL Parser",
-                        "description": "You can use the URL Parser Gizmo to parse and inspect any URL. See its protocol, host, path, query parameters, and more.",
+                        "description": "Parse and analyze URLs to extract components like protocol, hostname, path, query parameters, fragments, and port numbers. Essential for web developers, API testing, SEO analysis, and understanding URL structure for routing, redirects, and link building.",
                         "gizmo": "URLParser"
                     },
                     {
                         "title": "Slug Generator",
-                        "description": "You can use the Slug Generator Gizmo to convert your text into a SEO and URL-friendly slug. Turkish, German, French, and Spanish characters are automatically converted.",
+                        "description": "Convert text into SEO-friendly URL slugs with automatic character conversion for international languages. Handles Turkish, German, French, Spanish, and other special characters. Perfect for creating clean URLs, blog post slugs, product pages, and improving website SEO structure.",
                         "gizmo": "SlugGenerator"
                     },
                     {
                         "title": "Text Deduplicator",
-                        "description": "You can use the Text Deduplicator Gizmo to remove duplicate lines or words from your text. Choose deduplication mode, case sensitivity, output format, and more.",
+                        "description": "Remove duplicate lines and words from text with advanced filtering options. Configure case sensitivity, choose between line or word deduplication, and select output formats. Ideal for cleaning data lists, removing duplicate entries from CSV files, and text preprocessing tasks.",
                         "gizmo": "TextDeduplicator"
                     },
                     {
                         "title": "Text Sorter & Reverser",
-                        "description": "You can use the Text Sorter & Reverser Gizmo to sort, reverse, deduplicate, or clean up your text lines with flexible options.",
+                        "description": "Sort text lines alphabetically, numerically, or in reverse order with advanced options for case sensitivity, natural sorting, and custom delimiters. Remove duplicates, shuffle lines, and clean up text data. Perfect for organizing lists, processing CSV data, preparing datasets, and text preprocessing tasks.",
                         "gizmo": "TextSorterReverser"
                     },
                     {
                         "title": "ASCII - Unicode Converter",
-                        "description": "You can use the ASCII - Unicode Converter Gizmo to convert text to ASCII or Unicode format, and vice versa.",
+                        "description": "Convert text to ASCII or Unicode character codes and vice versa. Decode character representations, handle international characters, and work with different text encodings. Essential for debugging text processing, character analysis, escape sequence handling, and understanding character encoding issues across different systems.",
                         "gizmo": "AsciiUnicodeConverter"
                     }
                 ]
@@ -81,27 +81,27 @@
                 "items": [
                     {
                         "title": "Guid Generator",
-                        "description": "You can use the Guid Generator Gizmo to quickly generate a compliant version 4 GUID.",
+                        "description": "Generate RFC 4122 compliant version 4 GUIDs (Globally Unique Identifiers) instantly. Create multiple unique identifiers for database primary keys, API tokens, session IDs, and object identification. Essential for developers working with distributed systems, databases, and unique identifier requirements.",
                         "gizmo": "GuidGenerator"
                     },
                     {
                         "title": "Password Generator",
-                        "description": "You can use the Password Generator Gizmo to quickly generate a secure password.",
+                        "description": "Create cryptographically secure passwords with customizable length and character sets including uppercase, lowercase, numbers, and special symbols. Generate strong passwords for accounts, applications, and security systems. Includes password strength assessment and entropy calculation.",
                         "gizmo": "PasswordGenerator"
                     },
                     {
                         "title": "MD5 Hash Generator",
-                        "description": "You can use the Guid Generator Gizmo to quickly generate a MD5 Hash.",
+                        "description": "Generate MD5 hash values for text and files. Useful for file integrity checking, password hashing (for legacy systems), data verification, and simple checksum operations. Note: For security-critical applications, SHA-256 or stronger hash algorithms should be preferred over MD5.",
                         "gizmo": "MD5"
                     },
                     {
                         "title": "SHA Hash Generator",
-                        "description": "You can use the Guid Generator Gizmo to quickly generate a SHA-512, SHA-384, SHA-512/224, SHA-512/256 Hash.",
+                        "description": "Generate secure cryptographic hash values using SHA-1, SHA-256, SHA-384, SHA-512, and other SHA variants. Essential for security applications, digital signatures, password hashing, file integrity verification, and data validation. Provides modern and secure hash algorithms for production use.",
                         "gizmo": "SHA"
                     },
                     {
                         "title": "Checksum Calculator",
-                        "description": "You can use the Checksum Calculator Gizmo to calculate CRC32, Adler-32, MD5, SHA1, SHA256, SHA512 checksums from text or file.",
+                        "description": "Calculate and verify file integrity using CRC32, Adler-32, MD5, SHA1, SHA256, and SHA512 checksum algorithms. Essential for verifying file downloads, detecting data corruption, ensuring file authenticity, and implementing security protocols. Supports both text input and file processing.",
                         "gizmo": "ChecksumCalculator"
                     }
                 ]
@@ -111,12 +111,12 @@
                 "items": [
                     {
                         "title": "JSON Beautifier",
-                        "description": "Beautify your JSON files.",
+                        "description": "Format and beautify JSON data with proper indentation and syntax highlighting. Convert minified JSON into readable, well-structured format. Essential for debugging APIs, analyzing configuration files, and making JSON data human-readable. Supports validation and error detection for malformed JSON.",
                         "gizmo": "JSONBeautifier"
                     },
                     {
                         "title": "JSON Minifier",
-                        "description": "Minify your JSON files and reduce their size.",
+                        "description": "Compress JSON files by removing unnecessary whitespace, line breaks, and comments. Reduce file size for faster loading, API responses, and storage optimization. Perfect for production deployments, CDN optimization, and minimizing bandwidth usage while maintaining data integrity.",
                         "gizmo": "JSONMinifier"
                     },
                     {
@@ -126,7 +126,7 @@
                     },
                     {
                         "title": "HTML Beautifier",
-                        "description": "Beautify your HTML codes.",
+                        "description": "Format and indent HTML code for better readability and maintainability. Clean up messy HTML, add proper indentation, and organize nested elements. Essential for code reviews, debugging web pages, and improving HTML code quality. Works with HTML5, XHTML, and embedded CSS/JavaScript.",
                         "gizmo": "HTMLBeautifier"
                     },
                     {
@@ -136,7 +136,7 @@
                     },
                     {
                         "title": "SQL Beautifier",
-                        "description": "Format your SQL queries for better readability. Supports MySQL, PostgreSQL and SQL Server.",
+                        "description": "Format SQL queries with proper indentation, keyword highlighting, and readable structure. Supports MySQL, PostgreSQL, SQL Server, and Oracle syntax. Perfect for debugging complex queries, improving code readability, and maintaining database scripts. Handles joins, subqueries, and advanced SQL features.",
                         "gizmo": "SQLBeautifier"
                     },
                     {
@@ -151,12 +151,12 @@
                 "items": [
                     {
                         "title": "Base64",
-                        "description": "You can use the Base64 Gizmo to encode or decode text, and convert files to Base64 strings.",
+                        "description": "Encode text, files, and binary data to Base64 format or decode Base64 strings back to original content. Essential for data transmission, email attachments, embedding images in HTML/CSS, API authentication tokens, and handling binary data in JSON. Supports file uploads and drag-and-drop functionality.",
                         "gizmo": "Base64"
                     },
                     {
                         "title": "URL Encoder / Decoder",
-                        "description": "You can use the URL Encoder / Decoder Gizmo to encode or decode URL strings.",
+                        "description": "Encode and decode URL strings with proper percent-encoding for special characters, spaces, and international characters. Essential for web development, API requests, form submissions, and ensuring URLs are properly formatted for browsers and servers. Handles UTF-8 encoding and decoding seamlessly.",
                         "gizmo": "URL"
                     },
                     {
@@ -171,7 +171,7 @@
                 "items": [
                     {
                         "title": "My IP Address",
-                        "description": "You can use the My IP Address Gizmo to get your public IP address.",
+                        "description": "Discover your public IP address, geolocation information, ISP details, and network characteristics. Essential for network troubleshooting, security analysis, remote access configuration, and understanding your internet connection. Shows both IPv4 and IPv6 addresses when available.",
                         "gizmo": "MyIPAddress"
                     },
                     {
@@ -186,12 +186,12 @@
                 "items": [
                     {
                         "title": "UTM Link Generator",
-                        "description": "You can create campaign links for Google Analytics using the UTM Link Generator Gizmo.",
+                        "description": "Create campaign tracking links with UTM parameters for Google Analytics and marketing attribution. Track campaign source, medium, campaign name, content, and terms across different marketing channels including email, social media, ads, and referral links. Essential for marketing ROI analysis and traffic source identification.",
                         "gizmo": "UTMLinkGenerator"
                     },
                     {
                         "title": "Open Graph & X Card Preview",
-                        "description": "You can use the Open Graph & X Card Preview Gizmo to preview and generate Open Graph and X Card meta tags for your web pages.",
+                        "description": "Preview and generate Open Graph meta tags for Facebook, Twitter/X Cards, LinkedIn, and other social media platforms. Optimize social media sharing with custom titles, descriptions, images, and metadata. Essential for social media marketing, content optimization, and ensuring proper link previews across all social platforms.",
                         "gizmo": "OGCardPreview"
                     }
                 ]
@@ -206,12 +206,12 @@
                     },
                     {
                         "title": "UUID/GUID Validator",
-                        "description": "Validate UUID and GUID formats. Supports all versions (v1, v3, v4, v5).",
+                        "description": "Validate and verify UUID/GUID format compliance across all versions (v1, v3, v4, v5). Check syntax correctness, identify UUID version and variant, and ensure proper formatting for database keys, API identifiers, and distributed system components. Essential for data validation and system integration.",
                         "gizmo": "UUIDValidator"
                     },
                     {
                         "title": "JSON Validator",
-                        "description": "Validate JSON format and view structure information.",
+                        "description": "Validate JSON syntax, detect formatting errors, and analyze structure with detailed error reporting. Essential for API development, configuration file validation, data interchange verification, and ensuring JSON compliance. Shows line numbers for errors and provides suggestions for common JSON syntax issues.",
                         "gizmo": "JSONValidator"
                     }
                 ]
@@ -221,17 +221,17 @@
                 "items": [
                     {
                         "title": "Unix Timestamp Converter",
-                        "description": "Convert between Unix timestamps and human-readable dates. Supports local time and UTC.",
+                        "description": "Convert between Unix timestamps (epoch time) and human-readable dates with timezone support. Handle millisecond precision, UTC and local time conversions, and various date formats. Essential for log analysis, database operations, API development, and working with time-based data across different systems and programming languages.",
                         "gizmo": "UnixTimestamp"
                     },
                     {
                         "title": "File Size Converter",
-                        "description": "Convert file sizes between different units (Byte, KB, MB, GB, TB).",
+                        "description": "Convert between different file size units including bytes, kilobytes, megabytes, gigabytes, terabytes, and petabytes. Supports both binary (1024) and decimal (1000) calculations. Perfect for storage planning, bandwidth calculations, file management, and understanding data transfer requirements across different systems.",
                         "gizmo": "FileSizeConverter"
                     },
                     {
                         "title": "Roman Numeral Converter",
-                        "description": "Convert between numbers and Roman numerals (1-3999 range).",
+                        "description": "Convert between Arabic numbers and Roman numerals with support for numbers 1-3999. Includes validation for proper Roman numeral format and historical accuracy. Perfect for educational purposes, document formatting, numbered lists, movie sequels, book chapters, and historical or formal documentation requirements.",
                         "gizmo": "RomanNumeralConverter"
                     }
                 ]

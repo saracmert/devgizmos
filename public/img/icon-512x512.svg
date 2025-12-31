@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="#0d6efd"/>
+  
+  <!-- Main content container -->
+  <g transform="translate(64, 64)">
+    <!-- Code brackets -->
+    <g fill="white" opacity="0.9">
+      <!-- Left bracket -->
+      <path d="M64 96 L32 128 L32 256 L64 288 M64 112 L48 128 L48 256 L64 272" 
+            stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Right bracket -->
+      <path d="M320 96 L352 128 L352 256 L320 288 M320 112 L336 128 L336 256 L320 272" 
+            stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    
+    <!-- Central gizmo/gear icon -->
+    <g transform="translate(192, 192)">
+      <circle cx="0" cy="0" r="48" fill="white" opacity="0.15"/>
+      <g fill="white">
+        <!-- Gear teeth -->
+        <circle cx="0" cy="-60" r="12"/>
+        <circle cx="42.4" cy="-42.4" r="12"/>
+        <circle cx="60" cy="0" r="12"/>
+        <circle cx="42.4" cy="42.4" r="12"/>
+        <circle cx="0" cy="60" r="12"/>
+        <circle cx="-42.4" cy="42.4" r="12"/>
+        <circle cx="-60" cy="0" r="12"/>
+        <circle cx="-42.4" cy="-42.4" r="12"/>
+        
+        <!-- Center circle -->
+        <circle cx="0" cy="0" r="20" fill="#0d6efd"/>
+        <circle cx="0" cy="0" r="8" fill="white"/>
+      </g>
+    </g>
+    
+    <!-- Dev tools icons -->
+    <g fill="white" opacity="0.8" transform="translate(192, 320)">
+      <!-- JSON braces -->
+      <text x="-80" y="0" font-family="monospace" font-size="24" font-weight="bold">{}</text>
+      <!-- Code tag -->
+      <text x="-20" y="0" font-family="monospace" font-size="20" font-weight="bold">&lt;/&gt;</text>
+      <!-- Hash -->
+      <text x="40" y="0" font-family="monospace" font-size="24" font-weight="bold">#</text>
+    </g>
+    
+    <!-- DevGizmos text -->
+    <text x="192" y="360" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="white" opacity="0.9">
+      DevGizmos
+    </text>
+  </g>
+</svg>

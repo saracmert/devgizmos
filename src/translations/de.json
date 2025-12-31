@@ -1,0 +1,261 @@
+{
+    "generic": {
+        "copy": "Kopieren",
+        "copied": "Kopiert!"
+    },
+    "gizmos": {
+        "title": "Gizmo",
+        "pronunciation": "/ˈɡɪzmoʊ/",
+        "intro": "ist ein Open-Source-Projekt, das eine breite Palette von essentiellen Tools für Entwickler an einem Ort zusammenbringt. Ob Sie an Web-, Mobil- oder Desktop-Projekten arbeiten, Devgizmos hilft Ihnen dabei, Ihre Produktivität zu steigern und Ihren Workflow zu optimieren.",
+        "gizmoTerm": "Der Begriff \"<a href=\"https://en.wikipedia.org/wiki/Gizmo\" target=\"_blank\">Gizmo</a>\" bezieht sich auf ein Gadget, insbesondere eines, dessen richtiger Name unbekannt oder vergessen ist. Im Türkischen wird es auch <a href=\"https://eksisozluk.com/zamazingo--61113\" target=\"_blank\">zamazingo</a>, <a href=\"https://eksisozluk.com/zimbirti--60489\" target=\"_blank\">zımbırtı</a> oder <a href=\"https://eksisozluk.com/dalgametre--93562\" target=\"_blank\">dalgametre</a> genannt.",
+        "offlineTitle": "Devgizmos ist vollständig offline-first und datenschutzorientiert.",
+        "offlineDesc": "Alle Tools laufen vollständig in Ihrem Browser, sodass Ihre Daten niemals Ihr Gerät verlassen. Dies macht Devgizmos sicherer als die meisten Alternativen und ideal für sensible oder private Arbeit.",
+        "openSourceTitle": "Das Projekt wird ständig aktualisiert und ist Open Source.",
+        "openSourceDesc": "Jeder kann beitragen oder neue Funktionen vorschlagen. Dank seiner offenen Natur entwickelt sich Devgizmos mit den Bedürfnissen der Entwickler-Community.",
+        "noAds": "Sie werden hier niemals Werbung sehen.",
+        "support": " Wenn Sie das Projekt unterstützen und dabei helfen möchten, Domain- und Cloudflare-Kosten zu decken, <a href=\"https://www.buymeacoffee.com/mertsarac\" target=\"_blank\">können Sie uns einen Kaffee kaufen</a> ☕.",
+        "supportDesc": "* Browser-Einschränkungen wie CORS erfordern, dass einige Gizmos auf einem Server laufen. Diese Gizmos enthalten Datenschutz-Warnungen. Da wir noch keine große Community haben, haben wir keine Sponsoren. Alle Kosten für Gizmos, die auf Cloudflare Workers laufen, werden persönlich getragen.",
+        "roadmapTitle": "Roadmap:",
+        "roadmapDesc": "Wir fügen kontinuierlich neue Gizmos hinzu und verbessern bestehende basierend auf Benutzer-Feedback. Sie können den Fortschritt verfolgen und auf unserer GitHub-Seite beitragen.",
+        "quickSearch": "Schnellsuche:",
+        "quickSearchPlaceholder": "Geben Sie Ihr Stichwort ein",
+        "tryGizmo": "{title} Gizmo ausprobieren",
+        "categories": [
+            {
+                "title": "Text-Tools",
+                "items": [
+                    {
+                        "title": "Unterschiede-Checker",
+                        "description": "Sie können das Unterschiede-Checker-Tool verwenden, um die Unterschiede zwischen 2 Codes anzuzeigen.",
+                        "gizmo": "DiffChecker"
+                    },
+                    {
+                        "title": "String-Builder",
+                        "description": "Automatische StringBuilder-Escape-Code-Generierung.",
+                        "gizmo": "StringBuilder"
+                    },
+                    {
+                        "title": "Groß-/Kleinschreibung-Konverter",
+                        "description": "Sie können das Groß-/Kleinschreibung-Konverter-Tool verwenden, um Ihre Texte in verschiedene Groß-/Kleinschreibungsformate zu konvertieren.",
+                        "gizmo": "CaseConverter"
+                    },
+                    {
+                        "title": "Lorem Ipsum Generator",
+                        "description": "Sie können das Lorem Ipsum Generator-Tool verwenden, um Lorem Ipsum-Texte zu generieren.",
+                        "gizmo": "LoremIpsumGenerator"
+                    },
+                    {
+                        "title": "Fake E-Mail-Adressen-Generator",
+                        "description": "Sie können das Fake E-Mail-Adressen-Generator-Tool verwenden, um Dummy-E-Mail-Adressen zu generieren.",
+                        "gizmo": "FakeEmailGenerator"
+                    },
+                    {
+                        "title": "URL-Parser",
+                        "description": "Sie können das URL-Parser-Tool verwenden, um jede URL zu parsen und zu inspizieren. Sehen Sie Protokoll, Host, Pfad, Abfrageparameter und mehr.",
+                        "gizmo": "URLParser"
+                    },
+                    {
+                        "title": "Slug-Generator",
+                        "description": "Sie können das Slug-Generator-Tool verwenden, um Ihren Text in einen SEO- und URL-freundlichen Slug zu konvertieren. Türkische, deutsche, französische und spanische Zeichen werden automatisch konvertiert.",
+                        "gizmo": "SlugGenerator"
+                    },
+                    {
+                        "title": "Text-Deduplicator",
+                        "description": "Sie können das Text-Deduplicator-Tool verwenden, um doppelte Zeilen oder Wörter aus Ihrem Text zu entfernen. Wählen Sie Deduplizierungsmodus, Groß-/Kleinschreibung, Ausgabeformat und mehr.",
+                        "gizmo": "TextDeduplicator"
+                    },
+                    {
+                        "title": "Text-Sortierer & Umkehrer",
+                        "description": "Sie können das Text-Sortierer & Umkehrer-Tool verwenden, um Ihre Textzeilen mit flexiblen Optionen zu sortieren, umzukehren, zu deduplizieren oder zu bereinigen.",
+                        "gizmo": "TextSorterReverser"
+                    },
+                    {
+                        "title": "ASCII - Unicode-Konverter",
+                        "description": "Sie können das ASCII - Unicode-Konverter-Tool verwenden, um Text in ASCII- oder Unicode-Format zu konvertieren und umgekehrt.",
+                        "gizmo": "AsciiUnicodeConverter"
+                    }
+                ]
+            },
+            {
+                "title": "Kryptographie-Tools",
+                "items": [
+                    {
+                        "title": "Guid-Generator",
+                        "description": "Sie können das Guid-Generator-Tool verwenden, um schnell eine konforme Version 4 GUID zu generieren.",
+                        "gizmo": "GuidGenerator"
+                    },
+                    {
+                        "title": "Passwort-Generator",
+                        "description": "Sie können das Passwort-Generator-Tool verwenden, um schnell ein sicheres Passwort zu generieren.",
+                        "gizmo": "PasswordGenerator"
+                    },
+                    {
+                        "title": "MD5 Hash-Generator",
+                        "description": "Sie können das MD5 Hash-Generator-Tool verwenden, um schnell einen MD5-Hash zu generieren.",
+                        "gizmo": "MD5"
+                    },
+                    {
+                        "title": "SHA Hash-Generator",
+                        "description": "Sie können das SHA Hash-Generator-Tool verwenden, um schnell einen SHA-512-, SHA-384-, SHA-512/224-, SHA-512/256-Hash zu generieren.",
+                        "gizmo": "SHA"
+                    },
+                    {
+                        "title": "Checksummen-Rechner",
+                        "description": "Sie können das Checksummen-Rechner-Tool verwenden, um CRC32-, Adler-32-, MD5-, SHA1-, SHA256-, SHA512-Checksummen aus Text oder Datei zu berechnen.",
+                        "gizmo": "ChecksumCalculator"
+                    }
+                ]
+            },
+            {
+                "title": "Formatierungs-Tools",
+                "items": [
+                    {
+                        "title": "JSON-Verschönerer",
+                        "description": "Verschönern Sie Ihre JSON-Dateien.",
+                        "gizmo": "JSONBeautifier"
+                    },
+                    {
+                        "title": "JSON-Minifizierer",
+                        "description": "Minifizieren Sie Ihre JSON-Dateien und reduzieren Sie ihre Größe.",
+                        "gizmo": "JSONMinifier"
+                    },
+                    {
+                        "title": "MongoDB JSON-Konverter",
+                        "description": "Konvertieren Sie MongoDB-JSON-Format (ObjectId, ISODate, NumberInt usw.) in Standard-JSON-Format.",
+                        "gizmo": "MongoDBJsonConverter"
+                    },
+                    {
+                        "title": "HTML-Verschönerer",
+                        "description": "Verschönern Sie Ihre HTML-Codes.",
+                        "gizmo": "HTMLBeautifier"
+                    },
+                    {
+                        "title": "HTML-Minifizierer",
+                        "description": "Minifizieren Sie Ihre HTML-Codes.",
+                        "gizmo": "HTMLMinifier"
+                    },
+                    {
+                        "title": "SQL-Verschönerer",
+                        "description": "Formatieren Sie Ihre SQL-Abfragen für bessere Lesbarkeit. Unterstützt MySQL, PostgreSQL und SQL Server.",
+                        "gizmo": "SQLBeautifier"
+                    },
+                    {
+                        "title": "E-Invoice UBL-Viewer",
+                        "description": "E-Invoice XML (UBL)-Dateien im HTML-Format anzeigen. Unterstützt eingebettete XSLT-Stile.",
+                        "gizmo": "EInvoiceViewer"
+                    }
+                ]
+            },
+            {
+                "title": "Kodieren - Dekodieren Tools",
+                "items": [
+                    {
+                        "title": "Base64",
+                        "description": "Sie können das Base64-Tool verwenden, um Text zu kodieren oder zu dekodieren und Dateien in Base64-Strings zu konvertieren.",
+                        "gizmo": "Base64"
+                    },
+                    {
+                        "title": "URL-Encoder / Decoder",
+                        "description": "Sie können das URL-Encoder / Decoder-Tool verwenden, um URL-Strings zu kodieren oder zu dekodieren.",
+                        "gizmo": "URL"
+                    },
+                    {
+                        "title": "JWT-Decoder",
+                        "description": "Fügen Sie ein JWT (JSON Web Token) ein, um Header und Payload zu dekodieren. Die Signatur wird nicht verifiziert. Es werden keine Daten an einen Server gesendet; die Dekodierung erfolgt lokal in Ihrem Browser.",
+                        "gizmo": "JWT"
+                    }
+                ]
+            },
+            {
+                "title": "Netzwerk-Tools",
+                "items": [
+                    {
+                        "title": "Meine IP-Adresse",
+                        "description": "Sie können das Meine IP-Adresse-Tool verwenden, um Ihre öffentliche IP-Adresse zu erhalten.",
+                        "gizmo": "MyIPAddress"
+                    },
+                    {
+                        "title": "CIDR-Rechner",
+                        "description": "Sie können das CIDR-Rechner-Tool verwenden, um Ihre gegebene IP-Adresse in CIDR-Notation zu analysieren und Details wie Netzwerkadresse, Broadcast-Adresse, erste und letzte nutzbare IP, Subnetzmaske und Gesamtanzahl der Hosts einfach zu berechnen.",
+                        "gizmo": "CIDRCalculator"
+                    }
+                ]
+            },
+            {
+                "title": "Marketing-Tools",
+                "items": [
+                    {
+                        "title": "UTM-Link-Generator",
+                        "description": "Sie können mit dem UTM-Link-Generator-Tool Kampagnen-Links für Google Analytics erstellen.",
+                        "gizmo": "UTMLinkGenerator"
+                    },
+                    {
+                        "title": "Open Graph & X Card Vorschau",
+                        "description": "Sie können das Open Graph & X Card Vorschau-Tool verwenden, um Open Graph- und X Card-Meta-Tags für Ihre Webseiten zu erstellen und zu generieren.",
+                        "gizmo": "OGCardPreview"
+                    }
+                ]
+            },
+            {
+                "title": "Validator-Tools",
+                "items": [
+                    {
+                        "title": "Regex-Tester",
+                        "description": "Geben Sie einen JavaScript-regulären Ausdruck ein und testen Sie ihn gegen einen Ziel-String. Flags und mehrzeilige Muster werden unterstützt. Benannte Gruppen werden angezeigt, falls vorhanden.",
+                        "gizmo": "RegexTester"
+                    },
+                    {
+                        "title": "UUID/GUID-Validator",
+                        "description": "UUID- und GUID-Formate validieren. Unterstützt alle Versionen (v1, v3, v4, v5).",
+                        "gizmo": "UUIDValidator"
+                    },
+                    {
+                        "title": "JSON-Validator",
+                        "description": "JSON-Format validieren und Struktur-Informationen anzeigen.",
+                        "gizmo": "JSONValidator"
+                    }
+                ]
+            },
+            {
+                "title": "Konverter-Tools",
+                "items": [
+                    {
+                        "title": "Unix-Zeitstempel-Konverter",
+                        "description": "Konvertierung zwischen Unix-Zeitstempeln und menschenlesbaren Daten. Unterstützt Ortszeit und UTC.",
+                        "gizmo": "UnixTimestamp"
+                    },
+                    {
+                        "title": "Dateigröße-Konverter",
+                        "description": "Konvertierung von Dateigrößen zwischen verschiedenen Einheiten (Byte, KB, MB, GB, TB).",
+                        "gizmo": "FileSizeConverter"
+                    },
+                    {
+                        "title": "Römische Zahlen-Konverter",
+                        "description": "Konvertierung zwischen Zahlen und römischen Zahlen (Bereich 1-3999).",
+                        "gizmo": "RomanNumeralConverter"
+                    }
+                ]
+            },
+            {
+                "title": "Design-Tools",
+                "items": [
+                    {
+                        "title": "QR-Code-Generator",
+                        "description": "Erstellen Sie anpassbare QR-Codes für verschiedene Inhaltstypen und laden Sie sie in SVG/PNG-Formaten herunter.",
+                        "gizmo": "QRCodeGenerator"
+                    },
+                    {
+                        "title": "Farbpaletten-Generator",
+                        "description": "Erstellen Sie schöne Farbpaletten mit verschiedenen Farbtheorien und überprüfen Sie Farbkontraste.",
+                        "gizmo": "ColorPaletteGenerator"
+                    },
+                    {
+                        "title": "Farbkontrast-Checker",
+                        "description": "Überprüfen Sie Farbkontraste nach WCAG-Standards und verifizieren Sie die Barrierefreiheit.",
+                        "gizmo": "ColorContrastChecker"
+                    }
+                ]
+            }
+        ]
+    }
+}

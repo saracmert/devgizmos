@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Ana sayfa - 9 dil -->
+  <url>
+    <loc>https://devgizmos.com/en/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devgizmos.com/en/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://devgizmos.com/tr/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://devgizmos.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://devgizmos.com/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://devgizmos.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://devgizmos.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://devgizmos.com/de/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://devgizmos.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devgizmos.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devgizmos.com/en/" />
+  </url>
+  
+  <url>
+    <loc>https://devgizmos.com/tr/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devgizmos.com/en/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://devgizmos.com/tr/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://devgizmos.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://devgizmos.com/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://devgizmos.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://devgizmos.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://devgizmos.com/de/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://devgizmos.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devgizmos.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devgizmos.com/en/" />
+  </url>
+
+  <!-- Diğer dil ana sayfaları -->
+  <url>
+    <loc>https://devgizmos.com/zh/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/es/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/fr/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/ja/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/de/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/ru/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/hi/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Credits sayfaları -->
+  <url>
+    <loc>https://devgizmos.com/en/credits</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://devgizmos.com/tr/krediler</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

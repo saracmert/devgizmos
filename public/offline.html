@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevGizmos - Offline</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .offline-container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 500px;
+        }
+        
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .offline-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .offline-message {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .offline-features {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .offline-features h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .offline-features ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .offline-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .offline-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .offline-features li::before {
+            content: "✓ ";
+            color: #4ade80;
+            font-weight: bold;
+        }
+        
+        .retry-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+        }
+        
+        .retry-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .network-status {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .network-online {
+            background: rgba(74, 222, 128, 0.2);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+        }
+        
+        .network-offline {
+            background: rgba(248, 113, 113, 0.2);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+        }
+        
+        @media (max-width: 480px) {
+            .offline-container {
+                padding: 1rem;
+            }
+            
+            .offline-icon {
+                font-size: 3rem;
+            }
+            
+            .offline-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">🔌</div>
+        <h1 class="offline-title">You're Offline</h1>
+        <p class="offline-message">
+            Don't worry! Many DevGizmos tools work offline. You can still use cached tools while disconnected.
+        </p>
+        
+        <div class="offline-features">
+            <h3>Available Offline Tools</h3>
+            <ul>
+                <li>JSON Beautifier & Minifier</li>
+                <li>Password Generator</li>
+                <li>Base64 Encoder/Decoder</li>
+                <li>URL Encoder/Decoder</li>
+                <li>Case Converter</li>
+                <li>HTML Beautifier & Minifier</li>
+                <li>Hash Generators (MD5, SHA)</li>
+                <li>Lorem Ipsum Generator</li>
+                <li>Regex Tester</li>
+                <li>Color Palette Generator</li>
+                <li>UUID Generator</li>
+                <li>Text Utilities</li>
+            </ul>
+        </div>
+        
+        <div class="network-status" id="networkStatus">
+            <span id="statusText">Checking connection...</span>
+        </div>
+        
+        <a href="/" class="retry-button mt-5" onclick="window.location.reload();">
+            Try Again
+        </a>
+    </div>
+
+    <script>
+        function updateNetworkStatus() {
+            const statusElement = document.getElementById('networkStatus');
+            const statusText = document.getElementById('statusText');
+            
+            if (navigator.onLine) {
+                statusElement.className = 'network-status network-online';
+                statusText.textContent = '✓ Connection restored! Click "Try Again" to refresh.';
+            } else {
+                statusElement.className = 'network-status network-offline';
+                statusText.textContent = '⚠ You are currently offline.';
+            }
+        }
+
+        // İlk durumu kontrol et
+        updateNetworkStatus();
+
+        // Network durumu değişikliklerini dinle
+        window.addEventListener('online', updateNetworkStatus);
+        window.addEventListener('offline', updateNetworkStatus);
+
+        // Otomatik yenileme (online olduğunda)
+        window.addEventListener('online', () => {
+            setTimeout(() => {
+                window.location.reload();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

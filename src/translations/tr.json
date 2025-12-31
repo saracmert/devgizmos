@@ -26,27 +26,27 @@
                 "items": [
                     {
                         "title": "Fark Karşılaştırıcı",
-                        "description": "Fark Karşılaştırıcı Gizmo ile iki kod arasındaki farkları görebilirsiniz.",
+                        "description": "İki kod parçası veya metin arasındaki farkları görsel vurgulama ile karşılaştırın. Kod incelemeleri, dosya karşılaştırmaları, versiyon kontrol analizi ve metin belgeleri arasındaki değişiklikleri tespit etmek için mükemmel. JavaScript, Python, HTML, CSS, JSON ve düz metin dosyaları dahil tüm programlama dilleri ile çalışır.",
                         "gizmo": "DiffChecker"
                     },
                     {
                         "title": "String Builder",
-                        "description": "Otomatik StringBuilder kodu üretimi.",
+                        "description": "C# StringBuilder kodunu doğru string kaçış karakterleri ile otomatik olarak oluşturun. Çok satırlı metinleri, tırnakları ve özel karakterleri geçerli StringBuilder.Append() ifadelerine dönüştürün. Dinamik string oluşturma, SQL sorgu oluşturucuları ve metin işleme uygulamaları ile çalışan C# geliştiricileri için vazgeçilmez araç.",
                         "gizmo": "StringBuilder"
                     },
                     {
                         "title": "Büyük/Küçük Harf Dönüştürücü",
-                        "description": "Metinlerinizi farklı harf formatlarına dönüştürmek için Harf Dönüştürücü Gizmo'yu kullanabilirsiniz.",
+                        "description": "Metinleri camelCase, PascalCase, snake_case, kebab-case, BÜYÜK HARF, küçük harf ve Başlık Büyüklüğü dahil farklı harf formatları arasında dönüştürün. Değişken adları, API endpoint'leri, veritabanı sütunları, CSS sınıfları ve farklı programlama dillerinde dosya adlandırma kuralları ile çalışan geliştiriciler için mükemmel.",
                         "gizmo": "CaseConverter"
                     },
                     {
                         "title": "Lorem Ipsum Üretici",
-                        "description": "Lorem Ipsum Üretici Gizmo ile Lorem Ipsum metinleri oluşturabilirsiniz.",
+                        "description": "Web tasarımı, grafik tasarım ve içerik düzenleri için Lorem Ipsum yer tutucu metni oluşturun. Özel miktarlarda kelime, cümle veya paragraf halinde kukla metin oluşturun. Maketler, prototipler, web sitesi şablonları ve içerikle dikkat dağınıklığı olmadan metin düzenlerini test etmek için vazgeçilmez.",
                         "gizmo": "LoremIpsumGenerator"
                     },
                     {
                         "title": "Sahte E-posta Adresi Üretici",
-                        "description": "Sahte E-posta Adresi Üretici Gizmo ile sahte e-posta adresleri oluşturabilirsiniz.",
+                        "description": "Test, geliştirme ve gösterim amaçları için gerçekçi sahte e-posta adresleri oluşturun. Çeşitli domain'ler ve formatlar ile rastgele e-posta adresleri oluşturun. Veritabanlarını doldurma, kayıt formlarını test etme, e-posta doğrulama sistemleri ve gerçek e-posta adresleri kullanmadan uygulamalar için örnek veri oluşturma için mükemmel.",
                         "gizmo": "FakeEmailGenerator"
                     },
                     {
@@ -81,27 +81,27 @@
                 "items": [
                     {
                         "title": "Guid Üretici",
-                        "description": "Guid Üretici Gizmo ile hızlıca geçerli bir sürüm 4 GUID oluşturabilirsiniz.",
+                        "description": "RFC 4122 standartına uygun sürüm 4 GUID'leri (Global Benzersiz Tanımlayıcılar) anlık oluşturun. Veritabanı birincil anahtarları, API token'ları, oturum ID'leri ve nesne tanımlama için birden fazla benzersiz tanımlayıcı oluşturun. Dağıtılmış sistemler, veritabanları ve benzersiz tanımlayıcı gereksinimleri olan geliştiriciler için vazgeçilmez.",
                         "gizmo": "GuidGenerator"
                     },
                     {
                         "title": "Şifre Üretici",
-                        "description": "Şifre Üretici Gizmo ile hızlıca güvenli bir şifre oluşturabilirsiniz.",
+                        "description": "Büyük harf, küçük harf, rakamlar ve özel semboller dahil özelleştirilebilir uzunluk ve karakter setleri ile kriptografik olarak güvenli şifreler oluşturun. Hesaplar, uygulamalar ve güvenlik sistemleri için güçlü şifreler oluşturun. Şifre gücü değerlendirmesi ve entropi hesaplaması içerir.",
                         "gizmo": "PasswordGenerator"
                     },
                     {
                         "title": "MD5 Hash Üretici",
-                        "description": "Guid Üretici Gizmo ile hızlıca bir MD5 Hash oluşturabilirsiniz.",
+                        "description": "Metin ve dosyalar için MD5 hash değerleri oluşturun. Dosya bütünlüğü kontrolü, şifre hash'leme (eski sistemler için), veri doğrulama ve basit checksum işlemleri için kullanılır. Not: Güvenlik açısından kritik uygulamalar için SHA-256 veya daha güçlü hash algoritmaları tercih edilmelidir.",
                         "gizmo": "MD5"
                     },
                     {
                         "title": "SHA Hash Üretici",
-                        "description": "Guid Üretici Gizmo ile hızlıca SHA-512, SHA-384, SHA-512/224, SHA-512/256 Hash oluşturabilirsiniz.",
+                        "description": "Güvenli SHA-1, SHA-256, SHA-384, SHA-512 ve diğer SHA varyantları ile kriptografik hash değerleri oluşturun. Güvenlik uygulamaları, dijital imzalar, şifre hash'leme, dosya bütünlüğü kontrolü ve veri doğrulama için modern ve güvenli hash algoritmaları sağlar.",
                         "gizmo": "SHA"
                     },
                     {
                         "title": "Checksum Hesaplayıcı",
-                        "description": "Checksum Hesaplayıcı Gizmo ile metin veya dosyadan CRC32, Adler-32, MD5, SHA1, SHA256, SHA512 checksum hesaplayabilirsiniz.",
+                        "description": "CRC32, Adler-32, MD5, SHA1, SHA256 ve SHA512 checksum algoritmaları kullanarak dosya bütünlüğünü hesaplayın ve doğrulayın. Dosya indirmelerini doğrulama, veri bozulmasını tespit etme, dosya otantikliğini sağlama ve güvenlik protokollerini uygulama için vazgeçilmez. Hem metin girişi hem de dosya işlemeyi destekler.",
                         "gizmo": "ChecksumCalculator"
                     }
                 ]
@@ -111,12 +111,12 @@
                 "items": [
                     {
                         "title": "JSON Güzelleştirici",
-                        "description": "JSON dosyalarınızı güzelleştirin.",
+                        "description": "JSON verilerini düzgün girintileme ve sözdizimi vurgulaması ile formatla ve güzelleştir. Küçültülmüş JSON'u okunabilir, iyi yapılandırılmış formata dönüştür. API'leri hata ayıklama, konfigürasyon dosyalarını analiz etme ve JSON verilerini insan tarafından okunabilir hale getirmek için vazgeçilmez. Hatalı JSON'lar için doğrulama ve hata tespiti destekler.",
                         "gizmo": "JSONBeautifier"
                     },
                     {
                         "title": "JSON Küçültücü",
-                        "description": "JSON dosyalarınızı küçültün ve boyutunu azaltın.",
+                        "description": "Gereksiz boşlukları, satır sonlarını ve yorumları kaldırarak JSON dosyalarını sıkıştırın. Daha hızlı yükleme, API yanıtları ve depolama optimizasyonu için dosya boyutunu küçültün. Üretim dağıtımları, CDN optimizasyonu ve veri bütünlüğünü koruyarak bant genişliği kullanımını minimize etmek için mükemmel.",
                         "gizmo": "JSONMinifier"
                     },
                     {
@@ -126,17 +126,17 @@
                     },
                     {
                         "title": "HTML Güzelleştirici",
-                        "description": "HTML kodlarınızı güzelleştirin.",
+                        "description": "HTML kodunu daha iyi okunabilirlik ve sürdürülebilirlik için formatla ve girintile. Dağınık HTML'i temizle, düzgün girintileme ekle ve iç içe geçmiş öğeleri düzenle. Kod incelemeleri, web sayfası hata ayıklama ve HTML kod kalitesini artırmak için vazgeçilmez. HTML5, XHTML ve gömülü CSS/JavaScript ile çalışır.",
                         "gizmo": "HTMLBeautifier"
                     },
                     {
                         "title": "HTML Küçültücü",
-                        "description": "HTML kodlarınızı küçültün.",
+                        "description": "Gereksiz boşlukları, satır sonlarını ve yorumları kaldırarak HTML dosyalarını sıkıştırın. Web sayfası yükleme hızını artırın, bant genişliği kullanımını azaltın ve SEO performansını iyileştirin. Üretim web siteleri, CDN optimizasyonu ve sayfa hızı optimizasyonu için ideal.",
                         "gizmo": "HTMLMinifier"
                     },
                     {
                         "title": "SQL Güzelleştirici",
-                        "description": "SQL sorgularınızı daha okunabilir hale getirin. MySQL, PostgreSQL ve SQL Server desteklenir.",
+                        "description": "SQL sorgularını düzgün girintileme, anahtar kelime vurgulaması ve okunabilir yapı ile formatla. MySQL, PostgreSQL, SQL Server ve Oracle sözdizimini destekler. Karmaşık sorguları hata ayıklama, kod okunabilirliğini artırma ve veritabanı betiklerini sürdürme için mükemmel. Join'ler, alt sorgular ve gelişmiş SQL özelliklerini işler.",
                         "gizmo": "SQLBeautifier"
                     },
                     {

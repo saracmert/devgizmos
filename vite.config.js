@@ -11,5 +11,17 @@ export default defineConfig({
     alias: {
       'vue': 'vue/dist/vue.esm-bundler.js'
     }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue', 'vue-router', 'vue-i18n'],
+          bootstrap: ['bootstrap', '@popperjs/core'],
+          crypto: ['js-md5', 'js-sha1', 'js-sha256', 'js-sha512'],
+          editor: ['monaco-editor', '@monaco-editor/loader']
+        }
+      }
+    }
   }
 })

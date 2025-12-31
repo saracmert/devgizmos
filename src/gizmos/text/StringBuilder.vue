@@ -1,8 +1,12 @@
 <script>
 import loader from "@monaco-editor/loader";
+import GizmoHeader from '../../components/GizmoHeader.vue'
 
 export default {
     name: "Editor",
+    components: {
+        GizmoHeader
+    },
     async mounted() {
         loader.init().then((monaco) => {
             var editorConfig = {
@@ -35,12 +39,7 @@ export default {
 
 <template>
     <div class="container-fluid p-0">
-        <div class="row">
-            <div class="col mb-3">
-                <h1>String Builder</h1>
-                <span>Automatic StringBuilder escaper code generation.</span>
-            </div>
-        </div>
+        <GizmoHeader />
         <div class="row justify-content-center h-100">
             <div class="col-6">
                 <div id="editor1" class="editor w-100"></div>

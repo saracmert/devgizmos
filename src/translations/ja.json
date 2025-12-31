@@ -1,0 +1,261 @@
+{
+    "generic": {
+        "copy": "コピー",
+        "copied": "コピーしました！"
+    },
+    "gizmos": {
+        "title": "ギズモ",
+        "pronunciation": "/ˈɡɪzmoʊ/",
+        "intro": "は、開発者に必要な幅広い必須ツールをひとつの場所にまとめたオープンソースプロジェクトです。ウェブ、モバイル、デスクトッププロジェクトのどれに取り組んでいても、Devgizmosは生産性を向上させ、ワークフローを合理化するのに役立ちます。",
+        "gizmoTerm": "「<a href=\"https://en.wikipedia.org/wiki/Gizmo\" target=\"_blank\">gizmo</a>」という用語は、特に本当の名前が不明または忘れられたガジェットを指します。トルコ語では、<a href=\"https://eksisozluk.com/zamazingo--61113\" target=\"_blank\">zamazingo</a>、<a href=\"https://eksisozluk.com/zimbirti--60489\" target=\"_blank\">zımbırtı</a>、または<a href=\"https://eksisozluk.com/dalgametre--93562\" target=\"_blank\">dalgametre</a>とも呼ばれます。",
+        "offlineTitle": "Devgizmosは完全にオフライン優先でプライバシー重視です。",
+        "offlineDesc": "すべてのツールは完全にブラウザ内で実行されるため、データがデバイスから離れることはありません。これにより、Devgizmosはほとんどの代替手段よりも安全で、機密作業やプライベート作業に最適です。",
+        "openSourceTitle": "プロジェクトは継続的に更新されており、オープンソースです。",
+        "openSourceDesc": "誰でも貢献したり、新機能を提案したりできます。オープンな性質により、Devgizmosは開発者コミュニティのニーズとともに発展します。",
+        "noAds": "ここで広告を見ることは決してありません。",
+        "support": " プロジェクトをサポートし、ドメインとCloudflareの費用を支援したい場合は、<a href=\"https://www.buymeacoffee.com/mertsarac\" target=\"_blank\">コーヒーを買っていただけます</a> ☕。",
+        "supportDesc": "* CORSなどのブラウザ制限により、一部のツールはサーバー上で実行する必要があります。これらのツールにはプライバシー警告が含まれています。まだ大きなコミュニティがないため、スポンサーはいません。Cloudflare Workers上で実行されるツールのすべての費用は個人的に負担されています。",
+        "roadmapTitle": "ロードマップ：",
+        "roadmapDesc": "ユーザーフィードバックに基づいて継続的に新しいツールを追加し、既存のツールを改善しています。GitHubページで進捗を追跡し、貢献することができます。",
+        "quickSearch": "クイック検索：",
+        "quickSearchPlaceholder": "キーワードを入力",
+        "tryGizmo": "{title}ツールを試す",
+        "categories": [
+            {
+                "title": "テキストツール",
+                "items": [
+                    {
+                        "title": "差分チェッカー",
+                        "description": "差分チェッカーツールを使用して、2つのコード間の差分を表示できます。",
+                        "gizmo": "DiffChecker"
+                    },
+                    {
+                        "title": "文字列ビルダー",
+                        "description": "自動StringBuilder エスケープコード生成。",
+                        "gizmo": "StringBuilder"
+                    },
+                    {
+                        "title": "ケース変換器",
+                        "description": "ケース変換器ツールを使用して、テキストを異なるケース形式に変換できます。",
+                        "gizmo": "CaseConverter"
+                    },
+                    {
+                        "title": "Lorem Ipsum ジェネレーター",
+                        "description": "Lorem Ipsum ジェネレーターツールを使用してLorem Ipsum テキストを生成できます。",
+                        "gizmo": "LoremIpsumGenerator"
+                    },
+                    {
+                        "title": "偽メールアドレス生成器",
+                        "description": "偽メールアドレス生成器ツールを使用してダミーメールアドレスを生成できます。",
+                        "gizmo": "FakeEmailGenerator"
+                    },
+                    {
+                        "title": "URLパーサー",
+                        "description": "URLパーサーツールを使用して、任意のURLを解析および検査できます。プロトコル、ホスト、パス、クエリパラメータなどを確認できます。",
+                        "gizmo": "URLParser"
+                    },
+                    {
+                        "title": "スラグジェネレーター",
+                        "description": "スラグジェネレーターツールを使用して、テキストをSEOとURL対応のスラグに変換できます。トルコ語、ドイツ語、フランス語、スペイン語の文字は自動的に変換されます。",
+                        "gizmo": "SlugGenerator"
+                    },
+                    {
+                        "title": "テキスト重複除去",
+                        "description": "テキスト重複除去ツールを使用して、テキストから重複行や単語を削除できます。重複除去モード、大文字小文字の区別、出力形式などを選択できます。",
+                        "gizmo": "TextDeduplicator"
+                    },
+                    {
+                        "title": "テキストソーターとリバーサー",
+                        "description": "テキストソーターとリバーサーツールを使用して、柔軟なオプションでテキスト行をソート、反転、重複除去、またはクリーンアップできます。",
+                        "gizmo": "TextSorterReverser"
+                    },
+                    {
+                        "title": "ASCII - Unicode変換器",
+                        "description": "ASCII - Unicode変換器ツールを使用して、テキストをASCIIまたはUnicode形式に変換し、その逆も行えます。",
+                        "gizmo": "AsciiUnicodeConverter"
+                    }
+                ]
+            },
+            {
+                "title": "暗号化ツール",
+                "items": [
+                    {
+                        "title": "Guidジェネレーター",
+                        "description": "Guidジェネレーターツールを使用して、準拠したバージョン4 GUIDを素早く生成できます。",
+                        "gizmo": "GuidGenerator"
+                    },
+                    {
+                        "title": "パスワードジェネレーター",
+                        "description": "パスワードジェネレーターツールを使用して、安全なパスワードを素早く生成できます。",
+                        "gizmo": "PasswordGenerator"
+                    },
+                    {
+                        "title": "MD5ハッシュジェネレーター",
+                        "description": "MD5ハッシュジェネレーターツールを使用して、MD5ハッシュを素早く生成できます。",
+                        "gizmo": "MD5"
+                    },
+                    {
+                        "title": "SHAハッシュジェネレーター",
+                        "description": "SHAハッシュジェネレーターツールを使用して、SHA-512、SHA-384、SHA-512/224、SHA-512/256ハッシュを素早く生成できます。",
+                        "gizmo": "SHA"
+                    },
+                    {
+                        "title": "チェックサム計算機",
+                        "description": "チェックサム計算機ツールを使用して、テキストまたはファイルからCRC32、Adler-32、MD5、SHA1、SHA256、SHA512チェックサムを計算できます。",
+                        "gizmo": "ChecksumCalculator"
+                    }
+                ]
+            },
+            {
+                "title": "フォーマッターツール",
+                "items": [
+                    {
+                        "title": "JSON美化",
+                        "description": "JSONファイルを美化します。",
+                        "gizmo": "JSONBeautifier"
+                    },
+                    {
+                        "title": "JSON最小化",
+                        "description": "JSONファイルを最小化し、サイズを削減します。",
+                        "gizmo": "JSONMinifier"
+                    },
+                    {
+                        "title": "MongoDB JSON変換器",
+                        "description": "MongoDB JSON形式（ObjectId、ISODate、NumberIntなど）を標準JSON形式に変換します。",
+                        "gizmo": "MongoDBJsonConverter"
+                    },
+                    {
+                        "title": "HTML美化",
+                        "description": "HTMLコードを美化します。",
+                        "gizmo": "HTMLBeautifier"
+                    },
+                    {
+                        "title": "HTML最小化",
+                        "description": "HTMLコードを最小化します。",
+                        "gizmo": "HTMLMinifier"
+                    },
+                    {
+                        "title": "SQL美化",
+                        "description": "SQLクエリを可読性のためにフォーマットします。MySQL、PostgreSQL、SQL Serverをサポートします。",
+                        "gizmo": "SQLBeautifier"
+                    },
+                    {
+                        "title": "E-Invoice UBLビューアー",
+                        "description": "E-Invoice XML（UBL）ファイルをHTML形式で表示します。埋め込みXSLTスタイルをサポートします。",
+                        "gizmo": "EInvoiceViewer"
+                    }
+                ]
+            },
+            {
+                "title": "エンコード - デコードツール",
+                "items": [
+                    {
+                        "title": "Base64",
+                        "description": "Base64ツールを使用してテキストをエンコードまたはデコードし、ファイルをBase64文字列に変換できます。",
+                        "gizmo": "Base64"
+                    },
+                    {
+                        "title": "URLエンコーダー / デコーダー",
+                        "description": "URLエンコーダー / デコーダーツールを使用してURL文字列をエンコードまたはデコードできます。",
+                        "gizmo": "URL"
+                    },
+                    {
+                        "title": "JWTデコーダー",
+                        "description": "JWT（JSON Web Token）を貼り付けて、ヘッダーとペイロードをデコードします。署名は検証されません。データはサーバーに送信されず、デコードはブラウザでローカルに行われます。",
+                        "gizmo": "JWT"
+                    }
+                ]
+            },
+            {
+                "title": "ネットワークツール",
+                "items": [
+                    {
+                        "title": "My IPアドレス",
+                        "description": "My IPアドレスツールを使用してパブリックIPアドレスを取得できます。",
+                        "gizmo": "MyIPAddress"
+                    },
+                    {
+                        "title": "CIDR計算機",
+                        "description": "CIDR計算機ツールを使用して、CIDR記法で指定されたIPアドレスを分析し、ネットワークアドレス、ブロードキャストアドレス、最初と最後の使用可能IP、サブネットマスク、総ホスト数などの詳細を簡単に計算できます。",
+                        "gizmo": "CIDRCalculator"
+                    }
+                ]
+            },
+            {
+                "title": "マーケティングツール",
+                "items": [
+                    {
+                        "title": "UTMリンクジェネレーター",
+                        "description": "UTMリンクジェネレーターツールを使用してGoogle Analytics用のキャンペーンリンクを作成できます。",
+                        "gizmo": "UTMLinkGenerator"
+                    },
+                    {
+                        "title": "Open Graph & Xカードプレビュー",
+                        "description": "Open Graph & Xカードプレビューツールを使用して、ウェブページのOpen GraphとXカードメタタグをプレビューおよび生成できます。",
+                        "gizmo": "OGCardPreview"
+                    }
+                ]
+            },
+            {
+                "title": "バリデーターツール",
+                "items": [
+                    {
+                        "title": "正規表現テスター",
+                        "description": "JavaScript正規表現を入力し、ターゲット文字列に対してテストします。フラグとマルチラインパターンがサポートされています。名前付きグループがある場合は表示されます。",
+                        "gizmo": "RegexTester"
+                    },
+                    {
+                        "title": "UUID/GUIDバリデーター",
+                        "description": "UUIDおよびGUID形式を検証します。すべてのバージョン（v1、v3、v4、v5）をサポートします。",
+                        "gizmo": "UUIDValidator"
+                    },
+                    {
+                        "title": "JSONバリデーター",
+                        "description": "JSON形式を検証し、構造情報を表示します。",
+                        "gizmo": "JSONValidator"
+                    }
+                ]
+            },
+            {
+                "title": "変換ツール",
+                "items": [
+                    {
+                        "title": "Unixタイムスタンプ変換器",
+                        "description": "Unixタイムスタンプと人間が読める日付間で変換します。ローカル時間とUTCをサポートします。",
+                        "gizmo": "UnixTimestamp"
+                    },
+                    {
+                        "title": "ファイルサイズ変換器",
+                        "description": "異なる単位（Byte、KB、MB、GB、TB）間でファイルサイズを変換します。",
+                        "gizmo": "FileSizeConverter"
+                    },
+                    {
+                        "title": "ローマ数字変換器",
+                        "description": "数字とローマ数字間で変換します（1-3999の範囲）。",
+                        "gizmo": "RomanNumeralConverter"
+                    }
+                ]
+            },
+            {
+                "title": "デザインツール",
+                "items": [
+                    {
+                        "title": "QRコードジェネレーター",
+                        "description": "さまざまなコンテンツタイプ用のカスタマイズ可能なQRコードを作成し、SVG/PNG形式でダウンロードします。",
+                        "gizmo": "QRCodeGenerator"
+                    },
+                    {
+                        "title": "カラーパレットジェネレーター",
+                        "description": "さまざまな色理論を使用して美しいカラーパレットを作成し、色のコントラストをチェックします。",
+                        "gizmo": "ColorPaletteGenerator"
+                    },
+                    {
+                        "title": "色コントラストチェッカー",
+                        "description": "WCAG標準に従って色のコントラストをチェックし、アクセシビリティコンプライアンスを確認します。",
+                        "gizmo": "ColorContrastChecker"
+                    }
+                ]
+            }
+        ]
+    }
+}

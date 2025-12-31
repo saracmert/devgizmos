@@ -7,7 +7,29 @@ According to the definition on [Wikipedia](https://en.wikipedia.org/wiki/Gizmo),
 It's called “[zamazingo](https://eksisozluk.com/zamazingo--61113)”, “[zımbırtı](https://eksisozluk.com/zimbirti--60489)” or “[dalgametre](https://eksisozluk.com/dalgametre--93562)” in Turkish.
 
 Devgizmos, an open-source project, brings together tools frequently needed during software development. It aims to facilitate the development process by providing a collection of essential tools for developers.
+## 🌍 Multi-Language Support
 
+Devgizmos supports **9 languages** with full localization including SEO-optimized URLs:
+
+- 🇺🇸 **English** - `/en/` (Primary)
+- 🇹🇷 **Türkçe** - `/tr/`
+- 🇨🇳 **中文 (Chinese)** - `/zh/`
+- 🇪🇸 **Español** - `/es/`
+- 🇫🇷 **Français** - `/fr/`
+- 🇯🇵 **日本語 (Japanese)** - `/ja/`
+- 🇩🇪 **Deutsch** - `/de/`
+- 🇷🇺 **Русский** - `/ru/`
+- 🇮🇳 **हिन्दी (Hindi)** - `/hi/`
+
+All **38 developer tools** are fully translated with localized descriptions and SEO-friendly URLs.
+
+## ⚡ PWA & Offline Support
+
+Devgizmos is a **Progressive Web App (PWA)** that works completely offline:
+- 📱 **Installable** - Add to home screen on mobile/desktop
+- 🔒 **Privacy-First** - All processing happens locally in your browser
+- ⚡ **Offline-Ready** - Works without internet connection
+- 🚀 **Fast & Reliable** - Cached for instant loading
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/mertsarac)
 
 ### Hosted by  [<img alt="Cloudflare Pages" width="16" src="https://user-images.githubusercontent.com/23264/106598434-9e719e00-654f-11eb-9e59-6167043cfa01.png">](https://pages.dev)  Cloudflare Pages
