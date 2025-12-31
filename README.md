@@ -30,6 +30,8 @@ Devgizmos is a **Progressive Web App (PWA)** that works completely offline:
 - 🔒 **Privacy-First** - All processing happens locally in your browser
 - ⚡ **Offline-Ready** - Works without internet connection
 - 🚀 **Fast & Reliable** - Cached for instant loading
+
+
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/mertsarac)
 
 ### Hosted by  [<img alt="Cloudflare Pages" width="16" src="https://user-images.githubusercontent.com/23264/106598434-9e719e00-654f-11eb-9e59-6167043cfa01.png">](https://pages.dev)  Cloudflare Pages
