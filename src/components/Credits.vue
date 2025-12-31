@@ -10,6 +10,12 @@
         <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue.js</a> - The progressive JavaScript framework for building user interfaces.
       </li>
       <li>
+        <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a> - The official router for Vue.js applications.
+      </li>
+      <li>
+        <a href="https://vue-i18n.intlify.dev/" target="_blank" rel="noopener">Vue I18n</a> - Internationalization plugin for Vue.js.
+      </li>
+      <li>
         <a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a> - Responsive CSS framework for fast UI development.
       </li>
       <li>
@@ -18,48 +24,48 @@
       <li>
         <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> - Next Generation Frontend Tooling.
       </li>
+      <li>
+        <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a> - Open-source JavaScript library for mobile-friendly interactive maps.
+      </li>
+      <li>
+        <a href="https://vueuse.org/" target="_blank" rel="noopener">VueUse</a> - Collection of essential Vue Composition Utilities.
+      </li>
     </ul>
 
     <h3 class="mt-4">Other Open Source Packages</h3>
     <ul>
       <li>
-        <a href="https://github.com/uuidjs/uuid" target="_blank" rel="noopener">uuid</a> - For GUID/UUID generation.
+        <a href="https://github.com/soldair/node-qrcode" target="_blank" rel="noopener">QRCode</a> - For QR code generation and scanning.
       </li>
       <li>
-        <a href="https://github.com/dcodeIO/crypto-js" target="_blank" rel="noopener">crypto-js</a> - For cryptographic hash functions.
+        <a href="https://github.com/sql-formatter-org/sql-formatter" target="_blank" rel="noopener">SQL Formatter</a> - For SQL code formatting and beautification.
       </li>
       <li>
-        <a href="https://github.com/SheetJS/sheetjs" target="_blank" rel="noopener">SheetJS</a> - For CSV and Excel file parsing.
+        <a href="https://github.com/emn178/js-md5" target="_blank" rel="noopener">js-md5</a> - MD5 hash function implementation.
       </li>
       <li>
-        <a href="https://github.com/validatorjs/validator.js" target="_blank" rel="noopener">validator.js</a> - For string validation and sanitization.
+        <a href="https://github.com/emn178/js-sha1" target="_blank" rel="noopener">js-sha1</a> - SHA-1 hash function implementation.
       </li>
       <li>
-        <a href="https://github.com/markedjs/marked" target="_blank" rel="noopener">marked</a> - For Markdown parsing.
+        <a href="https://github.com/emn178/js-sha256" target="_blank" rel="noopener">js-sha256</a> - SHA-256 hash function implementation.
       </li>
       <li>
-        <a href="https://github.com/axios/axios" target="_blank" rel="noopener">axios</a> - Promise based HTTP client for the browser.
+        <a href="https://github.com/emn178/js-sha512" target="_blank" rel="noopener">js-sha512</a> - SHA-512 hash function implementation.
       </li>
       <li>
-        <a href="https://github.com/30-seconds/30-seconds-of-code" target="_blank" rel="noopener">30-seconds-of-code</a> - Useful code snippets.
+        <a href="https://github.com/dejavu1987/jabber" target="_blank" rel="noopener">Jabber</a> - For generating random text and fake data.
       </li>
       <li>
-        <a href="https://github.com/ai/nanoid" target="_blank" rel="noopener">nanoid</a> - For random ID generation.
+        <a href="https://github.com/dropbox/zxcvbn" target="_blank" rel="noopener">zxcvbn</a> - Password strength estimation library.
       </li>
       <li>
-        <a href="https://github.com/iamkun/dayjs" target="_blank" rel="noopener">dayjs</a> - For date/time formatting.
+        <a href="https://github.com/SheetJS/js-adler32" target="_blank" rel="noopener">adler-32</a> - Adler-32 checksum algorithm implementation.
       </li>
       <li>
-        <a href="https://github.com/GoogleChromeLabs/text-encoding" target="_blank" rel="noopener">text-encoding</a> - Polyfill for TextEncoder and TextDecoder.
+        <a href="https://github.com/SheetJS/js-crc32" target="_blank" rel="noopener">crc-32</a> - CRC-32 checksum algorithm implementation.
       </li>
       <li>
-        <a href="https://github.com/beatgammit/base64-js" target="_blank" rel="noopener">base64-js</a> - For base64 encoding/decoding.
-      </li>
-      <li>
-        <a href="https://github.com/eligrey/FileSaver.js/" target="_blank" rel="noopener">FileSaver.js</a> - For saving files client-side.
-      </li>
-      <li>
-        <a href="https://github.com/zenorocha/clipboard.js" target="_blank" rel="noopener">clipboard.js</a> - For clipboard copy support.
+        <a href="https://github.com/popperjs/popper-core" target="_blank" rel="noopener">Popper.js</a> - Positioning engine for tooltips and popovers.
       </li>
     </ul>
 
