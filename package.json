@@ -45,7 +45,7 @@
     "eslint": "^9.39.2",
     "eslint-plugin-vue": "^10.7.0",
     "sass": "^1.97.3",
-    "sass-loader": "^16.0.6",
+    "sass-loader": "^16.0.7",
     "vite": "^6.4.1",
     "vue-loader": "^17.4.2",
     "workbox-build": "^7.4.0"
