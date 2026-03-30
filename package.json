@@ -35,7 +35,7 @@
     "monaco-editor-webpack-plugin": "^7.1.1",
     "monaco-languageclient": "^10.7.0",
     "qrcode": "^1.5.4",
-    "sql-formatter": "^15.7.2",
+    "sql-formatter": "^15.7.3",
     "vue": "^3.5.30",
     "vue-i18n": "^11.3.0",
     "vue-router": "^5.0.4"
